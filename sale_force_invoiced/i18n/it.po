@@ -37,7 +37,7 @@ msgid ""
 "to invoice. To use this field, the invoice must be in \"locked\" state."
 msgstr ""
 "Impostando questo indicatore, l’ordine sarà impostato come interamente "
-"fatturato anche se sono presenti quantità da fattturare. Puoi impostare "
-"questo campo solo se l’ordine è bloccato."
+"fatturato anche se sono presenti quantità da fattturare. Si può impostare"
+" questo campo solo se l’ordine è bloccato."
 
 
