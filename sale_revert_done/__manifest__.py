@@ -11,7 +11,6 @@
     "website": "https://www.zeroincombenze.it",
     "development_status": "Alpha",
     "license": "AGPL-3",
-    "depends": [''],
     "data": ['views/sale_revert_done_view.xml'],
     "installable": True,
     "application": False,
