@@ -6,22 +6,23 @@
 # OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-23 01:51+0000\n"
 "PO-Revision-Date: 2017-11-23 01:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
-"Language: it\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_order_all_qty_delivered
 msgid "All quantities delivered"
-msgstr ""
+msgstr "Tutte le quantità consegnate"
 
 #. module: sale_automatic_workflow
 #: model:ir.actions.act_window,name:sale_automatic_workflow.act_sale_workflow_process_form
@@ -31,37 +32,37 @@ msgstr ""
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_workflow_process_view_form
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_workflow_process_view_tree
 msgid "Automatic Workflow"
-msgstr ""
+msgstr "Workflow Automatico"
 
 #. module: sale_automatic_workflow
 #: model:ir.filters,name:sale_automatic_workflow.automatic_workflow_create_invoice_filter
 msgid "Automatic Workflow Create Invoice Filter"
-msgstr ""
+msgstr "Workflow Automatico filtro Crea Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.filters,name:sale_automatic_workflow.automatic_workflow_order_filter
 msgid "Automatic Workflow Order Filter"
-msgstr ""
+msgstr "Workflow Automatico filtro Ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.filters,name:sale_automatic_workflow.automatic_workflow_picking_filter
 msgid "Automatic Workflow Picking Filter"
-msgstr ""
+msgstr "Workflow Automatico filtro Picking"
 
 #. module: sale_automatic_workflow
 #: model:ir.filters,name:sale_automatic_workflow.automatic_workflow_sale_done_filter
 msgid "Automatic Workflow Sale Done Filter"
-msgstr ""
+msgstr "Workflow Automatico Filtro Vendita effettuata"
 
 #. module: sale_automatic_workflow
 #: model:ir.filters,name:sale_automatic_workflow.automatic_workflow_validate_invoice_filter
 msgid "Automatic Workflow Validate Invoice Filter"
-msgstr ""
+msgstr "Workflow Automatico Filtro Valida Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_order_view_form
 msgid "Automation Information"
-msgstr ""
+msgstr "Informazione automatica"
 
 #. module: sale_automatic_workflow
 #: model:sale.workflow.process,warning:sale_automatic_workflow.automatic_validation
@@ -69,26 +70,28 @@ msgid ""
 "Be careful, if you save the order with this setting, it could be auto-"
 "confirmed, even if you are editing it."
 msgstr ""
+"Fai attenzione, se salvi l'ordine con questa impostazione, potrebbe "
+"essere confermato automaticamente, anche se lo stai modificando."
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_validate_picking
 msgid "Confirm and Transfer Picking"
-msgstr ""
+msgstr "Conferma e Trasferisci il picking"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_create_invoice
 msgid "Create Invoice"
-msgstr "Crea Fattura"
+msgstr "Creare fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_create_invoice_filter_id
 msgid "Create Invoice Filter"
-msgstr ""
+msgstr "Filtro Crea Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_create_invoice_filter_domain
 msgid "Create Invoice Filter Domain"
-msgstr ""
+msgstr "Dominio filtro Crea Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_automatic_workflow_job_create_uid
@@ -104,24 +107,26 @@ msgstr "Creato il"
 
 #. module: sale_automatic_workflow
 #: selection:sale.workflow.process,picking_policy:0
+#: selection:sale.workflow.process,picking_policy
 msgid "Deliver all products at once"
-msgstr ""
+msgstr "Consegna tutti i prodotti in una volta"
 
 #. module: sale_automatic_workflow
 #: selection:sale.workflow.process,picking_policy:0
+#: selection:sale.workflow.process,picking_policy
 msgid "Deliver each product when available"
-msgstr ""
+msgstr "Consegna ogni prodotto quando disponibile"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_automatic_workflow_job_display_name
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_display_name
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Nome visualizzato"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_invoice_date_is_order_date
 msgid "Force Invoice Date"
-msgstr ""
+msgstr "Forza Data Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_automatic_workflow_job_id
@@ -132,15 +137,20 @@ msgstr "ID"
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,help:sale_automatic_workflow.field_sale_workflow_process_warning
 msgid ""
-"If set, displays the message when an userselects the process on a sale order"
+"If set, displays the message when an userselects the process on a sale "
+"order"
 msgstr ""
+"Se impostato, visualizza il messaggio quando un utente seleziona il "
+"processo su un ordine di vendita"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,help:sale_automatic_workflow.field_sale_workflow_process_invoice_service_delivery
 msgid ""
-"If this box is checked, when the first invoice is created The service sale "
-"order lines will be included and will be marked as delivered"
+"If this box is checked, when the first invoice is created The service "
+"sale order lines will be included and will be marked as delivered"
 msgstr ""
+"Se è spuntato, alla creazione della prima fattura Le righe dell'ordine di"
+" vendita del servizio verranno incluse e contrassegnate come consegnate"
 
 #. module: sale_automatic_workflow
 #: model:ir.model,name:sale_automatic_workflow.model_account_invoice
@@ -150,7 +160,7 @@ msgstr "Fattura"
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_invoice_service_delivery
 msgid "Invoice Service on delivery"
-msgstr ""
+msgstr "Servizio Fattura alla consegna"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_automatic_workflow_job___last_update
@@ -173,79 +183,79 @@ msgstr "Ultimo aggiornamento il"
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_name
 msgid "Name"
-msgstr "Nome"
+msgstr "Descrizione"
 
 #. module: sale_automatic_workflow
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_workflow_process_view_form
 msgid "Order Configuration"
-msgstr ""
+msgstr "Configurazione Ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_order_filter_id
 msgid "Order Filter"
-msgstr ""
+msgstr "Filtro Ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_order_filter_domain
 msgid "Order Filter Domain"
-msgstr ""
+msgstr "Dominio filtro Ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_picking_filter_id
 msgid "Picking Filter"
-msgstr ""
+msgstr "Filtro Picking"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_picking_filter_domain
 msgid "Picking Filter Domain"
-msgstr ""
+msgstr "Dominio filtro Picking"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_sale_done
 msgid "Sale Done"
-msgstr ""
+msgstr "Vendita effettuata"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_sale_done_filter_id
 msgid "Sale Done Filter"
-msgstr ""
+msgstr "Filtro Vendita effettuata"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_sale_done_filter_domain
 msgid "Sale Done Filter Domain"
-msgstr ""
+msgstr "Dominio filtro Vendita effettuata"
 
 #. module: sale_automatic_workflow
 #: model:ir.model,name:sale_automatic_workflow.model_sale_workflow_process
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_account_invoice_workflow_process_id
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_stock_picking_workflow_process_id
 msgid "Sale Workflow Process"
-msgstr ""
+msgstr "Processo workflow vendita"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_property_journal_id
 msgid "Sales Journal"
-msgstr ""
+msgstr "Registro vendite"
 
 #. module: sale_automatic_workflow
 #: model:ir.model,name:sale_automatic_workflow.model_sale_order
 msgid "Sales Order"
-msgstr "Ordini vendita"
+msgstr "Ordine di vendita"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_team_id
 msgid "Sales Team"
-msgstr ""
+msgstr "Team di Vendita"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,help:sale_automatic_workflow.field_sale_workflow_process_property_journal_id
 msgid "Set default journal to use on invoice"
-msgstr ""
+msgstr "Imposta il registro predefinito da utilizzare sulla fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_workflow_process_view_form
 msgid "Set selection based on a search filter:"
-msgstr ""
+msgstr "Imposta la selezione basata a un filtro di ricerca:"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_picking_policy
@@ -260,50 +270,54 @@ msgstr "Movimenti magazzino"
 #. module: sale_automatic_workflow
 #: model:ir.model,name:sale_automatic_workflow.model_stock_picking
 msgid "Transfer"
-msgstr ""
+msgstr "Trasferimento"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_validate_invoice
 msgid "Validate Invoice"
-msgstr ""
+msgstr "Valida Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_validate_invoice_filter_id
 msgid "Validate Invoice Filter"
-msgstr ""
+msgstr "Filtro Valida Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_validate_invoice_filter_domain
 msgid "Validate Invoice Filter Domain"
-msgstr ""
+msgstr "Dominio filtro Valida Fattura"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_validate_order
 msgid "Validate Order"
-msgstr ""
+msgstr "Valida Ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,field_description:sale_automatic_workflow.field_sale_workflow_process_warning
 msgid "Warning Message"
-msgstr ""
+msgstr "Messaggio di avviso"
 
 #. module: sale_automatic_workflow
 #: model:ir.model.fields,help:sale_automatic_workflow.field_sale_workflow_process_invoice_date_is_order_date
 msgid "When checked, the invoice date will be the same than the order's date"
 msgstr ""
+"Quando spuntato, la data della fattura sarà la stessa della data "
+"dell'ordine"
 
 #. module: sale_automatic_workflow
 #: model:ir.ui.view,arch_db:sale_automatic_workflow.sale_workflow_process_view_form
 msgid "Workflow Options"
-msgstr ""
+msgstr "Opzioni Workflow"
 
 #. module: sale_automatic_workflow
 #: code:addons/sale_automatic_workflow/models/sale_order.py:60
-#, python-format
+#: code:addons/sale_automatic_workflow/models/sale_order.py:60
 msgid "Workflow Warning"
-msgstr ""
+msgstr "Workflow Avviso"
 
 #. module: sale_automatic_workflow
 #: model:ir.model,name:sale_automatic_workflow.model_automatic_workflow_job
 msgid "automatic.workflow.job"
 msgstr ""
+
+

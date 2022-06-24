@@ -1,27 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * sale_order_add_variants
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: sale-workflow (8.0)\n"
+"Project-Id-Version: Odoo (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-02 17:59+0000\n"
 "PO-Revision-Date: 2015-09-03 07:08+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-sale-workflow-8-0/language/it/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: it\n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
+"workflow-8-0/language/it/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
 
 #. module: sale_order_add_variants
 #: code:addons/sale_order_add_variants/wizard/sale_add_variants.py:75
 #: view:sale.add.variants:sale_order_add_variants.sale_add_variants_form
 #: view:sale.order:sale_order_add_variants.sale_order_add_variants_form
-#, python-format
+#: code:addons/sale_order_add_variants/wizard/sale_add_variants.py:75
 msgid "Add Variants"
 msgstr ""
 
@@ -47,60 +49,71 @@ msgstr ""
 
 #. module: sale_order_add_variants
 #: field:sale.config.settings,group_sale_add_variants:0
+#: field:sale.config.settings,group_sale_add_variants
 msgid "Allow to add variants from template in Sale order"
 msgstr ""
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,create_uid:0
 #: field:sale.add.variants.line,create_uid:0
+#: field:sale.add.variants,create_uid field:sale.add.variants.line,create_uid
 msgid "Created by"
 msgstr "Creato da"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,create_date:0
 #: field:sale.add.variants.line,create_date:0
+#: field:sale.add.variants,create_date field:sale.add.variants.line,create_date
 msgid "Created on"
 msgstr "Creato il"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,id:0 field:sale.add.variants.line,id:0
+#: field:sale.add.variants,id field:sale.add.variants.line,id
 msgid "ID"
 msgstr "ID"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,write_uid:0
 #: field:sale.add.variants.line,write_uid:0
+#: field:sale.add.variants,write_uid field:sale.add.variants.line,write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,write_date:0
 #: field:sale.add.variants.line,write_date:0
+#: field:sale.add.variants,write_date field:sale.add.variants.line,write_date
 msgid "Last Updated on"
 msgstr "Ultimo aggiornamento il"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants.line,product_uom_qty:0
+#: field:sale.add.variants.line,product_uom_qty
 msgid "Quantity"
 msgstr ""
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,product_tmpl_id:0
+#: field:sale.add.variants,product_tmpl_id
 msgid "Template"
-msgstr ""
+msgstr "Modello"
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants.line,product_uom:0
+#: field:sale.add.variants.line,product_uom
 msgid "Unit of Measure "
-msgstr ""
+msgstr "Unità di misura "
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants.line,product_id:0
+#: field:sale.add.variants.line,product_id
 msgid "Variant"
 msgstr ""
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants,variant_line_ids:0
+#: field:sale.add.variants,variant_line_ids
 msgid "Variant Lines"
 msgstr ""
 
@@ -111,5 +124,8 @@ msgstr ""
 
 #. module: sale_order_add_variants
 #: field:sale.add.variants.line,wizard_id:0
+#: field:sale.add.variants.line,wizard_id
 msgid "Wizard id"
 msgstr ""
+
+

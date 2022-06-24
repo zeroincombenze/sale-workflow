@@ -1,21 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * sale_payment_term_interest
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: sale-workflow (8.0)\n"
+"Project-Id-Version: Odoo (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-02 17:59+0000\n"
 "PO-Revision-Date: 2015-09-03 07:09+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-sale-workflow-8-0/language/it/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: it\n"
+"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
+"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
+"Language: it_IT\n"
+"workflow-8-0/language/it/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
 
 #. module: sale_payment_term_interest
 #: view:sale.order:sale_payment_term_interest.view_order_form
@@ -24,31 +26,34 @@ msgstr ""
 
 #. module: sale_payment_term_interest
 #: field:account.payment.term.line,interest_rate:0
+#: field:account.payment.term.line,interest_rate
 msgid "Interest Rate"
 msgstr ""
 
 #. module: sale_payment_term_interest
 #: code:addons/sale_payment_term_interest/model/sale_order.py:108
-#, python-format
+#: code:addons/sale_payment_term_interest/model/sale_order.py:108
 msgid ""
-"Interest amount differs. Click on \"(update interests)\" next to the payment"
-" terms."
-msgstr ""
+"Interest amount differs. Click on \"(update interests)\" next to the "
+"payment terms."
+msgstr "."
 
 #. module: sale_payment_term_interest
 #: field:sale.order.line,interest_line:0
+#: field:sale.order.line,interest_line
 msgid "Interest line"
 msgstr ""
 
 #. module: sale_payment_term_interest
 #: field:account.payment.term,interest_min:0
+#: field:account.payment.term,interest_min
 msgid "Minimum Interest Amount"
 msgstr ""
 
 #. module: sale_payment_term_interest
 #: model:ir.model,name:sale_payment_term_interest.model_account_payment_term
 msgid "Payment Term"
-msgstr ""
+msgstr "Termine di pagamento"
 
 #. module: sale_payment_term_interest
 #: model:ir.model,name:sale_payment_term_interest.model_account_payment_term_line
@@ -68,21 +73,27 @@ msgstr ""
 #. module: sale_payment_term_interest
 #: model:ir.model,name:sale_payment_term_interest.model_sale_order
 msgid "Sales Order"
-msgstr "Ordini vendita"
+msgstr "Ordine di vendita"
 
 #. module: sale_payment_term_interest
 #: model:ir.model,name:sale_payment_term_interest.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "Linea d'ordine di vendita"
+msgstr "Riga ordine di vendita"
 
 #. module: sale_payment_term_interest
 #: help:account.payment.term.line,interest_rate:0
+#: help:account.payment.term.line,interest_rate
 msgid ""
-"The annual interest rate applied on a sales order. Value between 0 and 100.\n"
-"The interest is computed as: 'Amount * (Interest Rate / 100 /  (12 months * 30 days)) * Term Days'"
+"The annual interest rate applied on a sales order. Value between 0 and "
+"100.\n"
+"The interest is computed as: 'Amount * (Interest Rate / 100 /  (12 months"
+" * 30 days)) * Term Days'"
 msgstr ""
 
 #. module: sale_payment_term_interest
 #: help:account.payment.term,interest_min:0
+#: help:account.payment.term,interest_min
 msgid "The minimum amount of interest added to a sales order."
-msgstr ""
+msgstr "."
+
+
