@@ -8,7 +8,7 @@
 
 {
     "name": "Sale Order Type",
-    "version": "11.0.1.4.2",
+    "version": "12.0.1.3.0",
     "category": "Sales Management",
     "author": "Grupo Vermon,"
               "AvanzOSC,"
@@ -31,7 +31,6 @@
         "security/security.xml",
         "views/sale_order_view.xml",
         "views/sale_order_type_view.xml",
-        "views/sale_order_type_rule_view.xml",
         "views/account_invoice_view.xml",
         "views/res_partner_view.xml",
         "data/default_type.xml",

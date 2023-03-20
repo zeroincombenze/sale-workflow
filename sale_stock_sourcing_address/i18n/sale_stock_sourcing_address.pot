@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
@@ -24,7 +24,8 @@ msgid "Invoice Line"
 msgstr ""
 
 #. module: sale_stock_sourcing_address
-#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_sale_order_line_warehouse_id
+#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_account_invoice_line__warehouse_id
+#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_sale_order_line__warehouse_id
 msgid "Order's Warehouse"
 msgstr ""
 
@@ -34,8 +35,8 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: sale_stock_sourcing_address
-#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_account_invoice_line_sourcing_address_id
-#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_sale_order_line_sourcing_address_id
+#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_account_invoice_line__sourcing_address_id
+#: model:ir.model.fields,field_description:sale_stock_sourcing_address.field_sale_order_line__sourcing_address_id
 msgid "Sourcing Address"
 msgstr ""
 

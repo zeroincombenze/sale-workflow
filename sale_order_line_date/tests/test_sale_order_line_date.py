@@ -11,7 +11,6 @@ import datetime
 
 
 class TestSaleOrderLineDates(TransactionCase):
-    """Check the _get_shipped method of Sale Order. """
 
     def setUp(self):
         """Setup a Sale Order with 4 lines.
@@ -21,16 +20,16 @@ class TestSaleOrderLineDates(TransactionCase):
         price = 100.0
         qty = 5
         product_id = self.env.ref('product.product_product_7')
-        today = datetime.datetime.now()
+        today = fields.Datetime.now()
         dt1 = today + datetime.timedelta(days=9)
         dt2 = today + datetime.timedelta(days=10)
         self.dt3 = today + datetime.timedelta(days=3)
         self.sale1 = self._create_sale_order(customer, dt2)
-        self.sale_line1 = self._create_sale_order_line(self.sale1, product_id,
-                                                       qty, price, dt1)
-        self.sale_line2 = self._create_sale_order_line(self.sale1, product_id,
-                                                       qty, price, dt2)
-        self.sale_line2.write({'requested_date': dt2})
+        self.sale_line1 = self._create_sale_order_line(
+            self.sale1, product_id, qty, price, dt1)
+        self.sale_line2 = self._create_sale_order_line(
+            self.sale1, product_id, qty, price, dt2)
+        self.sale_line2.write({'commitment_date': dt2})
         self.sale1.action_confirm()
 
     def _create_sale_order(self, customer, date):
@@ -38,7 +37,7 @@ class TestSaleOrderLineDates(TransactionCase):
             'partner_id': customer.id,
             'partner_invoice_id': customer.id,
             'partner_shipping_id': customer.id,
-            'requested_date': date
+            'commitment_date': date
         })
         return sale
 
@@ -49,14 +48,13 @@ class TestSaleOrderLineDates(TransactionCase):
             'order_id': sale.id,
             'price_unit': price,
             'product_uom_qty': qty,
-            'requested_date': date})
+            'commitment_date': date})
         return sale_line
 
-    def test_on_change_requested_date(self):
-        """True when the requested date in the sale_order_line
-        matches the requested date in the sale order"""
-        req_date = fields.Datetime.to_string(self.dt3)
-        self.sale1.write({'requested_date': self.dt3})
-        result = self.sale1.onchange_requested_date()
+    def test_on_change_commitment_date(self):
+        """True when the commitment date in the sale_order_line
+        matches the commitment date in the sale order"""
+        self.sale1.write({'commitment_date': self.dt3})
+        result = self.sale1._onchange_commitment_date()
         for line in result['value']['order_line']:
-            self.assertEqual(line[2]['requested_date'], req_date)
+            self.assertEqual(line[2]['commitment_date'], self.dt3)

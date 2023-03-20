@@ -13,9 +13,10 @@ class SaleReturnRequestCase(StockReturnRequestCase):
             'property_stock_supplier': cls.supplier_loc.id,
             'property_stock_customer': cls.customer_loc.id,
         })
-        cls.wh1.delivery_route_id.pull_ids.location_id = cls.customer_loc.id
+        cls.wh1.delivery_route_id.rule_ids.location_id = cls.customer_loc.id
         cls.so_1 = cls.env["sale.order"].create({
             "partner_id": cls.partner_customer_2.id,
+            'warehouse_id': cls.wh1.id,
             'picking_policy': 'direct',
             "order_line": [
                 (0, False, {
@@ -29,9 +30,6 @@ class SaleReturnRequestCase(StockReturnRequestCase):
         })
         cls.so_2 = cls.so_1.copy()
         cls.sale_orders = cls.so_1 | cls.so_2
-        # Write after create so other modules like sale_order_type doesn't
-        # interfere on the tests
-        cls.sale_orders.write({'warehouse_id': cls.wh1.id})
         # Confirm all the sale orders
         for order in cls.sale_orders:
             order.action_confirm()

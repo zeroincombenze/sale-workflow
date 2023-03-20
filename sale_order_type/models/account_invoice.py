@@ -11,7 +11,11 @@ class AccountInvoice(models.Model):
 
     sale_type_id = fields.Many2one(
         comodel_name='sale.order.type',
-        string='Sale Type', default=_get_order_type)
+        string='Sale Type',
+        default=_get_order_type,
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
 
     @api.onchange('partner_id', 'company_id')
     def _onchange_partner_id(self):
@@ -25,16 +29,6 @@ class AccountInvoice(models.Model):
     @api.onchange('sale_type_id')
     def onchange_sale_type_id(self):
         if self.sale_type_id.payment_term_id:
-            self.payment_term_id = self.sale_type_id.payment_term_id.id
+            self.payment_term = self.sale_type_id.payment_term_id.id
         if self.sale_type_id.journal_id:
             self.journal_id = self.sale_type_id.journal_id.id
-
-    @api.multi
-    def match_order_type(self):
-        order_types = self.env['sale.order.type'].search([])
-        for invoice in self:
-            for order_type in order_types:
-                if order_type.matches_invoice(invoice):
-                    invoice.sale_type_id = order_type
-                    invoice.onchange_sale_type_id()
-                    break

@@ -12,7 +12,6 @@
 * `Agile Business Group <https://www.agilebg.com>`_
 
   * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
-  * Simone Rubino <simone.rubino@agilebg.com>
 
 * `Niboo <https://www.niboo.be/>`_
 
@@ -24,5 +23,15 @@
   * Pedro M. Baeza
   * David Vidal
   * Carlos Dauden
+
+* `Pesol <https://www.pesol.es>`_
+
+  * Angel Moya Pardo <angel.moya@pesol.es>
+  * Antonio J Rubio Lorente <antonio.rubio@pesol.es>
+
+* `GSLab.it <https://www.gslab.it>`_
+
+  * Giovanni Serra <giovanni@gslab.it>
+
 
 Do not contact contributors directly about support or help with technical issues.

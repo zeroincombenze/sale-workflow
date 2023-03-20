@@ -14,7 +14,7 @@ class TestAutomaticWorkflowBase(common.TransactionCase):
                           'list_price': 5,
                           'type': 'product'}
         product = self.env['product.product'].create(product_values)
-        self.product_uom_unit = self.env.ref('product.product_uom_unit')
+        self.product_uom_unit = self.env.ref('uom.product_uom_unit')
         values = {
             'partner_id': partner.id,
             'order_line': [(0, 0, {
@@ -44,7 +44,7 @@ class TestAutomaticWorkflowBase(common.TransactionCase):
                         self.env.ref('stock.stock_location_stock').id
                     })]
                 })
-                inventory.action_done()
+                inventory.post_inventory()
         return order
 
     def create_full_automatic(self, override=None):

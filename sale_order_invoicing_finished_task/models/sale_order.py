@@ -2,7 +2,8 @@
 # Copyright 2017 Carlos Dauden <carlos.dauden@tecnativa.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class SaleOrder(models.Model):
@@ -19,6 +20,17 @@ class SaleOrder(models.Model):
                     'invoice_status': 'no',
                 })
 
+    def action_cancel(self):
+        # Avoid cancel SO with invoiced lines to don't have inconsistent lines,
+        # if we want reconfirm _check_sale_line_state restrict raises error
+        lines = self.mapped('order_line').filtered(
+            lambda x: x.task_id and x.invoice_status == 'invoiced')
+        if lines:
+            raise ValidationError(_(
+                'You cannot cancel because these lines have invoiced tasks:'
+                '\n %s') % ('\n'.join(lines.mapped('name'))))
+        return super().action_cancel()
+
 
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
@@ -33,11 +45,11 @@ class SaleOrderLine(models.Model):
                  'order_id.state', 'task_ids.invoiceable')
     def _get_to_invoice_qty(self):
         lines = self.filtered(
-            lambda x: (x.product_id.type == 'service' and
-                       x.product_id.invoicing_finished_task and
-                       x.product_id.service_tracking in [
-                           'task_global_project', 'task_new_project'] and
-                       not all(x.task_ids.mapped('invoiceable'))
+            lambda x: (x.product_id.type == 'service'
+                       and x.product_id.invoicing_finished_task
+                       and x.product_id.service_tracking in [
+                           'task_global_project', 'task_new_project']
+                       and not all(x.task_ids.mapped('invoiceable'))
                        )
         )
         if lines:
@@ -45,18 +57,14 @@ class SaleOrderLine(models.Model):
         super(SaleOrderLine, self - lines)._get_to_invoice_qty()
 
     @api.multi
-    def _analytic_compute_delivered_quantity_domain(self):
-        # Overwrite until resolve https://github.com/odoo/odoo/issues/24038
-        # After fix extend _timesheet_compute_delivered_quantity_domain
-        return [
-            ('so_line', 'in', self.ids),
+    def _timesheet_compute_delivered_quantity_domain(self):
+        vals = super()._timesheet_compute_delivered_quantity_domain()
+        vals = ['|', ('amount', '<=', 0.0)] + vals + [
             # don't update the qty on sale order lines which are not
             # with a product invoiced on ordered qty +
             # invoice_finished task = True
             '|',
             ('so_line.product_id.invoice_policy', '=', 'delivery'),
             ('so_line.product_id.invoicing_finished_task', '=', False),
-            '|',
-            ('amount', '<=', 0.0),
-            ('project_id', '!=', False),
         ]
+        return vals

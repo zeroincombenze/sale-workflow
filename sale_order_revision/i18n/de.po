@@ -20,41 +20,41 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #. module: sale_order_revision
-#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order_current_revision_id
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: sale_order_revision
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__current_revision_id
 msgid "Current revision"
 msgstr "Aktuelle Revision"
 
 #. module: sale_order_revision
-#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order_has_old_revisions
-msgid "Has old revisions"
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__has_old_revisions
+msgid "Has Old Revisions"
 msgstr "hat ältere Revisionen"
 
 #. module: sale_order_revision
-#: model:ir.ui.view,arch_db:sale_order_revision.sale_order_form
+#: model_terms:ir.ui.view,arch_db:sale_order_revision.view_order_form
 msgid "New Revision of Quotation"
 msgstr "Revision erstellen"
 
 #. module: sale_order_revision
-#: code:addons/sale_order_revision/models/sale_order.py:104
+#: code:addons/sale_order_revision/models/sale_order.py:111
 #, python-format
 msgid "New Sales Order Revisions"
 msgstr "Neue Auftragsrevisionen"
 
 #. module: sale_order_revision
-#: code:addons/sale_order_revision/models/sale_order.py:96
+#: code:addons/sale_order_revision/models/sale_order.py:103
 #, python-format
 msgid "New revision created: %s"
 msgstr "Neue Revision erzeugt : %s"
 
 #. module: sale_order_revision
-#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order_old_revision_ids
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__old_revision_ids
 msgid "Old revisions"
 msgstr "Alte Revisionen"
-
-#. module: sale_order_revision
-#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order_unrevisioned_name
-msgid "Order Reference"
-msgstr "Auftragsreferenz"
 
 #. module: sale_order_revision
 #: sql_constraint:sale.order:0
@@ -62,32 +62,31 @@ msgid "Order Reference and revision must be unique per Company."
 msgstr "Auftragsreferenz und -revision müssen je Unternehmen eindeutig sein."
 
 #. module: sale_order_revision
-#: model:ir.model,name:sale_order_revision.model_sale_order
-msgid "Quotation"
-msgstr "Angebot"
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__unrevisioned_name
+msgid "Original Order Reference"
+msgstr "Originale Auftragsreferenz"
 
 #. module: sale_order_revision
-#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order_revision_number
+#: model:ir.model.fields,field_description:sale_order_revision.field_sale_order__revision_number
 msgid "Revision"
 msgstr "Revision"
 
 #. module: sale_order_revision
-#: model:ir.ui.view,arch_db:sale_order_revision.sale_order_form
+#: model_terms:ir.ui.view,arch_db:sale_order_revision.view_order_form
 msgid "Revisions"
 msgstr "Revisionen"
 
 #. module: sale_order_revision
-#: model:ir.ui.view,arch_db:sale_order_revision.sale_order_form
+#: model:ir.model,name:sale_order_revision.model_sale_order
+msgid "Sale Order"
+msgstr "Verkaufsauftrag"
+
+#. module: sale_order_revision
+#: model_terms:ir.ui.view,arch_db:sale_order_revision.view_order_form
 msgid "Superseeded by"
 msgstr "Ersetzt durch"
 
 #. module: sale_order_revision
-#: model:ir.ui.view,arch_db:sale_order_revision.sale_order_form
+#: model_terms:ir.ui.view,arch_db:sale_order_revision.view_order_form
 msgid "Superseeded on"
 msgstr "Ersetzt am"
-
-#~ msgid "Active"
-#~ msgstr "Aktiv"
-
-#~ msgid "Sales Order"
-#~ msgstr "Verkaufsauftrag"

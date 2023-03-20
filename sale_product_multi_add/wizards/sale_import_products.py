@@ -43,6 +43,7 @@ class SaleImportProducts(models.TransientModel):
             'price_unit': item.product_id.list_price
         })
         sale_line.product_id_change()
+        sale_line._onchange_discount()
         line_values = sale_line._convert_to_write(sale_line._cache)
         return line_values
 
@@ -63,6 +64,7 @@ class SaleImportProducts(models.TransientModel):
 
 class SaleImportProductsItem(models.TransientModel):
     _name = 'sale.import.products.items'
+    _description = 'Sale Import Products Items'
 
     wizard_id = fields.Many2one(string="Wizard",
                                 comodel_name='sale.import.products')

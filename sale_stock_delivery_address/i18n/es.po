@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-25 16:46+0000\n"
+"PO-Revision-Date: 2021-03-22 10:46+0000\n"
 "Last-Translator: Daniel Martinez Vila <daniel.martinez@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_stock_delivery_address
-#: model:ir.model.fields,field_description:sale_stock_delivery_address.field_sale_order_line_dest_address_id
+#: model:ir.model.fields,field_description:sale_stock_delivery_address.field_sale_order_line__dest_address_id
 msgid "Destination Address"
 msgstr "Dirección de destino"
 
 #. module: sale_stock_delivery_address
-#: model:ir.model.fields,help:sale_stock_delivery_address.field_sale_order_line_dest_address_id
+#: model:ir.model.fields,help:sale_stock_delivery_address.field_sale_order_line__dest_address_id
 msgid "If set this address will be the delivery address instead of the one specified in the Sales Order header."
 msgstr ""
 "Si se establece, esta dirección será la dirección de entrega en lugar de la "
@@ -30,13 +30,13 @@ msgstr ""
 
 #. module: sale_stock_delivery_address
 #: model:ir.model,name:sale_stock_delivery_address.model_procurement_group
-msgid "Procurement Requisition"
-msgstr "Solicitud de adquisiciones"
+msgid "Procurement Group"
+msgstr "Grupo de adquisiciones"
 
 #. module: sale_stock_delivery_address
 #: model:ir.model,name:sale_stock_delivery_address.model_sale_order
-msgid "Quotation"
-msgstr "Cotización"
+msgid "Sale Order"
+msgstr "Orden de venta"
 
 #. module: sale_stock_delivery_address
 #: model:ir.model,name:sale_stock_delivery_address.model_sale_order_line

@@ -86,6 +86,6 @@ class TestSaleMrpLink(TransactionCase):
         self.assertEqual(mo.ids, mo_ids)
         self.assertEqual(len(mo), so.production_count)
         # The first MO will be the one that comes from the SO, the other one
-        #  should have the same origin as the first MO.
+        #  will have the first MO as it's origin.
         self.assertEqual(so.client_order_ref, mo[0].origin)
-        self.assertEqual(mo[0].origin, mo[1].origin)
+        self.assertEqual(mo[1].origin, mo[0].name)

@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 
 #. module: sale_stock_return_request
-#: model:ir.model.fields,field_description:sale_stock_return_request.field_stock_return_request_sale_order_ids
+#: model:ir.model.fields,field_description:sale_stock_return_request.field_stock_return_request__sale_order_ids
 msgid "Involved Sales"
 msgstr "Ventas involucradas"
 
@@ -38,6 +38,6 @@ msgid "Sale Return Requests"
 msgstr "Solicitud de devoluciones de venta"
 
 #. module: sale_stock_return_request
-#: model:ir.ui.view,arch_db:sale_stock_return_request.view_stock_return_request_form
+#: model_terms:ir.ui.view,arch_db:sale_stock_return_request.view_stock_return_request_form
 msgid "Sales"
 msgstr "Ventas"

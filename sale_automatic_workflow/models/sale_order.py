@@ -30,18 +30,20 @@ class SaleOrder(models.Model):
             order.all_qty_delivered = all(
                 l.product_id.type not in ('product', 'consu') or
                 float_compare(l.qty_delivered, l.product_uom_qty,
-                              precision_digits=precision) == 0
+                              precision_digits=precision) >= 0
                 for l in order.order_line
             )
 
     def _prepare_invoice(self):
-        invoice_vals = super(SaleOrder, self)._prepare_invoice()
+        invoice_vals = super()._prepare_invoice()
         workflow = self.workflow_process_id
         if not workflow:
             return invoice_vals
         invoice_vals['workflow_process_id'] = workflow.id
         if workflow.invoice_date_is_order_date:
-            invoice_vals['date_invoice'] = self.date_order
+            invoice_vals['date_invoice'] = (
+                fields.Date.context_today(self, self.date_order)
+            )
         if workflow.property_journal_id:
             invoice_vals['journal_id'] = workflow.property_journal_id.id
         return invoice_vals
@@ -66,7 +68,7 @@ class SaleOrder(models.Model):
             if not order.workflow_process_id.invoice_service_delivery:
                 continue
             for line in order.order_line:
-                if line.qty_delivered_updateable and not line.qty_delivered:
+                if line.qty_delivered_method == 'manual' \
+                        and not line.qty_delivered:
                     line.write({'qty_delivered': line.product_uom_qty})
-        return super(SaleOrder, self).action_invoice_create(grouped=grouped,
-                                                            final=final)
+        return super().action_invoice_create(grouped=grouped, final=final)

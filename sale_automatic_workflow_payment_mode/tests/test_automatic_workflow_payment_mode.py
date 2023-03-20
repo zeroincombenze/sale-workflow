@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -8,6 +7,18 @@ from odoo.addons.sale_automatic_workflow.tests.test_automatic_workflow_base \
 
 
 class TestAutomaticWorkflowPaymentMode(TestAutomaticWorkflowBase):
+
+    def setUp(self):
+        super().setUp()
+        self.env = self.env(
+            context=dict(
+                self.env.context, tracking_disable=True,
+                # Compatibility with sale_automatic_workflow_job: even if
+                # the module is installed, ensure we don't delay a job.
+                # Thus, we test the usual flow.
+                _job_force_sync=True,
+            )
+        )
 
     def create_sale_order(self, workflow, override=None):
         new_order = super(TestAutomaticWorkflowPaymentMode, self).\
@@ -49,5 +60,7 @@ class TestAutomaticWorkflowPaymentMode(TestAutomaticWorkflowBase):
         self.assertEqual(sale.state, 'sale')
         self.assertTrue(sale.picking_ids)
         self.assertTrue(sale.invoice_ids)
-        self.assertEqual(sale.invoice_ids.state, 'paid')
-        self.assertEqual(sale.picking_ids.state, 'done')
+        invoice = sale.invoice_ids
+        self.assertEqual(invoice.state, 'paid')
+        picking = sale.picking_ids
+        self.assertEqual(picking.state, 'done')

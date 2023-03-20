@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-25 02:45+0000\n"
-"PO-Revision-Date: 2021-03-25 16:46+0000\n"
+"PO-Revision-Date: 2021-03-22 10:46+0000\n"
 "Last-Translator: Daniel Martinez Vila <daniel.martinez@qubiq.es>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_validity
-#: model:ir.ui.view,arch_db:sale_validity.res_config_settings_view_form_sale_order_validity
+#: model_terms:ir.ui.view,arch_db:sale_validity.res_config_settings_view_form_sale_order_validity
 msgid ""
 "By default, the validity date of sale orders will be the date of the sale "
 "order plus the number of days defined in this field.\n"
@@ -33,8 +33,8 @@ msgstr ""
 "tindran una data de validesa per defecte."
 
 #. module: sale_validity
-#: model:ir.model.fields,help:sale_validity.field_res_company_default_sale_order_validity_days
-#: model:ir.model.fields,help:sale_validity.field_res_config_settings_default_sale_order_validity_days
+#: model:ir.model.fields,help:sale_validity.field_res_company__default_sale_order_validity_days
+#: model:ir.model.fields,help:sale_validity.field_res_config_settings__sale_order_default_validity_days
 msgid ""
 "By default, the validity date of sale orders will be the date of the sale "
 "order plus the number of days defined in this field. If the value of this "
@@ -51,20 +51,25 @@ msgid "Companies"
 msgstr "Empreses"
 
 #. module: sale_validity
-#: model:ir.ui.view,arch_db:sale_validity.res_config_settings_view_form_sale_order_validity
+#: model:ir.model,name:sale_validity.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuració de la configuració"
+
+#. module: sale_validity
+#: model_terms:ir.ui.view,arch_db:sale_validity.res_config_settings_view_form_sale_order_validity
 msgid "Days"
 msgstr "Dies"
 
 #. module: sale_validity
-#: model:ir.model.fields,field_description:sale_validity.field_res_company_default_sale_order_validity_days
-#: model:ir.model.fields,field_description:sale_validity.field_res_config_settings_default_sale_order_validity_days
+#: model:ir.model.fields,field_description:sale_validity.field_res_company__default_sale_order_validity_days
+#: model:ir.model.fields,field_description:sale_validity.field_res_config_settings__sale_order_default_validity_days
 msgid "Default Validity of Sale Orders"
 msgstr "Validesa per defecte de les comandes de venda"
 
 #. module: sale_validity
 #: model:ir.model,name:sale_validity.model_sale_order
-msgid "Quotation"
-msgstr "Pressupost"
+msgid "Sale Order"
+msgstr "Comandes de venda"
 
 #. module: sale_validity
 #: sql_constraint:res.company:0
@@ -76,9 +81,15 @@ msgstr ""
 " ha de ser positiu o 0."
 
 #. module: sale_validity
-#: model:ir.model,name:sale_validity.model_res_config_settings
-msgid "res.config.settings"
-msgstr "res.config.settings"
+#: model:ir.model.fields,field_description:sale_validity.field_sale_order__validity_date
+msgid "Validity"
+msgstr "Validesa"
 
-#~ msgid "Sales Order"
-#~ msgstr "Comandes de venda"
+#. module: sale_validity
+#: model:ir.model.fields,help:sale_validity.field_sale_order__validity_date
+msgid ""
+"Validity date of the quotation, after this date, the customer won't be able "
+"to validate the quotation online."
+msgstr ""
+"Data de validesa del pressupost, després d’aquesta data, el client no podrà "
+"validar el pressupost en línia."

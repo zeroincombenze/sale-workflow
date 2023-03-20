@@ -5,9 +5,9 @@
 {
     'name': 'Sale MRP Link',
     'summary': 'Show manufacturing orders generated from sales order',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.1',
     'development_status': 'Production/Stable',
-    'category': 'Sales',
+    'category': 'Sales Management',
     'website': 'https://github.com/OCA/sale-workflow',
     'author': 'Akretion, Agile Business Group, '
               'Odoo Community Association (OCA)',

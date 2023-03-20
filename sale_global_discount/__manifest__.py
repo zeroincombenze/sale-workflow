@@ -1,8 +1,9 @@
 # Copyright 2020 Tecnativa - David Vidal
+# Copyright 2020 Tecnativa - Pedro M. Baeza
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     'name': 'Sale Global Discount',
-    'version': '11.0.1.0.3',
+    'version': '12.0.1.2.1',
     'category': 'Sales Management',
     'author': 'Tecnativa,'
               'Odoo Community Association (OCA)',
@@ -10,6 +11,7 @@
     'license': 'AGPL-3',
     'depends': [
         'account_global_discount',
+        "sale",
     ],
     'data': [
         'views/sale_order_views.xml',

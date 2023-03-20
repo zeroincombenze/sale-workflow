@@ -7,11 +7,15 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
     def _get_order_type(self):
-        """Keep the method to default in case the partner doesn't have any"""
         return self.env['sale.order.type'].search([], limit=1)
 
     type_id = fields.Many2one(
-        comodel_name='sale.order.type', string='Type')
+        comodel_name='sale.order.type',
+        string='Type',
+        default=_get_order_type,
+        readonly=True,
+        states={"draft": [("readonly", False)], "sent": [("readonly", False)]},
+    )
 
     @api.multi
     @api.onchange('partner_id')
@@ -21,58 +25,63 @@ class SaleOrder(models.Model):
                      self.partner_id.commercial_partner_id.sale_type)
         if sale_type:
             self.type_id = sale_type
-        else:
-            self.type_id = self._get_order_type()
 
     @api.multi
     @api.onchange('type_id')
     def onchange_type_id(self):
+        vals = {}
         for order in self:
-            if order.type_id.warehouse_id:
-                order.warehouse_id = order.type_id.warehouse_id
-            if order.type_id.picking_policy:
-                order.picking_policy = order.type_id.picking_policy
-            if order.type_id.payment_term_id:
-                order.payment_term_id = order.type_id.payment_term_id.id
-            if order.type_id.pricelist_id:
-                order.pricelist_id = order.type_id.pricelist_id.id
-            if order.type_id.incoterm_id:
-                order.incoterm = order.type_id.incoterm_id.id
-
-    @api.multi
-    def match_order_type(self):
-        order_types = self.env['sale.order.type'].search([])
-        for order in self:
-            for order_type in order_types:
-                if order_type.matches_order(order):
-                    order.type_id = order_type
-                    order.onchange_type_id()
-                    break
+            order_type = order.type_id
+            # Order values
+            vals = {}
+            if order_type.warehouse_id:
+                vals.update({"warehouse_id": order_type.warehouse_id})
+            if order_type.picking_policy:
+                vals.update({"picking_policy": order_type.picking_policy})
+            if order_type.payment_term_id:
+                vals.update({"payment_term_id": order_type.payment_term_id})
+            if order_type.pricelist_id:
+                vals.update({"pricelist_id": order_type.pricelist_id})
+            if order_type.incoterm_id:
+                vals.update({"incoterm": order_type.incoterm_id})
+            if order_type.analytic_account_id:
+                vals.update({
+                    "analytic_account_id": order_type.analytic_account_id
+                })
+            if vals:
+                order.update(vals)
+            # Order line values
+            line_vals = {}
+            line_vals.update({"route_id": order_type.route_id.id})
+            order.order_line.update(line_vals)
 
     @api.model
     def create(self, vals):
-        """We trigger onchanges on create to ensure the type mechanics is
-           applied even if the creation of the order isn't invoked from ui
-           as is the case for website orders. We also ensure this way that
-           a contact will be getting his commercial partner type if no
-           type is set on his record"""
-        fields_from_sale_type = [
-            'type_id', 'warehouse_id', 'picking_policy',
-            'payment_term_id', 'incoterm', 'pricelist_id',
-        ]
-        if not vals.get('type_id'):
-            sale = self.new(vals)
-            sale.onchange_partner_id()
-            sale.onchange_type_id()
-            for field in fields_from_sale_type:
-                vals[field] = sale._fields[field].convert_to_write(
-                    sale[field], sale,
-                )
         if vals.get('name', '/') == '/' and vals.get('type_id'):
             sale_type = self.env['sale.order.type'].browse(vals['type_id'])
             if sale_type.sequence_id:
                 vals['name'] = sale_type.sequence_id.next_by_id()
-        return super().create(vals)
+        return super(SaleOrder, self).create(vals)
+
+    @api.multi
+    def write(self, vals):
+        """A sale type could have a different order sequence, so we could
+        need to change it accordingly"""
+        if vals.get("type_id"):
+            sale_type = self.env["sale.order.type"].browse(vals["type_id"])
+            if sale_type.sequence_id:
+                for record in self:
+                    if (
+                        record.state in {"draft", "sent"}
+                        and record.type_id.sequence_id != sale_type.sequence_id
+                    ):
+                        new_vals = vals.copy()
+                        new_vals["name"] = sale_type.sequence_id.next_by_id()
+                        super(SaleOrder, record).write(new_vals)
+                    else:
+                        super(SaleOrder, record).write(vals)
+                return True
+        return super().write(vals)
 
     @api.multi
     def _prepare_invoice(self):

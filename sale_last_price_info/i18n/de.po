@@ -18,19 +18,24 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #. module: sale_last_price_info
-#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product_last_customer_id
+#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product__last_customer_id
 msgid "Last Customer"
 msgstr "Letzter Kunde"
 
 #. module: sale_last_price_info
-#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product_last_sale_date
+#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product__last_sale_date
 msgid "Last Sale Date"
 msgstr "Datum des letzten Verkaufs"
 
 #. module: sale_last_price_info
-#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product_last_sale_price
+#: model:ir.model.fields,field_description:sale_last_price_info.field_product_product__last_sale_price
 msgid "Last Sale Price"
 msgstr "Letzter Verkaufspreis"
+
+#. module: sale_last_price_info
+#: model:ir.model.fields,field_description:sale_last_price_info.field_sale_order_line__date_order_sale_last_price_info
+msgid "Order date"
+msgstr "Auftragsdatum"
 
 #. module: sale_last_price_info
 #: model:ir.model,name:sale_last_price_info.model_product_product
@@ -38,6 +43,11 @@ msgid "Product"
 msgstr "Produkt"
 
 #. module: sale_last_price_info
-#: model:ir.ui.view,arch_db:sale_last_price_info.product_last_sale_info_form_view
+#: model_terms:ir.ui.view,arch_db:sale_last_price_info.product_last_sale_info_form_view
 msgid "Sale"
 msgstr "Letzter Verkauf"
+
+#. module: sale_last_price_info
+#: model:ir.model,name:sale_last_price_info.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Auftragsposition"

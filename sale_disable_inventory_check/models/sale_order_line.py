@@ -1,7 +1,8 @@
 # Copyright Komit <http://komit-consulting.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import api, models, _
+from odoo import api, models
+from odoo.tools import config
 
 
 class SaleOrderLine(models.Model):
@@ -9,12 +10,7 @@ class SaleOrderLine(models.Model):
 
     @api.onchange('product_uom_qty', 'product_uom', 'route_id')
     def _onchange_product_id_check_availability(self):
-        res = \
-            super(SaleOrderLine,
-                  self)._onchange_product_id_check_availability()
-        if self.product_id \
-                and not self.product_id.product_tmpl_id._check_stock_on_sale():
-            if res.get('warning', {}).get('title') == _(
-                    'Not enough inventory!'):
-                res.pop('warning')
-        return res
+        if (config['test_enable'] and
+                not self.env.context.get('test_sale_disable_inventory_check')):
+            return super()._onchange_product_id_check_availability()
+        return {}
