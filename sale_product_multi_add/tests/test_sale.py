@@ -4,7 +4,6 @@ import odoo.tests.common as common
 
 
 class TestSale(common.TransactionCase):
-
     def setUp(self):
         super(TestSale, self).setUp()
 
@@ -12,21 +11,21 @@ class TestSale(common.TransactionCase):
         self.product_11 = self.env.ref("product.product_product_11")
 
     def test_import_product(self):
-        """ Create SO
-            Import products
-            Check products are presents
+        """Create SO
+        Import products
+        Check products are presents
         """
 
         so = self.env["sale.order"].create(
-            {"partner_id": self.env.ref("base.res_partner_2").id})
+            {"partner_id": self.env.ref("base.res_partner_2").id}
+        )
 
-        wiz_obj = self.env['sale.import.products']
-        wizard = wiz_obj.with_context(active_id=so.id,
-                                      active_model='sale.order')
+        wiz_obj = self.env["sale.import.products"]
+        wizard = wiz_obj.with_context(active_id=so.id, active_model="sale.order")
 
         products = [(6, 0, [self.product_9.id, self.product_11.id])]
 
-        wizard_id = wizard.create({'products': products})
+        wizard_id = wizard.create({"products": products})
         wizard_id.create_items()
         wizard_id.items[0].quantity = 4
         wizard_id.items[1].quantity = 6

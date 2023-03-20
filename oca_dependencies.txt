@@ -1,9 +1,4 @@
-server-tools
-bank-payment
-account-closing
-product-attribute
-account-invoicing
-server-backend
-stock-logistics-warehouse
+# See https://github.com/OCA/odoo-community.org/blob/master/website/Contribution/CONTRIBUTING.rst#oca_dependencies-txt
 stock-logistics-workflow
-web
+server-ux
+product-attribute

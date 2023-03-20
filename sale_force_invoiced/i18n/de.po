@@ -20,17 +20,18 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #. module: sale_force_invoiced
-#: model:ir.model.fields,field_description:sale_force_invoiced.field_sale_order_force_invoiced
+#: model:ir.model.fields,field_description:sale_force_invoiced.field_sale_order__force_invoiced
 msgid "Force invoiced"
 msgstr "als abgerechnet markieren"
 
 #. module: sale_force_invoiced
 #: model:ir.model,name:sale_force_invoiced.model_sale_order
-msgid "Quotation"
-msgstr "Angebot"
+#, fuzzy
+msgid "Sales Order"
+msgstr "Verkaufsauftrag"
 
 #. module: sale_force_invoiced
-#: model:ir.model.fields,help:sale_force_invoiced.field_sale_order_force_invoiced
+#: model:ir.model.fields,help:sale_force_invoiced.field_sale_order__force_invoiced
 msgid ""
 "When you set this field, the sales order will be considered as fully "
 "invoiced, even when there may be ordered or delivered quantities pending to "
@@ -39,6 +40,3 @@ msgstr ""
 "Wenn der Haken gesetzt ist, wird der Verkaufsauftrag als vollständig "
 "abgerechnet interpretiert, auch wenn es noch abzurechende Mengen geben "
 "sollte."
-
-#~ msgid "Sales Order"
-#~ msgstr "Verkaufsauftrag"

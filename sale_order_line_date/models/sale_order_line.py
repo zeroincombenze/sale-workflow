@@ -1,39 +1,30 @@
 # © 2016 OdooMRP team
 # © 2016 AvanzOSC
 # © 2016 Serv. Tecnol. Avanzados - Pedro M. Baeza
-# © 2016 Eficent Business and IT Consulting Services, S.L.
+# © 2016 ForgeFlow S.L. (https://forgeflow.com)
 # Copyright 2017 Serpent Consulting Services Pvt. Ltd.
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+# Copyright 2018 Camptocamp SA
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
-from odoo import api, fields, models
+from datetime import timedelta
+
+from odoo import fields, models
 
 
 class SaleOrderLine(models.Model):
-    _inherit = 'sale.order.line'
+    _inherit = "sale.order.line"
 
-    requested_date = fields.Datetime()
+    commitment_date = fields.Datetime("Delivery Date")
 
-    @api.multi
-    def write(self, vals):
-        for line in self:
-            if not line.requested_date and line.order_id.requested_date and\
-                    'requested_date' not in vals:
-                vals.update({
-                    'requested_date': line.order_id.requested_date
-                })
-        return super(SaleOrderLine, self).write(vals)
-
-    @api.model
-    def create(self, vals):
-        res = super(SaleOrderLine, self).create(vals)
-        if res.order_id.requested_date and not res.requested_date:
-            res.write({'requested_date': res.order_id.requested_date})
-        return res
-
-    @api.multi
     def _prepare_procurement_values(self, group_id=False):
-        vals = super(SaleOrderLine, self).\
-            _prepare_procurement_values(group_id)
-        if self.requested_date:
-            vals.update({'date_planned': self.requested_date})
+        vals = super(SaleOrderLine, self)._prepare_procurement_values(group_id)
+        # has ensure_one already
+        if self.commitment_date:
+            vals.update(
+                {
+                    "date_planned": self.commitment_date
+                    - timedelta(days=self.order_id.company_id.security_lead),
+                    "date_deadline": self.commitment_date,
+                }
+            )
         return vals

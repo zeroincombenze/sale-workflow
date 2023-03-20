@@ -5,8 +5,12 @@ from odoo import fields, models
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
     commercial_partner_id = fields.Many2one(
-        'res.partner', related='partner_id.commercial_partner_id', store=True,
-        string='Commercial Entity', index=True, readonly=True)
+        comodel_name="res.partner",
+        string="Commercial Entity",
+        related="partner_id.commercial_partner_id",
+        store=True,
+        index=True,
+    )
