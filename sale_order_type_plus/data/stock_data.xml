@@ -1,0 +1,121 @@
+<odoo>
+
+    <record id="transportation_reason_DEP" model="stock.picking.transportation_reason">
+        <field name="name">CONTO DEPOSITO</field>
+    </record>
+
+    <record id="seq_picking_type_consignment_return" model="ir.sequence">
+        <field name="name">On Consignment Return (Rientro C/Deposito)</field>
+        <field name="prefix">WH/CD/RET/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_picking_type_evaluation_return" model="ir.sequence">
+        <field name="name">Evaluation Return (Rientro C/Visione)</field>
+        <field name="prefix">WH/VI/RET/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_picking_type_consignment_out" model="ir.sequence">
+        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="prefix">WH/CD/OUT/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_picking_type_evaluation_out" model="ir.sequence">
+        <field name="name">Evaluation (C/Visione)</field>
+        <field name="prefix">WH/VI/OUT/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="picking_type_consignment_return" model="stock.picking.type">
+        <field name="name">On Consignment Return (Rientro C/Deposito)</field>
+        <field name="sequence_id" ref="seq_picking_type_consignment_return"/>
+        <field name="code">incoming</field>
+        <field name="default_location_src_id" ref="stock_location_consignment"/>
+        <field name="default_location_dest_id" ref="stock.stock_location_stock"/>
+        <field name="use_existing_lots" eval="True"/>
+        <field name="use_create_lots" eval="False"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+    </record>
+
+    <record id="picking_type_evaluation_return" model="stock.picking.type">
+        <field name="name">Evaluation Return (Rientro C/Visione)</field>
+        <field name="sequence_id" ref="seq_picking_type_evaluation_return"/>
+        <field name="code">incoming</field>
+        <field name="default_location_src_id" ref="stock_location_evaluation"/>
+        <field name="default_location_dest_id" ref="stock.stock_location_stock"/>
+        <field name="use_existing_lots" eval="True"/>
+        <field name="use_create_lots" eval="False"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+    </record>
+
+    <record id="picking_type_consignment_out" model="stock.picking.type">
+        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="sequence_id" ref="seq_picking_type_consignment_out"/>
+        <field name="code">outgoing</field>
+        <field name="default_location_src_id" ref="stock.stock_location_stock"/>
+        <field name="default_location_dest_id" ref="stock_location_consignment"/>
+        <field name="return_picking_type_id" ref="picking_type_consignment_return"/>
+        <field name="use_existing_lots" eval="True"/>
+        <field name="use_create_lots" eval="False"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+    </record>
+
+    <record id="picking_type_evaluation_out" model="stock.picking.type">
+        <field name="name">For Evaluation (C/Visione)</field>
+        <field name="sequence_id" ref="seq_picking_type_evaluation_out"/>
+        <field name="code">outgoing</field>
+        <field name="default_location_src_id" ref="stock.stock_location_stock"/>
+        <field name="default_location_dest_id" ref="stock_location_evaluation"/>
+        <field name="return_picking_type_id" ref="picking_type_evaluation_return"/>
+        <field name="use_existing_lots" eval="True"/>
+        <field name="use_create_lots" eval="False"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+    </record>
+
+    <record id="route_sale_consignment" model='stock.location.route'>
+        <field name="name">On Consignment in 1 step (ship)</field>
+        <field name="sequence">20</field>
+        <field name="company_id"></field>
+        <!-- <field name="sale_selectable" eval="True"/> -->
+        <field name="product_selectable" eval="True"/>
+        <field name="warehouse_selectable" eval="True"/>
+        <field name="product_categ_selectable" eval="True"/>
+    </record>
+
+    <record id="route_sale_evaluation" model='stock.location.route'>
+        <field name="name">For Evaluation in 1 step (ship)</field>
+        <field name="sequence">20</field>
+        <field name="company_id"></field>
+        <!-- <field name="sale_selectable" eval="True"/> -->
+        <field name="product_selectable" eval="True"/>
+        <field name="warehouse_selectable" eval="True"/>
+        <field name="product_categ_selectable" eval="True"/>
+    </record>
+
+    <record id="procurement_consignment" model="stock.rule">
+        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="action">pull</field>
+        <field name="location_id" ref="stock_location_consignment"/>
+        <field name="location_src_id" ref="stock.stock_location_stock"/>
+        <field name="procure_method">make_to_stock</field>
+        <field name="route_id" ref="route_sale_consignment"/>
+        <field name="picking_type_id" ref="picking_type_consignment_out"/>
+    </record>
+
+    <record id="procurement_evaluation" model="stock.rule">
+        <field name="name">For Evaluaton (C/Visione)</field>
+        <field name="action">pull</field>
+        <field name="location_id" ref="stock_location_evaluation"/>
+        <field name="location_src_id" ref="stock.stock_location_stock"/>
+        <field name="procure_method">make_to_stock</field>
+        <field name="route_id" ref="route_sale_evaluation"/>
+        <field name="picking_type_id" ref="picking_type_evaluation_out"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,19 @@
+<odoo>
+
+    <record id="consignment_sale_type" model="sale.order.type">
+        <field name="name">On Consignment Order (C/Deposito)</field>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="sequence_id" ref="sale.seq_sale_order"/>
+        <field name="location_dest_id" ref="stock_location_consignment"/>
+        <field name="transportation_reason_id" ref="transportation_reason_DEP"/>
+    </record>
+
+    <record id="evaluation_sale_type" model="sale.order.type">
+        <field name="name">For Evaluation Order (C/Visione)</field>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="sequence_id" ref="sale.seq_sale_order"/>
+        <field name="location_dest_id" ref="stock_location_evaluation"/>
+        <field name="transportation_reason_id" ref="l10n_it_ddt.transportation_reason_VIS"/>
+    </record>
+
+</odoo>
