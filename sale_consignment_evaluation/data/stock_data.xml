@@ -3,6 +3,10 @@
     <record id="transportation_reason_DEP" model="stock.picking.transportation_reason">
         <field name="name">CONTO DEPOSITO</field>
     </record>
+    <record id="transportation_reason_VISF" model="stock.picking.transportation_reason">
+        <field name="name">CONTO VENDITA DA C/VISIONE</field>
+        <field name="to_be_invoiced" eval="True"/>
+    </record>
 
     <record id="seq_picking_type_consignment_return" model="ir.sequence">
         <field name="name">On Consignment Return (Rientro C/Deposito)</field>
@@ -37,10 +41,11 @@
         <field name="sequence_id" ref="seq_picking_type_consignment_return"/>
         <field name="code">incoming</field>
         <field name="default_location_src_id" ref="stock_location_consignment"/>
-        <field name="default_location_dest_id" ref="stock.stock_location_stock"/>
+        <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
         <field name="use_existing_lots" eval="True"/>
         <field name="use_create_lots" eval="False"/>
         <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="owner_mode">anonimize</field>
     </record>
 
     <record id="picking_type_evaluation_return" model="stock.picking.type">
@@ -52,6 +57,7 @@
         <field name="use_existing_lots" eval="True"/>
         <field name="use_create_lots" eval="False"/>
         <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="owner_mode">anonimize</field>
     </record>
 
     <record id="picking_type_consignment_out" model="stock.picking.type">
@@ -64,6 +70,7 @@
         <field name="use_existing_lots" eval="True"/>
         <field name="use_create_lots" eval="False"/>
         <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="owner_mode">assign</field>
     </record>
 
     <record id="picking_type_evaluation_out" model="stock.picking.type">
@@ -76,6 +83,7 @@
         <field name="use_existing_lots" eval="True"/>
         <field name="use_create_lots" eval="False"/>
         <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="owner_mode">assign</field>
     </record>
 
     <record id="route_sale_consignment" model='stock.location.route'>

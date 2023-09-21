@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo (12.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 16:04+0000\n"
-"PO-Revision-Date: 2023-09-18 16:04+0000\n"
+"POT-Creation-Date: 2023-09-21 05:54+0000\n"
+"PO-Revision-Date: 2023-09-21 05:54+0000\n"
 "Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
 "Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
 "Language: it_IT\n"
@@ -20,6 +20,21 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__location_dest_id
 msgid "Destination Location"
 msgstr "Ubicazione di destinazione"
+
+#. module: sale_order_type_plus
+#: model:ir.model,name:sale_order_type_plus.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Riga ordine di vendita"
+
+#. module: sale_order_type_plus
+#: model:ir.model,name:sale_order_type_plus.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferimento"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__transportation_reason_id
+msgid "Transportation Reason"
+msgstr ""
 
 #. module: sale_order_type_plus
 #: model:ir.model,name:sale_order_type_plus.model_sale_order_type

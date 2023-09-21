@@ -15,10 +15,10 @@ def set_product_routes(cr):
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
         tmpl_model = env["product.template"]
-        route = env.ref("sale_order_type_plus.route_sale_evaluation")
+        route = env.ref("sale_consignment_evaluation.route_sale_evaluation")
         tmpl_model.search([]).write(
             {"route_ids": [(4, route.id)]})
-        route = env.ref("sale_order_type_plus.route_sale_consignment")
+        route = env.ref("sale_consignment_evaluation.route_sale_consignment")
         tmpl_model.search([]).write(
             {"route_ids": [(4, route.id)]})
         _logger.info("Products routes set.")

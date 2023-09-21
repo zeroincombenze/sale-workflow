@@ -1,14 +1,14 @@
 <odoo>
 
     <record id="stock_location_consignment" model="stock.location">
-        <field name="name">On Consignment</field>
+        <field name="name">On Consignment (C/Dep.)</field>
         <field name="location_id" ref="stock.stock_location_locations_partner"/>
         <field name="usage">customer</field>
         <field name="company_id"></field>
     </record>
 
     <record id="stock_location_evaluation" model="stock.location">
-        <field name="name">For Evaluation</field>
+        <field name="name">For Evaluation (C/Vis.)</field>
         <field name="location_id" ref="stock.stock_location_locations_partner"/>
         <field name="usage">customer</field>
         <field name="company_id"></field>

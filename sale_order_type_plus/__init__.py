@@ -1,3 +1,2 @@
+from ._check4deps_ import check_4_depending
 from . import models
-
-from .post_install import set_product_routes_post, set_product_routes

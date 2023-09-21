@@ -8,6 +8,3 @@ class SaleOrderType(models.Model):
         comodel_name="stock.location",
         domain=[("usage", "=", 'customer')],
         string="Destination Location")
-    transportation_reason_id = fields.Many2one(
-        comodel_name="stock.picking.transportation_reason",
-        string="Transportation Reason")

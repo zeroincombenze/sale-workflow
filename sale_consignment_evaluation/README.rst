@@ -1,11 +1,11 @@
 
-=============================================
-|icon| Sale Order Type Improvement 12.0.0.1.0
-=============================================
+========================================================
+|icon| Sale On Consignment and For Evaluation 12.0.0.1.0
+========================================================
 
-**Sale Order Base Stock Management**
+**On Consignment and For Evaluation Sale management flow**
 
-.. |icon| image:: https://raw.githubusercontent.com/zeroincombenze/sale-workflow/12.0/sale_order_type_plus/static/description/icon.png
+.. |icon| image:: https://raw.githubusercontent.com/zeroincombenze/sale-workflow/12.0/sale_consignment_evaluation/static/description/icon.png
 
 
 .. contents::
@@ -75,7 +75,7 @@ From UI: go to:
 
 * |menu| Setting > Activate Developer mode
 * |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Install
+* |menu| Setting > Apps |right_do| Select **sale_consignment_evaluation** > Install
 
 
 |
@@ -108,7 +108,7 @@ From UI: go to:
 
 * |menu| Setting > Activate Developer mode
 * |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Update
+* |menu| Setting > Apps |right_do| Select **sale_consignment_evaluation** > Update
 
 
 |
@@ -149,7 +149,7 @@ ChangeLog History / Cronologia modifiche
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 30% (61: 43+18) [0 TestPoints] - quality rating 0/100
+* [QUA] Test coverage 68% (40: 13+27) [0 TestPoints] - quality rating 1/100
 
 
 |
