@@ -6,13 +6,10 @@
         <field name="model">sale.order.type</field>
         <field name="inherit_id" ref="sale_order_type.sot_sale_order_type_form_view"/>
         <field name="arch" type="xml">
-            <form>
-                <xpath expr="/sheet//group[last()]" position="before">
-                    <group>
-                        <field name="location_dest_id"/>
-                    </group>
-                </xpath>
-            </form>
+            <xpath  expr="//group/group[last()]" position="inside">
+                <field name="location_dest_id"/>
+                <field name="owner_mode"/>
+            </xpath>
         </field>
     </record>
 

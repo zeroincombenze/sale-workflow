@@ -8,25 +8,52 @@
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
             </p>
-            <p class="oe_mt16" align="justify">Type order improvements</p>
+            <p class="oe_mt16" align="justify"><h2>Sale Order Base Stock Management / Evoluzione tipo ordine</h2>
+<p align="justify">
+This module adds some features to Order type:
+</p><p align="justify">
+<ul>
+<li>Destination location based on order type</li>
+<li>Automatic owner assign or deassingn on picking confirmation</li>
+</ul>
+</p></p>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
             </p>
-            <p class="oe_mt16" align="justify">Evoluzione tipo ordine</p>
+            <p class="oe_mt16" align="justify"><h2>Sale Order Base Stock Management / Evoluzione tipo ordine</h2>
+<p align="justify">
+Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
+</p><p align="justify">
+<ul>
+<li>Ubicazione di destinazione basata su tipo ordine</li>
+<li>Assegnazione o deassegnazione automatica del proprietario dello stock</li>
+</ul>
+</p></p>
         </div>
     </div>
     <div class="oe_row oe_spaced">
         <h3 class="oe_slogan" style="color:#162832;">ChangeLog History / Cronologia modifiche</h3>
         <div class="oe_span12">
-<h3>12.0.0.1.0 (2023-09-21)</h3>
+<h3>12.0.0.1.0 (2023-09-26)</h3>
 <p align="justify">
 <ul>
 <li>[IMP] First version</li>
-<li>[QUA] Test coverage 30% (61: 43+18) [0 TestPoints] - quality rating 0/100</li>
+<li>[QUA] Test coverage 32% (69: 47+22) [0 TestPoints] - quality rating 0/100</li>
 </ul>
 </p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan" style="color:#162832;">Known issues / Problemi conosciuti</h3>
+        <div class="oe_span12">
+This module replaces the standard Odoo function sale.order._action_launch_stock_rule()
+of the module sale_stock. The function, now can use the destination location different
+from the partner destination location.
+In this way is very simple to manage sale order on consignment or for evaluation or
+for tolling agreement or for subcontracting.
+For this reason, this module depends on specific 12.0.1.0 version of sale_stock module.
         </div>
     </div>
 </section>
@@ -38,11 +65,11 @@
         <div class="oe_span6" align="left">
             <p class="oe_mt16">Authors / Autori:</p>
             <p class="oe_mt16"><ul>
-<li>SHS-AV s.r.l. &lt;https://www.zeroincombenze.it&gt;</li>
+<li><a href="https://www.zeroincombenze.it/">SHS-AV s.r.l.</a></li>
 </ul></p>
         </div>
         <div class="oe_span6" align="left">
-            <p class="oe_mt16">Contributors / Collaboratori:</p>
+            <p class="oe_mt16">Contributors / Contributi da:</p>
             <p class="oe_mt16"><ul>
 <li>Antonio Maria Vigliotti &lt;antoniomaria.vigliotti@gmail.com&gt;</li>
 </ul></p>
@@ -54,6 +81,6 @@
         </div>
     </div>
     <div class="oe_row oe_spaced">
-        <p>This module is part of sale-workflow project.</p>
+        <p>This module is part of <a href="https://github.com/zeroincombenze/sale-workflow">sale-workflow</a> project.</p>
     </div>
 </section>

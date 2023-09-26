@@ -29,10 +29,22 @@ TEST_SALE_ORDER = {
     },
 }
 
+TEST_SALE_ORDER_LINE = {
+    "z0bug.sale_order_1_1": {
+        "sequence": 1,
+        "product_id": "product.product_product_1",
+        "order_id": "z0bug.sale_order_1",
+        "price_unit": 30.75,
+        "product_uom_qty": 10,
+        "name": "Virtual Interior Design",
+    },
+}
+
 TEST_SETUP_LIST = [
     "stock.location",
     "sale.order.type",
     "sale.order",
+    "sale.order.line",
 ]
 
 
@@ -40,14 +52,13 @@ class TestOrder(SingleTransactionCase):
 
     def setUp(self):
         super().setUp()
-        # Add following statement just for get debug information
         self.debug_level = 2
         data = {"TEST_SETUP_LIST": TEST_SETUP_LIST}
         for resource in TEST_SETUP_LIST:
             item = "TEST_%s" % resource.upper().replace(".", "_")
             data[item] = globals()[item]
-        self.declare_all_data(data)  # TestEnv swallows the data
-        self.setup_env()  # Create test environment
+        self.declare_all_data(data)
+        self.setup_env()
 
     def tearDown(self):
         super().tearDown()
@@ -60,3 +71,11 @@ class TestOrder(SingleTransactionCase):
         _logger.info(
             "🎺 Testing test_mytest"  # Use unicode char to best log reading
         )
+        for xref in TEST_SALE_ORDER:
+            order = self.resource_browse(xref)
+            order.action_confirm()
+            for picking in order.picking_ids:
+                if picking.state == "confirmed":
+                    picking.action_assign()
+                    self.assertEqual("z0bug.test_customer_location",
+                                     picking.location_dest_id)

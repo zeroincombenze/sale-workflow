@@ -16,10 +16,23 @@ Overview / Panoramica
 =====================
 
 |en| Type order improvements
+----------------------------
+
+This module adds some features to Order type:
+
+* Destination location based on order type
+* Automatic owner assign or deassingn on picking confirmation
+
 
 |
 
 |it| Evoluzione tipo ordine
+---------------------------
+
+Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
+
+* Ubicazione di destinazione basata su tipo ordine
+* Assegnazione o deassegnazione automatica del proprietario dello stock
 
 
 |
@@ -132,6 +145,19 @@ and/or submit pull requests on `GitHub Issues
 
 In case of trouble, please check there if your issue has already been reported.
 
+|
+
+Known issues / Roadmap
+----------------------
+
+This module replaces the standard Odoo function sale.order._action_launch_stock_rule()
+of the module sale_stock. The function, now can use the destination location different
+from the partner destination location.
+In this way is very simple to manage sale order on consignment or for evaluation or
+for tolling agreement or for subcontracting.
+For this reason, this module depends on specific 12.0.1.0 version of sale_stock module.
+
+
 Proposals for enhancement
 -------------------------
 
@@ -145,11 +171,11 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 ChangeLog History / Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-09-21)
+12.0.0.1.0 (2023-09-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 30% (61: 43+18) [0 TestPoints] - quality rating 0/100
+* [QUA] Test coverage 32% (69: 47+22) [0 TestPoints] - quality rating 0/100
 
 
 |
@@ -200,7 +226,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-09-21
+Last Update / Ultimo aggiornamento: 2023-09-26
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
