@@ -52,7 +52,7 @@ class TestOrder(SingleTransactionCase):
 
     def setUp(self):
         super().setUp()
-        self.debug_level = 2
+        self.debug_level = 0
         data = {"TEST_SETUP_LIST": TEST_SETUP_LIST}
         for resource in TEST_SETUP_LIST:
             item = "TEST_%s" % resource.upper().replace(".", "_")
@@ -79,3 +79,4 @@ class TestOrder(SingleTransactionCase):
                     picking.action_assign()
                     self.assertEqual("z0bug.test_customer_location",
                                      picking.location_dest_id)
+

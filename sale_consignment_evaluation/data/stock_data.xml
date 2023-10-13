@@ -9,35 +9,35 @@
     </record>
 
     <record id="seq_picking_type_consignment_return" model="ir.sequence">
-        <field name="name">On Consignment Return (Rientro C/Deposito)</field>
+        <field name="name">On Consignment Return</field>
         <field name="prefix">WH/CD/RET/</field>
         <field name="padding">5</field>
         <field name="company_id" eval="False"/>
     </record>
 
     <record id="seq_picking_type_evaluation_return" model="ir.sequence">
-        <field name="name">Evaluation Return (Rientro C/Visione)</field>
+        <field name="name">Evaluation Return</field>
         <field name="prefix">WH/VI/RET/</field>
         <field name="padding">5</field>
         <field name="company_id" eval="False"/>
     </record>
 
     <record id="seq_picking_type_consignment_out" model="ir.sequence">
-        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="name">On Consignment</field>
         <field name="prefix">WH/CD/OUT/</field>
         <field name="padding">5</field>
         <field name="company_id" eval="False"/>
     </record>
 
     <record id="seq_picking_type_evaluation_out" model="ir.sequence">
-        <field name="name">Evaluation (C/Visione)</field>
+        <field name="name">For Evaluation</field>
         <field name="prefix">WH/VI/OUT/</field>
         <field name="padding">5</field>
         <field name="company_id" eval="False"/>
     </record>
 
     <record id="picking_type_consignment_return" model="stock.picking.type">
-        <field name="name">On Consignment Return (Rientro C/Deposito)</field>
+        <field name="name">On Consignment Return</field>
         <field name="sequence_id" ref="seq_picking_type_consignment_return"/>
         <field name="code">incoming</field>
         <field name="default_location_src_id" ref="stock_location_consignment"/>
@@ -49,7 +49,7 @@
     </record>
 
     <record id="picking_type_evaluation_return" model="stock.picking.type">
-        <field name="name">Evaluation Return (Rientro C/Visione)</field>
+        <field name="name">Evaluation Return</field>
         <field name="sequence_id" ref="seq_picking_type_evaluation_return"/>
         <field name="code">incoming</field>
         <field name="default_location_src_id" ref="stock_location_evaluation"/>
@@ -61,7 +61,7 @@
     </record>
 
     <record id="picking_type_consignment_out" model="stock.picking.type">
-        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="name">On Consignment</field>
         <field name="sequence_id" ref="seq_picking_type_consignment_out"/>
         <field name="code">outgoing</field>
         <field name="default_location_src_id" ref="stock.stock_location_stock"/>
@@ -74,7 +74,7 @@
     </record>
 
     <record id="picking_type_evaluation_out" model="stock.picking.type">
-        <field name="name">For Evaluation (C/Visione)</field>
+        <field name="name">For Evaluation</field>
         <field name="sequence_id" ref="seq_picking_type_evaluation_out"/>
         <field name="code">outgoing</field>
         <field name="default_location_src_id" ref="stock.stock_location_stock"/>
@@ -107,7 +107,7 @@
     </record>
 
     <record id="procurement_consignment" model="stock.rule">
-        <field name="name">On Consignment (C/Deposito)</field>
+        <field name="name">On Consignment</field>
         <field name="action">pull</field>
         <field name="location_id" ref="stock_location_consignment"/>
         <field name="location_src_id" ref="stock.stock_location_stock"/>
@@ -117,7 +117,7 @@
     </record>
 
     <record id="procurement_evaluation" model="stock.rule">
-        <field name="name">For Evaluaton (C/Visione)</field>
+        <field name="name">For Evaluation</field>
         <field name="action">pull</field>
         <field name="location_id" ref="stock_location_evaluation"/>
         <field name="location_src_id" ref="stock.stock_location_stock"/>

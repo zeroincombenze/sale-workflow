@@ -149,7 +149,7 @@ ChangeLog History / Cronologia modifiche
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 68% (40: 13+27) [0 TestPoints] - quality rating 1/100
+* [QUA] Test coverage 71% (41: 12+29) [0 TestPoints] - quality rating 1/100
 
 
 |
@@ -200,7 +200,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-09-21
+Last Update / Ultimo aggiornamento: 2023-10-12
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

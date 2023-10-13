@@ -7,7 +7,7 @@ class StockPickingType(models.Model):
     owner_mode = fields.Selection(
         selection=[
             ("assign", _("Assign")),
-            ("anonimize", _("Anonimize")),
+            ("anonimize", _("Anonymize")),
         ],
         string="Stock Owner Mode",
     )

@@ -171,7 +171,7 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 ChangeLog History / Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-09-26)
+12.0.0.1.0 (2023-10-12)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
@@ -226,7 +226,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-09-26
+Last Update / Ultimo aggiornamento: 2023-10-12
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
