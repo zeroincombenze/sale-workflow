@@ -41,6 +41,20 @@ Overview / Panoramica
 Overview / Panoramica
 =====================
 
+|en| ==========================================
+|icon| Sale Order Lot Selection 12.0.2.0.2
+==========================================
+
+.. |icon| image:: https://raw.githubusercontent.com/zeroincombenze/sale-workflow/12.0/sale_order_lot_selection/static/description/icon.png
+
+
+.. contents::
+
+
+
+Overview / Panoramica
+=====================
+
 |en| .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
@@ -51,6 +65,13 @@ Sale Order Lot Selection
 
 This Module Allows you to select on sale order the production lot that will be delivered
 You can select a lot for every sale order line, and it will be proposed on the delivery
+
+
+|
+
+|it| N/D
+
+|
 
 
 |
@@ -256,7 +277,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-12
+Last Update / Ultimo aggiornamento: 2023-10-13
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

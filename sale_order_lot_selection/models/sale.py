@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, _
 
 
 class SaleOrderLine(models.Model):
@@ -29,3 +29,22 @@ class SaleOrderLine(models.Model):
         return {
             'domain': {'lot_id': [('id', 'in', available_lot_ids)]}
         }
+
+
+class SaleOrder(models.Model):
+    _inherit = "sale.order"
+
+    @api.multi
+    def action_confirm(self):
+        res = super(SaleOrder, self).action_confirm()
+        lots = []
+        for line in self.order_line:
+            if line.lot_id:
+                lots.append(line.lot_id.id)
+        if lots:
+            lines = self.env["stock.move.line"].search(
+                [("lot_id", "in", list(set(lots)))])
+            for picking in self.picking_ids:
+                if picking.state == "confirmed":
+                    picking.move_line_ids = [(6, 0, [x.id for x in lines])]
+        return res
