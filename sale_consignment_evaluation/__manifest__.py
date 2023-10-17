@@ -1,8 +1,8 @@
 {
-    "name": "Sale On Consignment and For Evaluation",
+    "name": "On Consignment and For Evaluation workflow",
     "version": "12.0.0.1.0",
     "category": "Sale Management",
-    "summary": "On Consignment and For Evaluation Sale management flow",
+    "summary": "On Consignment and For Evaluation Sale management",
     "author": "SHS-AV s.r.l.",
     "website": "https://www.zeroincombenze.it/crm",
     "development_status": "Alpha",

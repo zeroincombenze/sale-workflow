@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from odoo import api, fields, models
 
 
 class SaleOrderLine(models.Model):
@@ -37,14 +37,39 @@ class SaleOrder(models.Model):
     @api.multi
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
-        lots = []
-        for line in self.order_line:
-            if line.lot_id:
-                lots.append(line.lot_id.id)
-        if lots:
-            lines = self.env["stock.move.line"].search(
-                [("lot_id", "in", list(set(lots)))])
-            for picking in self.picking_ids:
-                if picking.state == "confirmed":
-                    picking.move_line_ids = [(6, 0, [x.id for x in lines])]
+        # we use this because compatibility with sale exception module
+        if isinstance(res, bool) and res:
+            for order in self:
+                if (
+                        not hasattr(order, "type_id")
+                        or order.type_id.auto_validate_picking != "lot_filled"
+                ):
+                    continue
+                auto_assign = True
+                for line in order.order_line:
+                    if line.product_id.tracking in ("lot",
+                                                    "serial") and not line.lot_id:
+                        auto_assign = False
+                        break
+                if not auto_assign:
+                    continue
+
+                pickings = [p for p in order.picking_ids if p.state == "confirmed"]
+                if len(pickings) != 1:
+                    continue
+
+                lots = {}
+                for line in order.order_line:
+                    if line.lot_id:
+                        lots[line.lot_id] = line
+                auto_validate = True
+                for move in pickings[0].move_ids_without_package:
+                    for line in move.move_line_ids:
+                        if line.lot_id in lots:
+                            line.qty_done = min(lots[line.lot_id].product_uom_qty,
+                                                line.lot_id.product_qty)
+                        else:
+                            auto_validate = False
+                if auto_validate:
+                    pickings[0].button_validate()
         return res

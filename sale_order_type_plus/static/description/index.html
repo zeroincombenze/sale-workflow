@@ -1,20 +1,27 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <div class="oe_span12">
-            <h2 class="oe_slogan" style="color:#162832;">Sale Order Base Stock Management / Evoluzione tipo ordine</h2>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
+            </p>
+            <h2 class="oe_slogan" style="color:#162832;">Sale Order Base Stock Management</h2>
+        </div>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
+            </p>
+            <h2 class="oe_slogan" style="color:#162832;">Gestione evoluta dei tipi di ordine</h2>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
             </p>
-            <p class="oe_mt16" align="justify"><h2>Sale Order Base Stock Management / Evoluzione tipo ordine</h2>
+            <p class="oe_mt16" align="justify">This module adds some features to Order type:
 <p align="justify">
-This module adds some features to Order type:
-</p><p align="justify">
 <ul>
 <li>Destination location based on order type</li>
-<li>Automatic owner assign or deassingn on picking confirmation</li>
+<li>Automatic owner assign or deassign on picking confirmation</li>
 </ul>
 </p></p>
         </div>
@@ -22,10 +29,8 @@ This module adds some features to Order type:
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
             </p>
-            <p class="oe_mt16" align="justify"><h2>Sale Order Base Stock Management / Evoluzione tipo ordine</h2>
+            <p class="oe_mt16" align="justify">Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
 <p align="justify">
-Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
-</p><p align="justify">
 <ul>
 <li>Ubicazione di destinazione basata su tipo ordine</li>
 <li>Assegnazione o deassegnazione automatica del proprietario dello stock</li>
@@ -34,26 +39,48 @@ Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
         </div>
     </div>
     <div class="oe_row oe_spaced">
-        <h3 class="oe_slogan" style="color:#162832;">ChangeLog History / Cronologia modifiche</h3>
+        <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Usage / Utilizzo</h3>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
+            </p>
+            <p class="oe_mt16" align="justify">Go to: Sales &gt; Sales Orders, and create a new sale order.
+Select the new type you have created before and all settings will be propagated.</p>
+        </div>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
+            </p>
+            <p class="oe_mt16" align="justify">Dal men&#249;: Vendite &gt; Ordine di vendita, creare un nuovo ordine.
+Selezionare il tipo di ordine desiderato e i dati configurati sarano impostati.</p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced">
+        <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">ChangeLog History / Cronologia modifiche</h3>
         <div class="oe_span12">
-<h3>12.0.0.1.0 (2023-10-12)</h3>
+<h3>12.0.0.1.0 (2023-10-17)</h3>
 <p align="justify">
 <ul>
 <li>[IMP] First version</li>
-<li>[QUA] Test coverage 32% (69: 47+22) [0 TestPoints] - quality rating 0/100</li>
+<li>[QUA] Test coverage 39% (85: 52+33) [0 TestPoints] - quality rating 0/100</li>
 </ul>
 </p>
         </div>
     </div>
     <div class="oe_row oe_spaced">
-        <h3 class="oe_slogan" style="color:#162832;">Known issues / Problemi conosciuti</h3>
+        <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Known issues / Problemi conosciuti</h3>
         <div class="oe_span12">
 This module replaces the standard Odoo function sale.order._action_launch_stock_rule()
 of the module sale_stock. The function, now can use the destination location different
 from the partner destination location.
 In this way is very simple to manage sale order on consignment or for evaluation or
 for tolling agreement or for subcontracting.
-For this reason, this module depends on specific 12.0.1.0 version of sale_stock module.
+For this reason, this module depends on specific 12.0.1.0 version of <i>sale_stock module</i>
+<p align="justify">
+This module may conflict with <i>sale_order_automatic_workflow</i> because overlaps some
+features of that module. Please choice this module or else
+*sale_order_automatic_workflow* but not both.
+</p>
         </div>
     </div>
 </section>

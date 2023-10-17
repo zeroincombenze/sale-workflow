@@ -1,7 +1,7 @@
 
-=============================================
-|icon| Sale Order Type Improvement 12.0.0.1.0
-=============================================
+=================================================================
+|icon| Sale Order Type Improvement/Tipo ordine evoluto 12.0.0.1.0
+=================================================================
 
 **Sale Order Base Stock Management**
 
@@ -15,24 +15,28 @@
 Overview / Panoramica
 =====================
 
-|en| Type order improvements
-----------------------------
-
-This module adds some features to Order type:
+|en| This module adds some features to Order type:
 
 * Destination location based on order type
-* Automatic owner assign or deassingn on picking confirmation
+* Automatic owner assign or deassign on picking confirmation
 
 
 |
 
-|it| Evoluzione tipo ordine
----------------------------
-
+|it| 
 Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
 
 * Ubicazione di destinazione basata su tipo ordine
 * Assegnazione o deassegnazione automatica del proprietario dello stock
+
+
+|
+
+Usage / Utilizzo
+----------------
+
+Go to: Sales > Sales Orders, and create a new sale order.
+Select the new type you have created before and all settings will be propagated.
 
 
 |
@@ -58,11 +62,11 @@ Installation / Installazione
 |                                 |                                          |
 | Installation is built with:     | L'installazione è costruita con:         |
 +---------------------------------+------------------------------------------+
-| `Zeroincombenze Tools <https://zeroincombenze-tools.readthedocs.io/>`__    |
+| `Zeroincombenze Tools <https://zeroincombenze-tools.readthedocs.io/>`__ |
 +---------------------------------+------------------------------------------+
 | Suggested deployment is:        | Posizione suggerita per l'installazione: |
 +---------------------------------+------------------------------------------+
-| $HOME/12.0                                                                 |
+| $HOME/12.0 |
 +----------------------------------------------------------------------------+
 
 ::
@@ -89,6 +93,20 @@ From UI: go to:
 * |menu| Setting > Activate Developer mode
 * |menu| Apps > Update Apps List
 * |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Install
+
+
+|
+
+Configuration / Configurazione
+------------------------------
+
+To configure Sale Order Types you need to:
+
+Go to: Sales > Configuration > Sales Orders Types
+Create a new sale order type with all the settings you want
+
+The field 'Picking Auto Confirmation' appear just if module *sale_order_lot_selection*
+is installed.
 
 
 |
@@ -155,7 +173,11 @@ of the module sale_stock. The function, now can use the destination location dif
 from the partner destination location.
 In this way is very simple to manage sale order on consignment or for evaluation or
 for tolling agreement or for subcontracting.
-For this reason, this module depends on specific 12.0.1.0 version of sale_stock module.
+For this reason, this module depends on specific 12.0.1.0 version of *sale_stock module*
+
+This module may conflict with *sale_order_automatic_workflow* because overlaps some
+features of that module. Please choice this module or else
+*sale_order_automatic_workflow* but not both.
 
 
 Proposals for enhancement
@@ -171,11 +193,11 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 ChangeLog History / Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-10-12)
+12.0.0.1.0 (2023-10-17)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 32% (69: 47+22) [0 TestPoints] - quality rating 0/100
+* [QUA] Test coverage 39% (85: 52+33) [0 TestPoints] - quality rating 0/100
 
 
 |
@@ -226,7 +248,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-12
+Last Update / Ultimo aggiornamento: 2023-10-17
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

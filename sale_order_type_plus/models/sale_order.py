@@ -6,6 +6,28 @@ from odoo.exceptions import UserError
 from odoo.tools import float_compare
 
 
+class SaleOrder(models.Model):
+    _inherit = "sale.order"
+
+    @api.multi
+    def action_confirm(self):
+        res = super(SaleOrder, self).action_confirm()
+        # we use this because compatibility with sale exception module
+        if isinstance(res, bool) and res:
+            for order in self:
+                if (
+                        not hasattr(order, "type_id")
+                        or order.type_id.auto_validate_picking != "validate"
+                ):
+                    continue
+
+                pickings = [p for p in order.picking_ids if p.state == "confirmed"]
+                if len(pickings) != 1:
+                    continue
+                pickings[0].button_validate()
+        return res
+
+
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 

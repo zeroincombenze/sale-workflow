@@ -1,9 +1,9 @@
 
-========================================================
-|icon| Sale On Consignment and For Evaluation 12.0.0.1.0
-========================================================
+===========================================================================================
+|icon| On Consignment and For Evaluation workflow/Flussi di c/lavoro e c/visione 12.0.0.1.0
+===========================================================================================
 
-**On Consignment and For Evaluation Sale management flow**
+**On Consignment and For Evaluation Sale management**
 
 .. |icon| image:: https://raw.githubusercontent.com/zeroincombenze/sale-workflow/12.0/sale_consignment_evaluation/static/description/icon.png
 
@@ -15,11 +15,44 @@
 Overview / Panoramica
 =====================
 
-|en| Type order improvements
+|en| This module manages On Consignment workflow and For Evaluation workflow.
+It is based on *sale_order_type_plus* module in order to create specific Sale Order and
+Return Merchandise Authorization (RMA) for returned goods.
+
+This module manages the transfers thru 2 locations, 'on consignment' and
+'for evaluation'. User can always see all product delivered on consignment o for
+evaluation and knows who holds goods.
 
 |
 
-|it| Evoluzione tipo ordine
+|it| Questo modulo gestisce i flussi di conto deposito e conto visione.
+Il modulo è basato sul modulo *sale_order_type_plus* per creare specifici tipi di
+ordine di vendita e creare le RMA per gestire il rientro merce.
+
+Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/lavoro e
+c/visione. L'utente può quindi sempre visionare i prodotti consegnati in conto visione o
+conto deposito e conoscere a presso quale cliente è giacente la merce.
+
+|
+
+Usage / Utilizzo
+----------------
+
+Go to: Sales > Sales Orders, and create a new sale order.
+Select the one of 'On Consignment' or 'For Evaluation' order type.
+
+After picking confirmation, all products will be transferred in specific location and
+assigned to partner.
+
+In order to see inventory go to: Inventory > Reporting > Inventory Report
+
+and click on button [Retrieve the inventory quantities]. In the list view, the product
+transferred on consignment or for evaluation are displayed with negative sign in
+internal location line. If you filter the external locations, you can see the
+'on consignment' and 'for evaluation' locations. All these product are assigned to a
+partner.
+
+This module can manage lots and serial numbers too.
 
 
 |
@@ -45,11 +78,11 @@ Installation / Installazione
 |                                 |                                          |
 | Installation is built with:     | L'installazione è costruita con:         |
 +---------------------------------+------------------------------------------+
-| `Zeroincombenze Tools <https://zeroincombenze-tools.readthedocs.io/>`__    |
+| `Zeroincombenze Tools <https://zeroincombenze-tools.readthedocs.io/>`__ |
 +---------------------------------+------------------------------------------+
 | Suggested deployment is:        | Posizione suggerita per l'installazione: |
 +---------------------------------+------------------------------------------+
-| $HOME/12.0                                                                 |
+| $HOME/12.0 |
 +----------------------------------------------------------------------------+
 
 ::
@@ -76,6 +109,17 @@ From UI: go to:
 * |menu| Setting > Activate Developer mode
 * |menu| Apps > Update Apps List
 * |menu| Setting > Apps |right_do| Select **sale_consignment_evaluation** > Install
+
+
+|
+
+Configuration / Configurazione
+------------------------------
+
+To configure Sale Order Types you need to:
+
+Go to: Sales > Configuration > Sales Orders Types
+Create a new sale order type with all the settings you want
 
 
 |
@@ -200,7 +244,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-12
+Last Update / Ultimo aggiornamento: 2023-10-17
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
