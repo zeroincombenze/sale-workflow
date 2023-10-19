@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo (12.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 15:53+0000\n"
-"PO-Revision-Date: 2023-10-12 15:53+0000\n"
+"POT-Creation-Date: 2023-10-18 11:42+0000\n"
+"PO-Revision-Date: 2023-10-18 11:42+0000\n"
 "Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
 "Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
 "Language: it\n"
@@ -25,6 +25,11 @@ msgstr "Lotto/i"
 #: model:ir.model,name:sale_order_lot_selection.model_stock_production_lot
 msgid "Lot/Serial"
 msgstr "Lotto/Serie"
+
+#. module: sale_order_lot_selection
+#: model:ir.model,name:sale_order_lot_selection.model_sale_order
+msgid "Sale Order"
+msgstr "Ordine di vendita"
 
 #. module: sale_order_lot_selection
 #: model:ir.model,name:sale_order_lot_selection.model_sale_order_line

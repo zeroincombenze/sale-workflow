@@ -40,10 +40,11 @@ class SaleOrderType(models.Model):
             ("none", _("None")),
             ("validate", _("Validate")),
             ('lot_filled', _('Only with lots/serial numbers filled')),
+            ('assign', _('Only assign lots/serial numbers filled')),
         ],
         default="none",
         required=True,
-        help="Pickings are generated automatically upon sale confirmatio:"
+        help="Pickings are confirmed automatically upon sale confirmation:"
         " always, if you set '" + _("Validate") + "' or else just if all order lines"
         " have lot/serial number (this feature requires lot/serial number activation"
         " and supplemental module installed."

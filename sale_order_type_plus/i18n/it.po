@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo (12.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 18:03+0000\n"
-"PO-Revision-Date: 2023-10-12 18:03+0000\n"
+"POT-Creation-Date: 2023-10-18 12:27+0000\n"
+"PO-Revision-Date: 2023-10-18 12:27+0000\n"
 "Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
 "Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
 "Language: it\n"
@@ -15,6 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:28
+#: selection:sale.order.type,validate_picking:0
+#, python-format
+msgid "Always"
+msgstr "Sempre"
 
 #. module: sale_order_type_plus
 #: code:addons/sale_order_type_plus/models/sale_order_type.py:16
@@ -35,6 +42,16 @@ msgid "Assign"
 msgstr "Assegnare"
 
 #. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__auto_validate_picking
+msgid "Auto Validate Picking"
+msgstr "Auto conferma prelievo"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__validate_picking
+msgid "Confirm and Transfer Picking"
+msgstr "Confermare e Transfer Picking"
+
+#. module: sale_order_type_plus
 #: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__location_dest_id
 msgid "Destination Location"
 msgstr "Ubicazione di destinazione"
@@ -45,9 +62,42 @@ msgid "Force the destination location rather than using customer location"
 msgstr "Forza la locazione di destinazione invece di usare quella del cliente"
 
 #. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:40
+#: selection:sale.order.type,auto_validate_picking:0
+#, python-format
+msgid "None"
+msgstr ""
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:43
+#: selection:sale.order.type,auto_validate_picking:0
+#, python-format
+msgid "Only assign lots/serial numbers filled"
+msgstr "Assegnare solo lotti e numeri di serie"
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:27
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:42
+#: selection:sale.order.type,auto_validate_picking:0
+#: selection:sale.order.type,validate_picking:0
+#, python-format
+msgid "Only with lots/serial numbers filled"
+msgstr "Sole se compilati lotti e numeri di serie"
+
+#. module: sale_order_type_plus
 #: model:ir.model,name:sale_order_type_plus.model_stock_picking_type
 msgid "Picking Type"
 msgstr "Tipo di prelievo"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__auto_validate_picking
+msgid "Pickings are generated automatically upon sale confirmatio: always, if you set 'Validate' or else just if all order lines have lot/serial number (this feature requires lot/serial number activation and supplemental module installed."
+msgstr "Pickings are generated automatically upon sale confirmatio: always, if you set 'Validate' o else just if all order lines have lot/serial number (this feature requires lot/serial number activation e  module installati."
+
+#. module: sale_order_type_plus
+#: model:ir.model,name:sale_order_type_plus.model_sale_order
+msgid "Sale Order"
+msgstr "Ordine di vendita"
 
 #. module: sale_order_type_plus
 #: model:ir.model,name:sale_order_type_plus.model_sale_order_line
@@ -71,9 +121,22 @@ msgid "Type of sale order"
 msgstr "Tipo di ordine di vendita"
 
 #. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:41
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:48
+#: selection:sale.order.type,auto_validate_picking:0
+#, python-format
+msgid "Validate"
+msgstr ""
+
+#. module: sale_order_type_plus
 #: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__owner_mode
 #: model:ir.model.fields,help:sale_order_type_plus.field_stock_picking_type__owner_mode
 msgid "When picking is assigned the ownership of stock mey be automatically assigned (if value is 'assign') or anonymized (if value is 'anonymize') or neither assignment neither anonymizing will be done"
 msgstr "quando il prelievo è assegnato, la proprietà della giacenza può essere automaticamente assegnata (se il valore è ‘assegnare') oppure anonimizzata (se il valore è ‘anonimizzare') oppure non fare nulla"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__validate_picking
+msgid "When sale order is confirmed, transfer picking may confirmed too. Picking may be always confirmed or just if all order lines have  lot/serial number (this feature requires lot/serial number activation and supplemental module"
+msgstr "È impostato a form solamente sale order is confirmed, transfer picking may confirmed too. Picking may be always confirmed o just if all order lines have  lot/serial number (this feature requires lot/serial number activation e  module"
 
 

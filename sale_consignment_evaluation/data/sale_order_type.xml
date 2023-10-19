@@ -5,7 +5,9 @@
         <field name="warehouse_id" ref="stock.warehouse0"/>
         <field name="sequence_id" ref="sale.seq_sale_order"/>
         <field name="location_dest_id" ref="stock_location_consignment"/>
+        <field name="owner_mode">assign</field>
         <field name="transportation_reason_id" ref="transportation_reason_DEP"/>
+        <field name="auto_validate_picking">assign</field>
     </record>
 
     <record id="evaluation_sale_type" model="sale.order.type">
@@ -13,7 +15,9 @@
         <field name="warehouse_id" ref="stock.warehouse0"/>
         <field name="sequence_id" ref="sale.seq_sale_order"/>
         <field name="location_dest_id" ref="stock_location_evaluation"/>
+        <field name="owner_mode">assign</field>
         <field name="transportation_reason_id" ref="l10n_it_ddt.transportation_reason_VIS"/>
+        <field name="auto_validate_picking">assign</field>
     </record>
 
 </odoo>

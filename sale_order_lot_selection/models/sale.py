@@ -5,7 +5,7 @@ class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
 
     lot_id = fields.Many2one(
-        'stock.production.lot', 'Lot', copy=False)
+        'stock.production.lot', 'Lot')
 
     @api.multi
     @api.onchange('product_id')
@@ -37,12 +37,13 @@ class SaleOrder(models.Model):
     @api.multi
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
-        # we use this because compatibility with sale exception module
-        if isinstance(res, bool) and res:
+        # This test for compatibility with sale exception module
+        if res is True:
             for order in self:
                 if (
                         not hasattr(order, "type_id")
-                        or order.type_id.auto_validate_picking != "lot_filled"
+                        or order.type_id.auto_validate_picking not in ("assign",
+                                                                       "lot_filled")
                 ):
                     continue
                 auto_assign = True
@@ -58,6 +59,17 @@ class SaleOrder(models.Model):
                 if len(pickings) != 1:
                     continue
 
+                pickings[0].action_assign()
+                lots = []
+                for line in self.order_line:
+                    if line.lot_id:
+                        lots.append(line.lot_id.id)
+                if lots:
+                    lines = self.env["stock.move.line"].search(
+                        [("lot_id", "in", list(set(lots)))])
+                    for picking in pickings:
+                        picking.move_line_ids = [(6, 0, [x.id for x in lines])]
+
                 lots = {}
                 for line in order.order_line:
                     if line.lot_id:
@@ -70,6 +82,11 @@ class SaleOrder(models.Model):
                                                 line.lot_id.product_qty)
                         else:
                             auto_validate = False
-                if auto_validate:
+
+                if (
+                        auto_validate
+                        and hasattr(order, "type_id")
+                        and order.type_id.auto_validate_picking == "lot_filled"
+                ):
                     pickings[0].button_validate()
         return res
