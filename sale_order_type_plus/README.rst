@@ -3,7 +3,7 @@
 |icon| Sale Order Type Improvement/Tipo ordine evoluto 12.0.0.1.0
 =================================================================
 
-**Sale Order Base Stock Management**
+**S.O. type to manage On Consignment / For Evaluation**
 
 .. |icon| image:: https://raw.githubusercontent.com/zeroincombenze/sale-workflow/12.0/sale_order_type_plus/static/description/icon.png
 
@@ -19,6 +19,7 @@ Overview / Panoramica
 
 * Destination location based on order type
 * Automatic owner assign or deassign on picking confirmation
+* Automatic picking validation upon sale order confirmation
 
 
 |
@@ -28,6 +29,7 @@ Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
 
 * Ubicazione di destinazione basata su tipo ordine
 * Assegnazione o deassegnazione automatica del proprietario dello stock
+* Validazione automatica del picking alla conferma ordine
 
 
 |
@@ -105,8 +107,7 @@ To configure Sale Order Types you need to:
 Go to: Sales > Configuration > Sales Orders Types
 Create a new sale order type with all the settings you want
 
-The field 'Picking Auto Confirmation' appear just if module *sale_order_lot_selection*
-is installed.
+The field 'Picking Auto Confirmation' requires module *sale_order_lot_selection*.
 
 
 |
@@ -193,7 +194,7 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 ChangeLog History / Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-10-17)
+12.0.0.1.0 (2023-10-18)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
@@ -248,7 +249,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-18
+Last Update / Ultimo aggiornamento: 2023-10-19
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

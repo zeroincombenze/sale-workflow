@@ -2,7 +2,7 @@
     "name": "Sale Order Type Improvement",
     "version": "12.0.0.1.0",
     "category": "Sale Management",
-    "summary": "Sale Order Base Stock Management",
+    "summary": "S.O. type to manage On Consignment / For Evaluation",
     "author": "SHS-AV s.r.l.",
     "website": "https://www.zeroincombenze.it/crm",
     "development_status": "Alpha",

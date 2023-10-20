@@ -22,19 +22,6 @@ class SaleOrderType(models.Model):
             " or neither assignment neither anonymizing will be done"
         )
     )
-    validate_picking = fields.Boolean(
-        selection=[
-            ("lot_filled", _("Only with lots/serial numbers filled")),
-            ("always", _("Always")),
-        ],
-        string='Confirm and Transfer Picking',
-        help=(
-            "When sale order is confirmed, transfer picking may confirmed too."
-            " Picking may be always confirmed or just if all order lines have"
-            "  lot/serial number (this feature requires lot/serial number activation"
-            " and supplemental module"
-        )
-    )
     auto_validate_picking = fields.Selection(
         [
             ("none", _("None")),
