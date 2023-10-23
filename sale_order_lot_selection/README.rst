@@ -12,46 +12,74 @@
 
 
 
-Overview / Panoramica
+Overview | Panoramica
 =====================
 
 |en| This module add the field lot in Sale Order line view.
+It is an improvement of OCA module.
 User can choices serial number or lot in every order line from list of available
-serial number / lot in stock; user can see available quantity of every serial number / lot.
-This value is inherited by picking when sale order is confirmed (notice: this feature
-is not available in OCA module).
-Thru module sale_order_type_plus is possible auto confirm picking upon sale order
+serial number / lot in stock; user can see available quantity for every serial
+number / lot.
+
+This value is inherited by picking when sale order is confirmed.
+
+Thru module *sale_order_type_plus* is possible auto confirm picking upon sale order
 confirmation.
 
 
 |
 
 |it| Questo modulo aggiunge il campo "lotto/numero di serie" nella riga della vista
-ordine cliente.
-L'utente può scegliere il lotto o il numero seriale dalla lista dei disponibile in
+ordine cliente. Derivato da modulo OCA con alcune migliorie.
+L'utente può scegliere il lotto o il numero seriale dalla lista tra i disponibili in
 magazzino.
-L'utente vede anche la quantità disponibile nella lista.
-Il valore è riportato nel prelievo (notare che questa funzione non è disponibile
-nel relativo modulo OCA).
-Attravaerso il modulo sale_order_type_plus è possibile confermare automaticamente il
+L'utente vede, nella lista, anche la quantità disponibile.
+
+Il valore è riportato nel prelievo.
+
+Attraverso il modulo *sale_order_type_plus* è possibile confermare automaticamente il
 prelievo alla conferma dell'ordine.
 
 
 |
 
-Usage / Utilizzo
+Features | Caratteristiche
+--------------------------
+
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Description | Descrizione                                                                | Z0incomben | OCA        | Note(s)                               |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Version | Versione                                                                       | 12.0.2.0.2 | 12.0.2.0.1 |                                       |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Lot/S.N. choice in order line | Lotto/N.serie in riga ordine                             | ✅          | ✅          |                                       |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| See Lot/S.N. quantity in order line | Vedere quantità lotto/n.serie                      | ✅          | ❌          |                                       |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Lot/S.N. from Sale Order to Picking | Lotti/n.serie in prelievo da ordine                | ✅          | ❌          | This feature was active in 10.0       |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Declare confirm picking upon sale confirmation | Dichiarare conferma prelievo con ordine | ✅          | ❌          | Require module *sale_order_type_plus* |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+| Duplicated order with Lot/S.N. | Ordine duplicato con Lotti/n.serie                      | ✅          | ❌          |                                       |
++------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
+
+
+|
+
+Usage | Utilizzo
 ----------------
 
 Please, choice the serial number / lot from list in sale order line. In order to
 simplify the choice you can see availabel quantity for every serial number / lot.
+
 If you wish add more serial numer / lot than one, please add a new order line with
 the same product.
+
 Using module *sale_order_type_plus* is possible set the auto confirmpicking upon
 sale confirmation for specific order type.
 
 |
 
-Getting started / Primi passi
+Getting started | Primi passi
 =============================
 
 |Try Me|
@@ -59,7 +87,7 @@ Getting started / Primi passi
 
 |
 
-Installation / Installazione
+Installation | Installazione
 ----------------------------
 
 
@@ -107,22 +135,23 @@ From UI: go to:
 
 |
 
-Configuration / Configurazione
+Configuration | Configurazione
 ------------------------------
 
 To configure lot selection you need to:
 
-Go to: Inventory > Configuration > Settings
+☰ Inventory > Configuration > Settings >
 Enable 'Lots & Serial Numbers'
 
-If you have installed the module *sale_order_type_plus* go to:
-Sales > Configuration > Sales Orders Types
+If you have installed the module *sale_order_type_plus*:
+
+☰ Sales > Configuration > Sales Orders Types >
 Enable 'Picking Auto Confirmation'.
 
 
 |
 
-Upgrade / Aggiornamento
+Upgrade | Aggiornamento
 -----------------------
 
 
@@ -155,7 +184,7 @@ From UI: go to:
 
 |
 
-Support / Supporto
+Support | Supporto
 ------------------
 
 
@@ -165,7 +194,7 @@ Support / Supporto
 |
 |
 
-Get involved / Ci mettiamo in gioco
+Get involved | Ci mettiamo in gioco
 ===================================
 
 Bug reports are welcome! You can use the issue tracker to report bugs,
@@ -184,24 +213,28 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 
-ChangeLog History / Cronologia modifiche
+ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.2 (2018-10-04)
+12.0.0.1.2 (2023-10-21)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* Display quantity of lot / Visualizza quantità del lotto
+* Lot/S.N. choice in order line | Lotto/N.serie in riga ordine
+* Lot/Serial Number choice in order line | Lotto/Numero serie in riga ordine
+* Declare confirm picking upon sale confirmation | Dichiarare conferma prelievo con ordine
+* Duplicated order with Lot/S.N. | Ordine duplicato con Lotti/n.serie
 
 12.0.0.1.0 (2018-10-04)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * Initial implementation
+* [QUA] Test coverage 53% (92: 43+49) [0 TestPoints] - quality rating 1/100
 
 
 |
 |
 
-Credits / Didascalie
+Credits | Didascalie
 ====================
 
 Copyright
@@ -212,21 +245,21 @@ Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 |
 
-Authors / Autori
+Authors | Autori
 ----------------
 
 * `Odoo Community Association (OCA) <https://odoo-community.org>`__
 * `Agile Business Group sagl <https://www.agilebg.com>`__
 * `SHS-AV s.r.l. <https://www.zeroincombenze.it>`__
 
-Contributors / Contributi da
+Contributors | Contributi da
 ----------------------------
 
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 * Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
 
-Maintainer / Manutenzione
+Maintainer | Manutenzione
 -------------------------
 
 Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
@@ -250,7 +283,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-18
+Last Update / Ultimo aggiornamento: 2023-10-22
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

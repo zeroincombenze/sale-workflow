@@ -20,6 +20,9 @@ class StockPicking(models.Model):
     def action_assign(self):
         super().action_assign()
         for picking in self:
+            if picking.sale_id.type_id.not_sale:
+                for move in picking.move_ids_without_package:
+                    move.sale_line_id.qty_to_invoice = 0.0
             if picking.picking_type_id.owner_mode == "assign":
                 picking.owner_id = picking.partner_id
                 picking.action_assign_owner()

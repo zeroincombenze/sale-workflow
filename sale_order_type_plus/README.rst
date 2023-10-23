@@ -12,10 +12,10 @@
 
 
 
-Overview / Panoramica
+Overview | Panoramica
 =====================
 
-|en| This module adds some features to Order type:
+|en| This module adds some features to order type:
 
 * Destination location based on order type
 * Automatic owner assign or deassign on picking confirmation
@@ -24,8 +24,7 @@ Overview / Panoramica
 
 |
 
-|it| 
-Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
+|it| Questo modulo aggiunge alcune caratteristiche al tipo di ordine.
 
 * Ubicazione di destinazione basata su tipo ordine
 * Assegnazione o deassegnazione automatica del proprietario dello stock
@@ -34,16 +33,53 @@ Questo modulo aggiunge alcune caratteristiche aggiuntive al tipo di ordine.
 
 |
 
-Usage / Utilizzo
+Features | Caratteristiche
+--------------------------
+
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Description | Descrizione                                                | Z0incomben | OCA | Note(s)                                    |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Version | Versione                                                       | 12.0.0.1.0 | N/D | Compared with *sale_order_type* 12.0.1.3.0 |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Order Number sequence | Sequenza numerazione                             | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Journal_id | Registro sezionale                                          | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Warehouse | Magazzino                                                    | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Picking policy | Politica di prelievo                                    | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Company | Azienda                                                        | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Payment term | Termini di pagamento                                      | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Price list | Listino                                                     | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Incoterms|Incoterm                                                       | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Route | Rotta                                                            | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Analytic account | Conto analitico                                       | ✅          | ✅   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine        | ✅          | ❌   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+| Auto confirm picking upon SO confirmation | Conferma prelievo con ordine | ✅          | ❌   |                                            |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
+
+
+|
+
+Usage | Utilizzo
 ----------------
 
-Go to: Sales > Sales Orders, and create a new sale order.
+☰  Sales > Sales Orders, and create a new sale order.
+
 Select the new type you have created before and all settings will be propagated.
 
 
 |
 
-Getting started / Primi passi
+Getting started | Primi passi
 =============================
 
 |Try Me|
@@ -51,7 +87,7 @@ Getting started / Primi passi
 
 |
 
-Installation / Installazione
+Installation | Installazione
 ----------------------------
 
 
@@ -99,12 +135,12 @@ From UI: go to:
 
 |
 
-Configuration / Configurazione
+Configuration | Configurazione
 ------------------------------
 
 To configure Sale Order Types you need to:
 
-Go to: Sales > Configuration > Sales Orders Types
+☰ Sales > Configuration > Sales Orders Types >
 Create a new sale order type with all the settings you want
 
 The field 'Picking Auto Confirmation' requires module *sale_order_lot_selection*.
@@ -112,7 +148,7 @@ The field 'Picking Auto Confirmation' requires module *sale_order_lot_selection*
 
 |
 
-Upgrade / Aggiornamento
+Upgrade | Aggiornamento
 -----------------------
 
 
@@ -145,7 +181,7 @@ From UI: go to:
 
 |
 
-Support / Supporto
+Support | Supporto
 ------------------
 
 
@@ -155,7 +191,7 @@ Support / Supporto
 |
 |
 
-Get involved / Ci mettiamo in gioco
+Get involved | Ci mettiamo in gioco
 ===================================
 
 Bug reports are welcome! You can use the issue tracker to report bugs,
@@ -166,11 +202,11 @@ In case of trouble, please check there if your issue has already been reported.
 
 |
 
-Known issues / Roadmap
+Known issues | Roadmap
 ----------------------
 
-This module replaces the standard Odoo function sale.order._action_launch_stock_rule()
-of the module sale_stock. The function, now can use the destination location different
+This module replaces the standard Odoo function `sale.order._action_launch_stock_rule()`
+of the module *sale_stock*. The function, now can use the destination location different
 from the partner destination location.
 In this way is very simple to manage sale order on consignment or for evaluation or
 for tolling agreement or for subcontracting.
@@ -191,20 +227,20 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 
-ChangeLog History / Cronologia modifiche
+ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-10-18)
+12.0.0.1.0 (2023-10-21)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 39% (85: 52+33) [0 TestPoints] - quality rating 0/100
+* [QUA] Test coverage 38% (84: 52+32) [0 TestPoints] - quality rating 20 (target 100)
 
 
 |
 |
 
-Credits / Didascalie
+Credits | Didascalie
 ====================
 
 Copyright
@@ -215,17 +251,17 @@ Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 |
 
-Authors / Autori
+Authors | Autori
 ----------------
 
 * SHS-AV s.r.l. <https://www.zeroincombenze.it>
 
-Contributors / Contributi da
+Contributors | Contributi da
 ----------------------------
 
 * Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>
 
-Maintainer / Manutenzione
+Maintainer | Manutenzione
 -------------------------
 
 Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
@@ -249,7 +285,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-19
+Last Update / Ultimo aggiornamento: 2023-10-22
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

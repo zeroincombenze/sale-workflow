@@ -1,4 +1,0 @@
-Description / Descrizione,Zeroincombenze(R),OCA,Notes / Note
-S.N./Lot from Sale Order to Picking / Lotti/n.serie in prelievo da ordine,✅,❌,This feature was active in 10.0
-Auto confirm picking upon sale confirmation / Conferma prelievo con ordine,✅,❌,Require module *sale_order_type_plus*
-See S.N./Lot quantity in oder line / Vedere quantità lotto/n.serie,✅,❌,

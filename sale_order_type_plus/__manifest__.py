@@ -12,12 +12,12 @@
         "sale_order_type",
         "stock",
     ],
-    "version_depends": ["sale_stock==12.0.1.0"],
     "data": [
         "views/sale_order_type_view.xml",
         "views/stock_picking_view.xml",
     ],
-    "pre_init_hook": "check_4_depending",
     "maintainer": "Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>",
     "installable": True,
+    "version_depends": ["sale_stock==12.0.1.0"],
+    "pre_init_hook": "check_4_depending",
 }

@@ -8,6 +8,7 @@
         <field name="owner_mode">assign</field>
         <field name="transportation_reason_id" ref="transportation_reason_DEP"/>
         <field name="auto_validate_picking">assign</field>
+        <field name="not_sale" eval="True"/>
     </record>
 
     <record id="evaluation_sale_type" model="sale.order.type">
@@ -18,6 +19,7 @@
         <field name="owner_mode">assign</field>
         <field name="transportation_reason_id" ref="l10n_it_ddt.transportation_reason_VIS"/>
         <field name="auto_validate_picking">assign</field>
+        <field name="not_sale" eval="True"/>
     </record>
 
 </odoo>

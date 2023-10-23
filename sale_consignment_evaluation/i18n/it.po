@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo (12.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 11:42+0000\n"
-"PO-Revision-Date: 2023-10-18 11:42+0000\n"
+"POT-Creation-Date: 2023-10-21 18:50+0000\n"
+"PO-Revision-Date: 2023-10-21 18:50+0000\n"
 "Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
 "Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
 "Language: it\n"
@@ -81,6 +81,11 @@ msgstr "Rientro C/Deposito"
 #: model:stock.location.route,name:sale_consignment_evaluation.route_sale_consignment
 msgid "On Consignment in 1 step (ship)"
 msgstr "consegna C/Deposito in 1 passo"
+
+#. module: sale_consignment_evaluation
+#: model:ir.model.fields,field_description:sale_consignment_evaluation.field_sale_order_type__not_sale
+msgid "Order not for sale"
+msgstr "Order not non valida in codice IVA sale"
 
 #. module: sale_consignment_evaluation
 #: model:ir.model,name:sale_consignment_evaluation.model_stock_picking_type

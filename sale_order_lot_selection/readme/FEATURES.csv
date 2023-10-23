@@ -1,0 +1,7 @@
+Description | Descrizione,Z0incombenze(R),OCA,Note(s)
+Version | Versione,12.0.2.0.2,12.0.2.0.1,
+Lot/S.N. choice in order line | Lotto/N.serie in riga ordine,✅,✅,
+See Lot/S.N. quantity in order line | Vedere quantità lotto/n.serie,✅,❌,
+Lot/S.N. from Sale Order to Picking | Lotti/n.serie in prelievo da ordine,✅,❌,This feature was active in 10.0
+Declare confirm picking upon sale confirmation | Dichiarare conferma prelievo con ordine,✅,❌,Require module *sale_order_type_plus*
+Duplicated order with Lot/S.N. | Ordine duplicato con Lotti/n.serie,✅,❌,

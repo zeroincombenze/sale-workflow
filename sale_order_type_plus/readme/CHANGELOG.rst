@@ -1,5 +1,5 @@
-12.0.0.1.0 (2023-10-18)
+12.0.0.1.0 (2023-10-22)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 39% (85: 52+33) [0 TestPoints] - quality rating 0/100
+* [QUA] Test coverage 38% (84: 52+32) [0 TestPoints] - quality rating 20 (target 100)

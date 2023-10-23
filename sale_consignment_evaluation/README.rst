@@ -12,7 +12,7 @@
 
 
 
-Overview / Panoramica
+Overview | Panoramica
 =====================
 
 |en| This module manages On Consignment workflow and For Evaluation workflow.
@@ -35,29 +35,30 @@ conto deposito e conoscere a presso quale cliente è giacente la merce.
 
 |
 
-Usage / Utilizzo
+Usage | Utilizzo
 ----------------
 
-Go to: Sales > Sales Orders, and create a new sale order.
+☰ Sales > Sales Orders > Click on button [Create] >
 Select the one of 'On Consignment' or 'For Evaluation' order type.
 
 After picking confirmation, all products will be transferred in specific location and
 assigned to partner.
 
-In order to see inventory go to: Inventory > Reporting > Inventory Report
+In order to see inventory:
 
-and click on button [Retrieve the inventory quantities]. In the list view, the product
-transferred on consignment or for evaluation are displayed with negative sign in
-internal location line. If you filter the external locations, you can see the
-'on consignment' and 'for evaluation' locations. All these product are assigned to a
-partner.
+☰ Inventory > Reporting > Inventory Report > Click on button [Retrieve the inventory quantities]
+
+In the list view, the product transferred 'on consignment' or 'for evaluation'
+are displayed with negative sign in internal location line.
+If you filter the external locations, you can see the 'on consignment'
+and 'for evaluation' locations. All these product are assigned to a partner.
 
 This module can manage lots and serial numbers too.
 
 
 |
 
-Getting started / Primi passi
+Getting started | Primi passi
 =============================
 
 |Try Me|
@@ -65,7 +66,7 @@ Getting started / Primi passi
 
 |
 
-Installation / Installazione
+Installation | Installazione
 ----------------------------
 
 
@@ -113,18 +114,19 @@ From UI: go to:
 
 |
 
-Configuration / Configurazione
+Configuration | Configurazione
 ------------------------------
 
 To configure Sale Order Types you need to:
 
-Go to: Sales > Configuration > Sales Orders Types
+☰ Sales > Configuration > Sales Orders Types
+
 Create a new sale order type with all the settings you want
 
 
 |
 
-Upgrade / Aggiornamento
+Upgrade | Aggiornamento
 -----------------------
 
 
@@ -157,7 +159,7 @@ From UI: go to:
 
 |
 
-Support / Supporto
+Support | Supporto
 ------------------
 
 
@@ -167,7 +169,7 @@ Support / Supporto
 |
 |
 
-Get involved / Ci mettiamo in gioco
+Get involved | Ci mettiamo in gioco
 ===================================
 
 Bug reports are welcome! You can use the issue tracker to report bugs,
@@ -186,20 +188,20 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 
-ChangeLog History / Cronologia modifiche
+ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
 12.0.0.1.0 (2023-09-21)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
-* [QUA] Test coverage 71% (41: 12+29) [0 TestPoints] - quality rating 1/100
+* [QUA] Test coverage 67% (45: 15+30) [0 TestPoints] - quality rating 19 (target 100)
 
 
 |
 |
 
-Credits / Didascalie
+Credits | Didascalie
 ====================
 
 Copyright
@@ -210,17 +212,17 @@ Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 |
 
-Authors / Autori
+Authors | Autori
 ----------------
 
 * SHS-AV s.r.l. <https://www.zeroincombenze.it>
 
-Contributors / Contributi da
+Contributors | Contributi da
 ----------------------------
 
 * Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>
 
-Maintainer / Manutenzione
+Maintainer | Manutenzione
 -------------------------
 
 Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
@@ -244,7 +246,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-20
+Last Update / Ultimo aggiornamento: 2023-10-22
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
