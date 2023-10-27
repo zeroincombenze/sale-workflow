@@ -35,6 +35,13 @@ class SaleOrder(models.Model):
                 [('group_id', 'in', list(group_ids))])
             sale.delivery_count = len(sale.picking_ids)
 
+    @api.multi
+    def action_draft(self):
+        res = super(SaleOrder, self).action_draft()
+        for line in self.order_line:
+            line.write({'procurement_group_id': False})
+        return res
+
 
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
@@ -82,6 +89,9 @@ class SaleOrderLine(models.Model):
                 vals = line.order_id._prepare_procurement_group_by_line(line)
                 group_id = self.env["procurement.group"].create(vals)
             line.procurement_group_id = group_id
+            # This ensure shipping address is updated
+            if line.order_id.partner_shipping_id:
+                group_id.partner_id = line.order_id.partner_shipping_id
 
             vals = line._prepare_order_line_procurement(
                 group_id=line.procurement_group_id.id)
