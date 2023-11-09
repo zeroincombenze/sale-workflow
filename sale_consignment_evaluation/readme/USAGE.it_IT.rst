@@ -1,4 +1,4 @@
-☰ endite > Ordine di vendita > Fare click sul bottone [Creare] >
+☰ Vendite > Ordine di vendita > Fare click sul bottone [Creare] >
 Selezionare il tipo di ordine 'Conto deposito' oppure 'Conto visione'
 
 Alla conferma del preliveo i prodotti saranno trasferiti nella specifica ubicazione e

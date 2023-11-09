@@ -1,4 +1,3 @@
-
 ===========================================================================================
 |icon| On Consignment and For Evaluation workflow/Flussi di c/lavoro e c/visione 12.0.0.1.0
 ===========================================================================================
@@ -23,6 +22,7 @@ This module manages the transfers thru 2 locations, 'on consignment' and
 'for evaluation'. User can always see all product delivered on consignment o for
 evaluation and knows who holds goods.
 
+
 |
 
 |it| Questo modulo gestisce i flussi di conto deposito e conto visione.
@@ -32,6 +32,8 @@ ordine di vendita e creare le RMA per gestire il rientro merce.
 Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/lavoro e
 c/visione. L'utente può quindi sempre visionare i prodotti consegnati in conto visione o
 conto deposito e conoscere a presso quale cliente è giacente la merce.
+
+
 
 |
 
@@ -56,7 +58,6 @@ and 'for evaluation' locations. All these product are assigned to a partner.
 This module can manage lots and serial numbers too.
 
 
-|
 
 Getting started | Primi passi
 =============================
@@ -64,11 +65,16 @@ Getting started | Primi passi
 |Try Me|
 
 
-|
+Prerequisites | Prerequisiti
+----------------------------
+
+* python 3.7
+* postgresql 9.6+ (best 10.0+)
+
+
 
 Installation | Installazione
 ----------------------------
-
 
 +---------------------------------+------------------------------------------+
 | |en|                            | |it|                                     |
@@ -112,7 +118,6 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_consignment_evaluation** > Install
 
 
-|
 
 Configuration | Configurazione
 ------------------------------
@@ -124,11 +129,9 @@ To configure Sale Order Types you need to:
 Create a new sale order type with all the settings you want
 
 
-|
 
 Upgrade | Aggiornamento
 -----------------------
-
 
 ::
 
@@ -157,17 +160,13 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_consignment_evaluation** > Update
 
 
-|
 
 Support | Supporto
 ------------------
 
-
 |Zeroincombenze| This module is supported by the `SHS-AV s.r.l. <https://www.zeroincombenze.it/>`__
 
 
-|
-|
 
 Get involved | Ci mettiamo in gioco
 ===================================
@@ -178,14 +177,16 @@ and/or submit pull requests on `GitHub Issues
 
 In case of trouble, please check there if your issue has already been reported.
 
+
+
 Proposals for enhancement
 -------------------------
-
 
 |en| If you have a proposal to change this module, you may want to send an email to <cc@shs-av.com> for initial feedback.
 An Enhancement Proposal may be submitted if your idea gains ground.
 
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
+
 
 
 ChangeLog History | Cronologia modifiche
@@ -198,8 +199,6 @@ ChangeLog History | Cronologia modifiche
 * [QUA] Test coverage 67% (45: 15+30) [0 TestPoints] - quality rating 19 (target 100)
 
 
-|
-|
 
 Credits | Didascalie
 ====================
@@ -210,24 +209,26 @@ Copyright
 Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 
-|
-
 Authors | Autori
 ----------------
 
 * SHS-AV s.r.l. <https://www.zeroincombenze.it>
+
+
 
 Contributors | Contributi da
 ----------------------------
 
 * Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>
 
+
+
 Maintainer | Manutenzione
 -------------------------
 
 Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
 
-|
+
 
 ----------------
 
@@ -243,10 +244,11 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 
 |
+|
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-22
+Last Update / Ultimo aggiornamento: 2023-11-09
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
@@ -306,5 +308,3 @@ Last Update / Ultimo aggiornamento: 2023-10-22
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
    :target: https://t.me/Assitenza_clienti_powERP
-
-

@@ -1,4 +1,3 @@
-
 ===============================================================================
 |icon| Sale Order Lot Selection/Selezione lotti in ordine di vendita 12.0.2.0.2
 ===============================================================================
@@ -41,7 +40,6 @@ Attraverso il modulo *sale_order_type_plus* è possibile confermare automaticame
 prelievo alla conferma dell'ordine.
 
 
-|
 
 Features | Caratteristiche
 --------------------------
@@ -63,6 +61,7 @@ Features | Caratteristiche
 +------------------------------------------------------------------------------------------+------------+------------+---------------------------------------+
 
 
+
 |
 
 Usage | Utilizzo
@@ -77,7 +76,7 @@ the same product.
 Using module *sale_order_type_plus* is possible set the auto confirmpicking upon
 sale confirmation for specific order type.
 
-|
+
 
 Getting started | Primi passi
 =============================
@@ -85,11 +84,16 @@ Getting started | Primi passi
 |Try Me|
 
 
-|
+Prerequisites | Prerequisiti
+----------------------------
+
+* python 3.7
+* postgresql 9.6+ (best 10.0+)
+
+
 
 Installation | Installazione
 ----------------------------
-
 
 +---------------------------------+------------------------------------------+
 | |en|                            | |it|                                     |
@@ -133,7 +137,6 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_order_lot_selection** > Install
 
 
-|
 
 Configuration | Configurazione
 ------------------------------
@@ -149,11 +152,9 @@ If you have installed the module *sale_order_type_plus*:
 Enable 'Picking Auto Confirmation'.
 
 
-|
 
 Upgrade | Aggiornamento
 -----------------------
-
 
 ::
 
@@ -182,17 +183,13 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_order_lot_selection** > Update
 
 
-|
 
 Support | Supporto
 ------------------
 
-
 |Zeroincombenze| This module is supported by the `SHS-AV s.r.l. <https://www.zeroincombenze.it/>`__
 
 
-|
-|
 
 Get involved | Ci mettiamo in gioco
 ===================================
@@ -203,9 +200,10 @@ and/or submit pull requests on `GitHub Issues
 
 In case of trouble, please check there if your issue has already been reported.
 
+
+
 Proposals for enhancement
 -------------------------
-
 
 |en| If you have a proposal to change this module, you may want to send an email to <cc@shs-av.com> for initial feedback.
 An Enhancement Proposal may be submitted if your idea gains ground.
@@ -213,10 +211,11 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 
+
 ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.2 (2023-10-21)
+12.0.0.1.2 (2023-11-09)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * Lot/S.N. choice in order line | Lotto/N.serie in riga ordine
@@ -228,11 +227,9 @@ ChangeLog History | Cronologia modifiche
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * Initial implementation
-* [QUA] Test coverage 53% (92: 43+49) [0 TestPoints] - quality rating 1/100
+* [QUA] Test coverage 53% (92: 43+49) [0 TestPoints] - quality rating 30 (target 100)
 
 
-|
-|
 
 Credits | Didascalie
 ====================
@@ -243,14 +240,14 @@ Copyright
 Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 
-|
-
 Authors | Autori
 ----------------
 
-* `Odoo Community Association (OCA) <https://odoo-community.org>`__
-* `Agile Business Group sagl <https://www.agilebg.com>`__
-* `SHS-AV s.r.l. <https://www.zeroincombenze.it>`__
+* Odoo Community Association (OCA) <https://odoo-community.org>
+* Agile Business Group sagl <https://www.agilebg.com>
+* SHS-AV s.r.l. <https://www.zeroincombenze.it>
+
+
 
 Contributors | Contributi da
 ----------------------------
@@ -259,12 +256,14 @@ Contributors | Contributi da
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 * Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
 
+
+
 Maintainer | Manutenzione
 -------------------------
 
 Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
 
-|
+
 
 ----------------
 
@@ -280,10 +279,11 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 
 |
+|
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-22
+Last Update / Ultimo aggiornamento: 2023-11-09
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
@@ -343,5 +343,3 @@ Last Update / Ultimo aggiornamento: 2023-10-22
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
    :target: https://t.me/Assitenza_clienti_powERP
-
-

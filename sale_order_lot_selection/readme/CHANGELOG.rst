@@ -1,4 +1,4 @@
-12.0.0.1.2 (2023-10-22)
+12.0.0.1.2 (2023-11-09)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * Lot/S.N. choice in order line | Lotto/N.serie in riga ordine
