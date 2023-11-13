@@ -22,7 +22,7 @@
                 <img src="/l10n_us/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
             </p>
             <p class="oe_mt16" align="justify">This module manages On Consignment workflow and For Evaluation workflow.
-It is based on <i>sale_order_type_plus</i>module in order to create specific Sale Order and
+It is based on <i>sale_order_type_plus</i> module in order to create specific Sale Order and
 Return Merchandise Authorization (RMA) for returned goods.
 <p align="justify">
 This module manages the transfers thru 2 locations, 'on consignment' and
@@ -36,10 +36,10 @@ evaluation and knows who holds goods.
                 <img src="/l10n_it/static/description/icon.png" alt="Italiano" style="width:16px;height:16px;"/>
             </p>
             <p class="oe_mt16" align="justify">Questo modulo gestisce i flussi di conto deposito e conto visione.
-Il modulo &#232; basato sul modulo <i>sale_order_type_plus</i>per creare specifici tipi di
+Il modulo &#232; basato sul modulo <i>sale_order_type_plus</i> per creare specifici tipi di
 ordine di vendita e creare le RMA per gestire il rientro merce.
 <p align="justify">
-Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/lavoro e
+Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/deposito e
 c/visione. L'utente pu&#242; quindi sempre visionare i prodotti consegnati in conto visione o
 conto deposito e conoscere a presso quale cliente &#232; giacente la merce.
 </p>
@@ -47,6 +47,31 @@ conto deposito e conoscere a presso quale cliente &#232; giacente la merce.
         </div>
         <img src="/sale_consignment_evaluation/static/description/description.png" alt="On Consignment and For Evaluation workflow" style="width:98%;max-width:1140px"/>
 
+    </div>
+    <div class="oe_row oe_spaced">
+        <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Features | Caratteristiche</h3>
+        <div class="oe_span12">
+<table style="width:100%; padding:2px; border-spacing:2px; text-align:left;"><tr>
+<td>Description</td><td>Descrizione</td><td>Z0incomb</td><td>Note(s)</td><td/>
+</tr><tr>
+<td>For Evaluation location</td><td>Ubicazione di conto visione</td><td>&#9989;</td><td/><td/>
+</tr><tr>
+<td>For Evaluation order type</td><td>Tipo ordine conto visione</td><td>&#9989;</td><td/><td/>
+</tr><tr>
+<td>For Evaluation return</td><td>Reso di conto visione</td><td>&#9989;</td><td>Requires <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>Transform for evaluation into sale</td><td>Trasforma c/visione in vendita</td><td>&#9989;</td><td>Requires <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>On Consignment location</td><td>Ubicazione di conto deposito</td><td>&#9989;</td><td/><td/>
+</tr><tr>
+<td>On Consignment order type</td><td>Tipo ordine conto deposito</td><td>&#9989;</td><td/><td/>
+</tr><tr>
+<td>On Consignment return</td><td>Reso di conto deposito</td><td>&#9989;</td><td>Requires <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>Transform on consignment into sale</td><td>Trasforma c/deposito in vendita</td><td>&#9989;</td><td>Requires <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr></table>
+
+        </div>
     </div>
     <div class="oe_row oe_spaced">
         <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Configuration | Configurazione</h3>
@@ -57,7 +82,7 @@ conto deposito e conoscere a presso quale cliente &#232; giacente la merce.
             </p>
             <p class="oe_mt16" align="justify">To configure Sale Order Types you need to:
 <p align="justify">
-<span class="fa fa-navicon"/> Sales &gt; Configuration &gt; Sales Orders Types
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Sales &#187; Configuration &#187; Sales Orders Types
 </p><p align="justify">
 Create a new sale order type with all the settings you want
 </p>
@@ -69,7 +94,7 @@ Create a new sale order type with all the settings you want
             </p>
             <p class="oe_mt16" align="justify">Per configurare il modulo.
 <p align="justify">
-<span class="fa fa-navicon"/> Vendite &gt; Configurazione &gt; Tipi Ordine di vendita
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Vendite &#187; Configurazione &#187; Tipi Ordine di vendita
 </p><p align="justify">
 Impostare la configurazione desiderata dell'ordine di vendita.
 </p>
@@ -83,7 +108,7 @@ Impostare la configurazione desiderata dell'ordine di vendita.
                 <img src="/l10n_uk/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
                 <img src="/l10n_us/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
             </p>
-            <p class="oe_mt16" align="justify"><span class="fa fa-navicon"/> Sales &gt; Sales Orders &gt; Click on button <span style="color:white;background-color:#7C7BAD">&#160;Create&#160;</span> &gt;
+            <p class="oe_mt16" align="justify"><span class="fa fa-th-large" style="color:#7C7BAD"/> Sales &#187; Sales Orders &#187; Click on button <span style="color:white;background-color:#7C7BAD">&#160;Create&#160;</span> &#187;
 Select the one of 'On Consignment' or 'For Evaluation' order type.
 <p align="justify">
 After picking confirmation, all products will be transferred in specific location and
@@ -91,7 +116,7 @@ assigned to partner.
 </p><p align="justify">
 In order to see inventory:
 </p><p align="justify">
-<span class="fa fa-navicon"/> Inventory &gt; Reporting &gt; Inventory Report &gt; Click on button <span style="color:white;background-color:#7C7BAD">Retrieve&#160;the&#160;inventory&#160;quantities</span>
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Inventory &#187; Reporting &#187; Inventory Report &#187; Click on button <span style="color:white;background-color:#7C7BAD">Retrieve&#160;the&#160;inventory&#160;quantities</span>
 </p><p align="justify">
 In the list view, the product transferred 'on consignment' or 'for evaluation'
 are displayed with negative sign in internal location line.
@@ -106,7 +131,7 @@ This module can manage lots and serial numbers too.
             <p align="center">
                 <img src="/l10n_it/static/description/icon.png" alt="Italiano" style="width:16px;height:16px;"/>
             </p>
-            <p class="oe_mt16" align="justify"><span class="fa fa-navicon"/> Vendite &gt; Ordine di vendita &gt; Fare click sul bottone <span style="color:white;background-color:#7C7BAD">&#160;Creare&#160;</span> &gt;
+            <p class="oe_mt16" align="justify"><span class="fa fa-th-large" style="color:#7C7BAD"/> Vendite &#187; Ordine di vendita &#187; Fare click sul bottone <span style="color:white;background-color:#7C7BAD">&#160;Creare&#160;</span> &#187;
 Selezionare il tipo di ordine 'Conto deposito' oppure 'Conto visione'
 <p align="justify">
 Alla conferma del preliveo i prodotti saranno trasferiti nella specifica ubicazione e
@@ -114,7 +139,7 @@ assegnati al cliente.
 </p><p align="justify">
 Per visionare le giacenze:
 </p><p align="justify">
-<span class="fa fa-navicon"/> Inventario &gt; Rendicontazione &gt; Resoconto di Magazzino &gt;
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Inventario &#187; Rendicontazione &#187; Resoconto di Magazzino &#187;
 Fare click sul bottone <span style="color:white;background-color:#7C7BAD">Recupera&#160;le&#160;quantit&#224;&#160;di&#160;inventario</span>
 </p><p align="justify">
 Nella lista i prodotti in giacenza in conto deposito o conto visione sono visualizzati
@@ -157,7 +182,7 @@ Il modulo &#232; compatibile con la gestione dei lotti e numeri di serie.
         <div class="oe_span6" align="left">
             <p class="oe_mt16">Contributors | Contributi da:</p>
             <p class="oe_mt16"><ul>
-<li>Antonio Maria Vigliotti &lt;antoniomaria.vigliotti@gmail.com&gt;</li>
+<li><a href="mailto:antoniomaria.vigliotti@gmail.com">Antonio Maria Vigliotti</a></li>
 </ul>
 </p>
         </div>

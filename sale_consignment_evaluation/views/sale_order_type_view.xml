@@ -10,7 +10,6 @@
                     <group></group>
                     <group>
                         <field name="transportation_reason_id"/>
-                        <field name="not_sale"/>
                     </group>
             </xpath>
         </field>

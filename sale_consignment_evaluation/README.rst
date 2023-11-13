@@ -29,9 +29,34 @@ evaluation and knows who holds goods.
 Il modulo è basato sul modulo *sale_order_type_plus* per creare specifici tipi di
 ordine di vendita e creare le RMA per gestire il rientro merce.
 
-Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/lavoro e
+Il modulo gestisce i trasferimento attraverso 2 ubicazioni specifiche, di c/deposito e
 c/visione. L'utente può quindi sempre visionare i prodotti consegnati in conto visione o
 conto deposito e conoscere a presso quale cliente è giacente la merce.
+
+
+
+Features | Caratteristiche
+--------------------------
+
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| Description | Descrizione                                            | Z0incomb | Note(s)                                           |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| For Evaluation location | Ubicazione di conto visione                | ✅        |                                                   |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| For Evaluation order type | Tipo ordine conto visione                | ✅        |                                                   |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| For Evaluation return | Reso di conto visione                        | ✅        | Requires *rma_sale_consignment_evaluation* module |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| Transform for evaluation into sale | Trasforma c/visione in vendita  | ✅        | Requires *rma_sale_consignment_evaluation* module |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| On Consignment location | Ubicazione di conto deposito               | ✅        |                                                   |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| On Consignment order type | Tipo ordine conto deposito               | ✅        |                                                   |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| On Consignment return | Reso di conto deposito                       | ✅        | Requires *rma_sale_consignment_evaluation* module |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
+| Transform on consignment into sale | Trasforma c/deposito in vendita | ✅        | Requires *rma_sale_consignment_evaluation* module |
++----------------------------------------------------------------------+----------+---------------------------------------------------+
 
 
 
@@ -212,21 +237,21 @@ Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 Authors | Autori
 ----------------
 
-* SHS-AV s.r.l. <https://www.zeroincombenze.it>
+* `SHS-AV s.r.l. <https://www.zeroincombenze.it>`__
 
 
 
 Contributors | Contributi da
 ----------------------------
 
-* Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>
+* `Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>`__
 
 
 
 Maintainer | Manutenzione
 -------------------------
 
-Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
+* `Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>`__
 
 
 
@@ -248,7 +273,7 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-11-10
+Last Update / Ultimo aggiornamento: 2023-11-13
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status

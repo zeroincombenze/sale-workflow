@@ -7,4 +7,4 @@ class SaleOrderType(models.Model):
     transportation_reason_id = fields.Many2one(
         comodel_name="stock.picking.transportation_reason",
         string="Transportation Reason")
-    not_sale = fields.Boolean("Order not for sale")
+

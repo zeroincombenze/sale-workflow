@@ -1,0 +1,10 @@
+Description | Descrizione,Z0incombenze(R),Note(s)
+
+For Evaluation location | Ubicazione di conto visione,✅,
+For Evaluation order type | Tipo ordine conto visione,✅,
+For Evaluation return | Reso di conto visione,✅,Requires *rma_sale_consignment_evaluation* module
+Transform for evaluation into sale | Trasforma c/visione in vendita,✅,Requires *rma_sale_consignment_evaluation* module
+On Consignment location | Ubicazione di conto deposito,✅,
+On Consignment order type | Tipo ordine conto deposito,✅,
+On Consignment return | Reso di conto deposito,✅,Requires *rma_sale_consignment_evaluation* module
+Transform on consignment into sale | Trasforma c/deposito in vendita,✅,Requires *rma_sale_consignment_evaluation* module

@@ -1,0 +1,51 @@
+2023-11-13 18:01:44,000 2631022 DAEMON test_sale_consignment_evaluation_12 run_odoo_debug.sh: cd /home/odoo/12.0/venv_odoo && source ./bin/activate
+2023-11-13 17:01:53,277 2632560 INFO ? odoo: Odoo version 12.0 
+2023-11-13 17:01:53,278 2632560 INFO ? odoo: Using configuration file at /home/odoo/12.0/sale-workflow/sale_consignment_evaluation/tests/logs/zero12.sale-workflow.sale_consignment_evaluation.conf 
+2023-11-13 17:01:53,278 2632560 INFO ? odoo: addons paths: ['/home/odoo/.local/share/Odoo12/addons/12.0', '/home/odoo/12.0/odoo/addons', '/home/odoo/12.0/addons', '/home/odoo/.local/share/Odoo12/addons', '/home/odoo/12.0/account-analytic', '/home/odoo/12.0/account-budgeting', '/home/odoo/12.0/account-closing', '/home/odoo/12.0/account-consolidation', '/home/odoo/12.0/account-financial-reporting', '/home/odoo/12.0/account-financial-tools', '/home/odoo/12.0/account-fiscal-rule', '/home/odoo/12.0/account-invoice-reporting', '/home/odoo/12.0/account-invoicing', '/home/odoo/12.0/account-payment', '/home/odoo/12.0/account-reconcile', '/home/odoo/12.0/apps-store', '/home/odoo/12.0/bank-payment', '/home/odoo/12.0/bank-statement-import', '/home/odoo/12.0/brand', '/home/odoo/12.0/business-requirement', '/home/odoo/12.0/calendar', '/home/odoo/12.0/commission', '/home/odoo/12.0/community-data-files', '/home/odoo/12.0/connector', '/home/odoo/12.0/contract', '/home/odoo/12.0/credit-control', '/home/odoo/12.0/crm', '/home/odoo/12.0/currency', '/home/odoo/12.0/data-protection', '/home/odoo/12.0/delivery-carrier', '/home/odoo/12.0/dms', '/home/odoo/12.0/e-commerce', '/home/odoo/12.0/edi', '/home/odoo/12.0/geospatial', '/home/odoo/12.0/helpdesk', '/home/odoo/12.0/hr', '/home/odoo/12.0/intrastat-extrastat', '/home/odoo/12.0/iot', '/home/odoo/12.0/knowledge', '/home/odoo/12.0/l10n-italy', '/home/odoo/12.0/l10n-italy-supplemental', '/home/odoo/12.0/maintenance', '/home/odoo/12.0/mgmtsystem', '/home/odoo/12.0/manufacture', '/home/odoo/12.0/manufacture-reporting', '/home/odoo/12.0/margin-analysis', '/home/odoo/12.0/mis-builder', '/home/odoo/12.0/mis-builder-contrib', '/home/odoo/12.0/multi-company', '/home/odoo/12.0/partner-contact', '/home/odoo/12.0/pos', '/home/odoo/12.0/product-attribute', '/home/odoo/12.0/product-pack', '/home/odoo/12.0/product-variant', '/home/odoo/12.0/profiles', '/home/odoo/12.0/project', '/home/odoo/12.0/project-agile', '/home/odoo/12.0/project-reporting', '/home/odoo/12.0/purchase-reporting', '/home/odoo/12.0/purchase-workflow', '/home/odoo/12.0/queue', '/home/odoo/12.0/report-print-send', '/home/odoo/12.0/reporting-engine', '/home/odoo/12.0/rma', '/home/odoo/12.0/sale-reporting', '/home/odoo/12.0/sale-workflow', '/home/odoo/12.0/search-engine', '/home/odoo/12.0/server-auth', '/home/odoo/12.0/server-backend', '/home/odoo/12.0/server-brand', '/home/odoo/12.0/server-env', '/home/odoo/12.0/server-tools', '/home/odoo/12.0/server-ux', '/home/odoo/12.0/social', '/home/odoo/12.0/stock-logistics-barcode', '/home/odoo/12.0/stock-logistics-reporting', '/home/odoo/12.0/stock-logistics-transport', '/home/odoo/12.0/stock-logistics-warehouse', '/home/odoo/12.0/stock-logistics-workflow', '/home/odoo/12.0/storage', '/home/odoo/12.0/timesheet', '/home/odoo/12.0/uncovered', '/home/odoo/12.0/web', '/home/odoo/12.0/website', '/home/odoo/12.0/wms', '/home/odoo/12.0/zerobug-test', '/home/odoo/12.0/venv_odoo/lib/python3.7/site-packages/odoo/addons'] 
+2023-11-13 17:01:53,278 2632560 INFO ? odoo: database: odoo12@localhost:default 
+2023-11-13 17:01:53,473 2632560 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /home/odoo/12.0/venv_odoo/bin/wkhtmltopdf 
+2023-11-13 17:01:53,654 2632560 INFO ? odoo.service.server: HTTP service (werkzeug) running on nb200z0.:29901 
+2023-11-13 17:01:53,721 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading 1 modules... 
+2023-11-13 17:01:53,732 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2023-11-13 17:01:53,947 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: updating modules list 
+2023-11-13 17:01:54,008 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2023-11-13 17:02:06,187 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['sale_consignment_evaluation'] to user __system__ #1 via n/a 
+2023-11-13 17:02:06,690 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading 49 modules... 
+2023-11-13 17:02:07,231 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: 49 modules loaded in 0.54s, 0 queries 
+2023-11-13 17:02:07,240 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading 50 modules... 
+2023-11-13 17:02:08,175 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.registry: module sale_consignment_evaluation: creating or updating database tables 
+2023-11-13 17:02:08,419 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading sale_consignment_evaluation/data/stock_location.xml 
+2023-11-13 17:02:08,481 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading sale_consignment_evaluation/data/stock_data.xml 
+2023-11-13 17:02:08,577 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading sale_consignment_evaluation/data/sale_order_type.xml 
+2023-11-13 17:02:08,617 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: loading sale_consignment_evaluation/views/sale_order_type_view.xml 
+2023-11-13 17:02:08,714 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: Module sale_consignment_evaluation: loading demo 
+2023-11-13 17:02:08,836 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.post_install: Products routes set. 
+2023-11-13 17:02:09,480 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.module: odoo.addons.sale_consignment_evaluation.tests.test_order running tests. 
+2023-11-13 17:02:09,481 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.test_order: test_mytest (odoo.addons.sale_consignment_evaluation.tests.test_order.TestOrder) 
+2023-11-13 17:02:09,647 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: 🎺🎺🎺 Starting test v2.0.12 (debug_level=0) 
+2023-11-13 17:02:09,654 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: 🎺🎺 Testing module: sale_consignment_evaluation (12.0.0.1.0) 
+2023-11-13 17:02:09,657 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: ⚠ account.payment.term.line._cvt_account_payment_term_line(all) 
+2023-11-13 17:02:09,661 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: ⚠ Invalid search keys for model sale.order 
+2023-11-13 17:02:09,662 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: ⚠ No *2many value for sale.order.[] 
+2023-11-13 17:02:09,862 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.test_order: 🎺 Testing test_mytest 
+2023-11-13 17:02:09,862 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.testenv: 🏆🥇 0 tests SUCCESSFULLY completed 
+2023-11-13 17:02:10,097 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.test_order: Ran 1 test in 0.617s 
+2023-11-13 17:02:10,097 2632560 INFO test_sale_consignment_evaluation_12 odoo.addons.sale_consignment_evaluation.tests.test_order: OK 
+2023-11-13 17:02:10,141 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: 50 modules loaded in 2.90s, 120 queries 
+2023-11-13 17:02:11,088 2632560 INFO test_sale_consignment_evaluation_12 odoo.modules.loading: Modules loaded. 
+2023-11-13 17:02:11,100 2632560 INFO test_sale_consignment_evaluation_12 odoo.service.server: Starting post tests 
+2023-11-13 17:02:11,101 2632560 INFO test_sale_consignment_evaluation_12 odoo.service.server: All post-tested in 0.00s, 0 queries 
+2023-11-13 17:02:11,101 2632560 INFO test_sale_consignment_evaluation_12 odoo.service.server: Initiating shutdown 
+2023-11-13 17:02:11,101 2632560 INFO test_sale_consignment_evaluation_12 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+
++===================================================================
+| please test [36msale_consignment_evaluation[0m (12.0): [32mSUCCESS![0m
++===================================================================
+
+Name                                                                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------
+/home/odoo/12.0/sale-workflow/sale_consignment_evaluation/models/sale_order.py            8      4    50%   8-11
+/home/odoo/12.0/sale-workflow/sale_consignment_evaluation/models/sale_order_type.py       4      0   100%
+/home/odoo/12.0/sale-workflow/sale_consignment_evaluation/post_install.py                14      0   100%
+-------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                    26      4    85%
