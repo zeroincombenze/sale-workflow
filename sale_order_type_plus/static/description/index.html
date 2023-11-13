@@ -6,27 +6,61 @@
                 <img src="/l10n_uk/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
                 <img src="/l10n_us/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
             </p>
-            <h2 class="oe_slogan" style="color:#162832;">S.O. type to manage On Consignment / For Evaluation</h2>
+            <h2 class="oe_slogan" style="color:#162832;">S.O. type to manage On Consignment / For Evaluation
+</h2>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="/l10n_it/static/description/icon.png" alt="Italiano" style="width:16px;height:16px;"/>
             </p>
-            <h2 class="oe_slogan" style="color:#162832;">Tipi di ordine per gestire conto deposito / conto visione</h2>
+            <h2 class="oe_slogan" style="color:#162832;">Tipi di ordine per gestire conto deposito / conto visione
+</h2>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="/l10n_uk/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
                 <img src="/l10n_us/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
             </p>
-            <p class="oe_mt16" align="justify">This module adds some features to order type:
+            <p class="oe_mt16" align="justify">This module adds some features to order type (see below Features for more info).
 <p align="justify">
+<b>Destination location</b>
+</p><p align="justify">
+You can force destination location based on order type. If destination location field
+is empty, ordinary Odoo process is executed, which is customer location.
+</p><p align="justify">
+**Automatic owner assign or de-assign on picking confirmation**
+</p><p align="justify">
+When picking is confirmed, the owner can be assigned or deassigned or none operation
+is done. This feature is useful specific order types, like:
+</p><p align="justify">
 <ul>
-<li>Destination location based on order type</li>
-<li>Automatic owner assign or deassign on picking confirmation</li>
-<li>Automatic picking validation upon sale order confirmation</li>
+<li>For for evaluation order</li>
+<li>On consignment order</li>
+<li>Subcontract work (tolling) order</li>
 </ul>
-</p></p>
+</p><p align="justify">
+Leave empty for manual management.
+</p><p align="justify">
+<b>Automatic picking validation upon sale order confirmation</b>
+</p><p align="justify">
+Force picking validation on sale order confirmation.
+</p><p align="justify">
+<b>Delivered quantity method</b>
+</p><p align="justify">
+This field force the delivered method for all sale order lines.
+A new method "After Return" is added to list. Delivered quantity of all sale order lines
+with this method are set ot zero when picking is confirmed.
+Actual delivered quantity will be set on confirmation of "for sale" specific picking.
+</p><p align="justify">
+This feature is useful for specific order type (see above *Automatic owner assign ...*).
+</p><p align="justify">
+<b>Not for sale</b>
+</p><p align="justify">
+Usually, sale orders start the sale process which ends with an invoice.
+This flag declare that the sale order is not for sale. Delivered quantity in all
+sale order lines are set with "After Return" (see above <i>Delivered quantity method</i>).
+</p>
+</p>
         </div>
         <div class="oe_span6">
             <p align="center">
@@ -34,47 +68,95 @@
             </p>
             <p class="oe_mt16" align="justify">Questo modulo aggiunge alcune caratteristiche al tipo di ordine.
 <p align="justify">
+<b>Ubicazione di destinazione</b>
+</p><p align="justify">
+SI pu&#242; forzare l'ubicazione di destinazione in base al tipo di ordine. Se il campo &#232;
+lasciato vuoto viene eseguito il normale processo di Odoo che &#232; ubicazione clienti.
+</p><p align="justify">
+<b>Assegnazione o deassegnazione automatica del proprietario dello stock</b>
+</p><p align="justify">
+Quanto un prelievo &#232; confermato, il proprieatrio dello stock pu&#242; essere assegnato,
+deassegnato o nessuna operazione &#232; eseguita. Questa caratteristica &#232; indispensabile
+per alcuni tipi di ordine, quali:
+</p><p align="justify">
 <ul>
-<li>Ubicazione di destinazione basata su tipo ordine</li>
-<li>Assegnazione o deassegnazione automatica del proprietario dello stock</li>
-<li>Validazione automatica del picking alla conferma ordine</li>
+<li>Ordine di conto visione</li>
+<li>Ordine di conto deposito</li>
+<li>Ordine di conto lavoro</li>
 </ul>
-</p></p>
+</p><p align="justify">
+Lasciare vuoto per gestione manuale.
+</p><p align="justify">
+<b>Validazione automatica del prelievo alla conferma ordine</b>
+</p><p align="justify">
+Forza la conferma del prelievo alla conferma dell'ordine.
+</p><p align="justify">
+<b>Metodo consegna quantit&#224;</b>
+</p><p align="justify">
+Questo campo forza il Metodo consegna quantit&#224; su tutte le righe dell'ordine.
+Un nuovo metodo "Dopo reso" &#232; disponibile. Le quantit&#224; consegnate di tutte le righe con
+questo metodo sono impostate a zero alla conferma del prelievo. Il valore reale sar&#224;
+calcolato da specifica conferma di prelievo per vendita.
+</p><p align="justify">
+Questa caratteristica &#232; indispensabile per alcuni tipi di ordine (vedere sopra
+*Assegnazione o deassegnazione automatica ...*)
+</p><p align="justify">
+</p><p align="justify">
+<b>No per vendita</b>
+</p><p align="justify">
+Di norma, gli ordini iniziano il processo di vendita che termina con un una fattura.
+Questa impostazione dichiara che l'ordine non &#232; per la vendita. Il metodo di calcolo
+di consegna quantit&#224; &#232; impostata con "Dopo reso" (vedere
+sopra <i>Metodo consegna quantit&#224;</i>).
+</p>
+</p>
         </div>
         <img src="/sale_order_type_plus/static/description/description.png" alt="Sale Order Type Improvement" style="width:98%;max-width:1140px"/>
+
     </div>
     <div class="oe_row oe_spaced">
         <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Features | Caratteristiche</h3>
         <div class="oe_span12">
 <table style="width:100%; padding:2px; border-spacing:2px; text-align:left;"><tr>
-<td>Description</td><td>Descrizione</td><td>Z0incomben</td><td>OCA</td><td>Note(s)</td>
+<td>Description</td><td>Descrizione</td><td>Z0incomben</td><td>OCA</td><td>Note(s)</td><td/>
 </tr><tr>
-<td>Version</td><td>Versione</td><td>12.0.0.1.0</td><td>N/D</td><td>Compared with <i>sale_order_type</i>12.0.1.3.0</td>
+<td>Version</td><td>Versione</td><td>12.0.0.1.0</td><td>N/D</td><td>Compared with <i>sale_order_type</i> 12.0.1.3.0</td><td/>
 </tr><tr>
-<td>Order Number sequence</td><td>Sequenza numerazione</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Order Number sequence</td><td>Sequenza numerazione</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Journal_id</td><td>Registro sezionale</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Journal_id</td><td>Registro sezionale</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Warehouse</td><td>Magazzino</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Warehouse</td><td>Magazzino</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Picking policy</td><td>Politica di prelievo</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Picking policy</td><td>Politica di prelievo</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Company</td><td>Azienda</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Company</td><td>Azienda</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Payment term</td><td>Termini di pagamento</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Payment term</td><td>Termini di pagamento</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Price list</td><td>Listino</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Price list</td><td>Listino</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Incoterms</td><td>Incoterm</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Incoterms</td><td>Incoterm</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Route</td><td>Rotta</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Route</td><td>Rotta</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>Analytic account</td><td>Conto analitico</td><td>&#9989;</td><td>&#9989;</td><td/>
+<td>Analytic account</td><td>Conto analitico</td><td>&#9989;</td><td>&#9989;</td><td/><td/>
 </tr><tr>
-<td>S.N./Lot from SO to Picking</td><td>Lotti/n.serie in prelievo da ordine</td><td>&#9989;</td><td>&#10060;</td><td/>
+<td>Destination location</td><td>Ubicazione di destinazione</td><td>&#9989;</td><td>&#10060;</td><td/><td/>
 </tr><tr>
-<td>Auto confirm picking upon SO confirmation</td><td>Conferma prelievo con ordine</td><td>&#9989;</td><td>&#10060;</td><td/>
+<td>S.N./Lot from SO to Picking</td><td>Lotti/n.serie in prelievo da ordine</td><td>&#9989;</td><td>&#10060;</td><td>Requires <i>sale_order_lot_selection</i> module</td><td/>
+</tr><tr>
+<td>Auto confirm picking upon SO confirmation</td><td>Conferma prelievo all'ordine</td><td>&#9989;</td><td>&#10060;</td><td/><td/>
+</tr><tr>
+<td>Assign stock owner</td><td>Assegna proprietario stock</td><td>&#9989;</td><td>&#10060;</td><td>Used by <i>sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>Deassign stock owner</td><td>Deassegna proprietario stock</td><td>&#9989;</td><td>&#10060;</td><td>Used by <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>Compute delivery q.ty on demand</td><td>Calcolo q.t&#224; consegnata su richiesta</td><td>&#9989;</td><td>&#10060;</td><td>Used by <i>rma_sale_consignment_evaluation</i> module</td><td/>
+</tr><tr>
+<td>Not for sale</td><td>No per vendita</td><td>&#9989;</td><td>&#10060;</td><td>Used by <i>sale_consignment_evaluation</i> module</td><td/>
 </tr></table>
+
         </div>
     </div>
     <div class="oe_row oe_spaced">
@@ -86,11 +168,12 @@
             </p>
             <p class="oe_mt16" align="justify">To configure Sale Order Types you need to:
 <p align="justify">
-<span class="fa fa-navicon"/> Sales &gt; Configuration &gt; Sales Orders Types &gt;
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Sales &#187; Configuration &#187; Sales Orders Types &#187;
 Create a new sale order type with all the settings you want
 </p><p align="justify">
-The field 'Picking Auto Confirmation' requires module <i>sale_order_lot_selection</i>
-</p></p>
+The field 'Picking Auto Confirmation' requires module <i>sale_order_lot_selection</i>.
+</p>
+</p>
         </div>
         <div class="oe_span6">
             <p align="center">
@@ -98,11 +181,12 @@ The field 'Picking Auto Confirmation' requires module <i>sale_order_lot_selectio
             </p>
             <p class="oe_mt16" align="justify">Per configurare il modulo.
 <p align="justify">
-<span class="fa fa-navicon"/> Vendite &gt; Configurazione &gt; Tipi Ordine di vendita &gt;
+<span class="fa fa-th-large" style="color:#7C7BAD"/> Vendite &#187; Configurazione &#187; Tipi Ordine di vendita &#187;
 Impostare la configurazione desiderata dell'ordine di vendita.
 </p><p align="justify">
-Il campo 'Auto conferma prelievo' richiede il modulo <i>sale_order_lot_selection</i>
-</p></p>
+Il campo 'Auto conferma prelievo' richiede il modulo <i>sale_order_lot_selection</i>.
+</p>
+</p>
         </div>
     </div>
     <div class="oe_row oe_spaced">
@@ -112,47 +196,51 @@ Il campo 'Auto conferma prelievo' richiede il modulo <i>sale_order_lot_selection
                 <img src="/l10n_uk/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
                 <img src="/l10n_us/static/description/icon.png" alt="English" style="width:16px;height:16px;"/>
             </p>
-            <p class="oe_mt16" align="justify"><span class="fa fa-navicon"/>  Sales &gt; Sales Orders, and create a new sale order.
+            <p class="oe_mt16" align="justify"><span class="fa fa-th-large" style="color:#7C7BAD"/>  Sales &#187; Sales Orders, and create a new sale order.
 <p align="justify">
 Select the new type you have created before and all settings will be propagated.
-</p></p>
+</p>
+</p>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="/l10n_it/static/description/icon.png" alt="Italiano" style="width:16px;height:16px;"/>
             </p>
-            <p class="oe_mt16" align="justify"><span class="fa fa-navicon"/>  Vendite &gt; Ordine di vendita, creare un nuovo ordine.
+            <p class="oe_mt16" align="justify"><span class="fa fa-th-large" style="color:#7C7BAD"/>  Vendite &#187; Ordine di vendita, creare un nuovo ordine.
 <p align="justify">
 Selezionare il tipo di ordine desiderato e i dati configurati sarano impostati.
-</p></p>
+</p>
+</p>
         </div>
     </div>
     <div class="oe_row oe_spaced">
         <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">ChangeLog History | Cronologia modifiche</h3>
         <div class="oe_span12">
-<h3>12.0.0.1.0 (2023-10-21)</h3>
+<h3>12.0.0.1.0 (2023-10-22)</h3>
 <p align="justify">
 <ul>
 <li>[IMP] First version</li>
 <li>[QUA] Test coverage 38% (84: 52+32) [0 TestPoints] - quality rating 20 (target 100)</li>
 </ul>
 </p>
+
         </div>
     </div>
     <div class="oe_row oe_spaced">
         <h3 align="center" style="color:#162832;font-size: 26px;font-weight: 300;">Known issues | Problemi conosciuti</h3>
         <div class="oe_span12">
 This module replaces the standard Odoo function <code>sale.order._action_launch_stock_rule()</code>
-of the module <i>sale_stock</i> The function, now can use the destination location different
+of the module <i>sale_stock</i>. The function, now can use the destination location different
 from the partner destination location.
 In this way is very simple to manage sale order on consignment or for evaluation or
 for tolling agreement or for subcontracting.
 For this reason, this module depends on specific 12.0.1.0 version of <i>sale_stock module</i>
 <p align="justify">
-This module may conflict with <i>sale_order_automatic_workflow</i>because overlaps some
+This module may conflict with <i>sale_order_automatic_workflow</i> because overlaps some
 features of that module. Please choice this module or else
-<i>sale_order_automatic_workflow</i>but not both.
+<i>sale_order_automatic_workflow</i> but not both.
 </p>
+
         </div>
     </div>
 </section>
@@ -165,13 +253,15 @@ features of that module. Please choice this module or else
             <p class="oe_mt16">Authors | Autori:</p>
             <p class="oe_mt16"><ul>
 <li><a href="https://www.zeroincombenze.it/">SHS-AV s.r.l.</a></li>
-</ul></p>
+</ul>
+</p>
         </div>
         <div class="oe_span6" align="left">
             <p class="oe_mt16">Contributors | Contributi da:</p>
             <p class="oe_mt16"><ul>
-<li>Antonio Maria Vigliotti &lt;antoniomaria.vigliotti@gmail.com&gt;</li>
-</ul></p>
+<li><a href="mailto:antoniomaria.vigliotti@gmail.com">Antonio Maria Vigliotti</a></li>
+</ul>
+</p>
         </div>
     </div>
     <div class="oe_row oe_spaced">
@@ -180,6 +270,7 @@ features of that module. Please choice this module or else
         </div>
     </div>
     <div class="oe_row oe_spaced">
-        <p>This module is part of <a href="https://github.com/zeroincombenze/sale-workflow">sale-workflow</a> project.</p>
+        <p>This module is part of <a href="https://github.com/zeroincombenze/sale-workflow ">sale-workflow
+</a> project.</p>
     </div>
 </section>

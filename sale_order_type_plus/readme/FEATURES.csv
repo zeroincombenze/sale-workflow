@@ -10,5 +10,10 @@ Price list | Listino,✅,✅,
 Incoterms|Incoterm,✅,✅,
 Route | Rotta,✅,✅,
 Analytic account | Conto analitico,✅,✅,
-S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine,✅,❌,
-Auto confirm picking upon SO confirmation | Conferma prelievo con ordine,✅,❌,
+Destination location | Ubicazione di destinazione,✅,❌,
+S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine,✅,❌,Requires *sale_order_lot_selection* module
+Auto confirm picking upon SO confirmation | Conferma prelievo all'ordine,✅,❌,
+Assign stock owner | Assegna proprietario stock,✅,❌,Used by *sale_consignment_evaluation* module
+Deassign stock owner | Deassegna proprietario stock,✅,❌,Used by *rma_sale_consignment_evaluation* module
+Compute delivery q.ty on demand | Calcolo q.tà consegnata su richiesta,✅,❌,Used by *rma_sale_consignment_evaluation* module
+Not for sale | No per vendita,✅,❌,Used by *sale_consignment_evaluation* module

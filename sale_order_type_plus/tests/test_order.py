@@ -18,6 +18,8 @@ TEST_SALE_ORDER_TYPE = {
         "name": "Test Sale Order Type",
         "warehouse_id": "stock.warehouse0",
         "location_dest_id": "z0bug.test_customer_location",
+        "auto_validate_picking": "validate",
+        "not_sale": True,
     },
 }
 
@@ -74,9 +76,9 @@ class TestOrder(SingleTransactionCase):
         for xref in TEST_SALE_ORDER:
             order = self.resource_browse(xref)
             order.action_confirm()
+            for line in order.order_line:
+                self.assertEqual(line.qty_delivered_method, "on_demand")
             for picking in order.picking_ids:
-                if picking.state == "confirmed":
-                    picking.action_assign()
-                    self.assertEqual("z0bug.test_customer_location",
-                                     picking.location_dest_id)
-
+                self.assertEqual(picking.state, "assigned")
+                self.assertEqual(picking.location_dest_id,
+                                 "z0bug.test_customer_location")

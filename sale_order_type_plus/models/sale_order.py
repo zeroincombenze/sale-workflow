@@ -1,7 +1,7 @@
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 
-from odoo import api, models
+from odoo import api, models, fields
 from odoo.exceptions import UserError
 from odoo.tools import float_compare
 
@@ -12,13 +12,10 @@ class SaleOrder(models.Model):
     @api.multi
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
-        # we use this because compatibility with sale exception module
+        # We use this because compatibility with sale exception module
         if isinstance(res, bool) and res:
             for order in self:
-                if (
-                        not hasattr(order, "type_id")
-                        or order.type_id.auto_validate_picking != "validate"
-                ):
+                if order.type_id.auto_validate_picking != "validate":
                     continue
 
                 pickings = [p for p in order.picking_ids if p.state == "confirmed"]
@@ -30,6 +27,34 @@ class SaleOrder(models.Model):
 
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
+
+    qty_delivered_method = fields.Selection(
+        selection_add=[("on_demand", "After return")])
+
+    @api.multi
+    @api.depends("product_id")
+    def _compute_qty_delivered_method(self):
+        super(SaleOrderLine, self)._compute_qty_delivered_method()
+        for line in self:
+            method = False
+            if line.product_id:
+                prod_type = line.product_id.type
+                method = getattr(
+                    line.order_id.type_id,
+                    "qty_delivered_method_service"
+                    if prod_type == "service"
+                    else "qty_delivered_method_stock")
+            if method:
+                line.qty_delivered_method = method
+            elif line.order_id.type_id.not_sale:
+                line.qty_delivered_method = "on_demand"
+
+    def _compute_qty_delivered(self):
+        # Actual quantity will be computed by RMA picking
+        super(SaleOrderLine, self)._compute_qty_delivered()
+        lines = self.filtered(lambda sol: sol.qty_delivered_method == "on_demand")
+        for line in lines:
+            line.qty_delivered = 0.0
 
     def get_location_dest(self, line):
         """

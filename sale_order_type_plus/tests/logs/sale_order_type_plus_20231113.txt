@@ -1,0 +1,1 @@
+2023-11-13 17:16:08,000 2616367 DAEMON test_sale_order_type_plus_12 run_odoo_debug.sh: cd /home/odoo/12.0/venv_odoo && source ./bin/activate

@@ -10,8 +10,11 @@
                     <group>
                         <field name="location_dest_id"/>
                         <field name="auto_validate_picking"/>
+                        <field name="not_sale"/>
                     </group>
                     <group>
+                        <field name="qty_delivered_method_stock"/>
+                        <field name="qty_delivered_method_service"/>
                         <field name="owner_mode"/>
                     </group>
             </xpath>

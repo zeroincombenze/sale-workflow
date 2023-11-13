@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo (12.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 12:27+0000\n"
-"PO-Revision-Date: 2023-10-18 12:27+0000\n"
+"POT-Creation-Date: 2023-11-13 14:33+0000\n"
+"PO-Revision-Date: 2023-11-13 14:33+0000\n"
 "Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
 "Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
 "Language: it\n"
@@ -17,14 +17,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:28
-#: selection:sale.order.type,validate_picking:0
-#, python-format
-msgid "Always"
-msgstr "Sempre"
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_line__qty_delivered_method
+msgid ""
+"According to product configuration, the delivered quantity can be "
+"automatically computed by mechanism :\n"
+"  - Manual: the quantity is set manually on the line\n"
+"  - Analytic From expenses: the quantity is the quantity sum from posted expenses\n"
+"  - Timesheet: the quantity is the sum of hours recorded on tasks linked to "
+"this sale line\n"
+"  - Stock Moves: the quantity comes from confirmed pickings\n"
+msgstr ""
+"In base alla configurazione del prodotto, la quantità consegnata può essere "
+"calcolata automaticamente con un meccanismo:\n"
+"  - Manuale: la quantità viene impostata manualmente sulla riga\n"
+"  - Calcolo analitico delle spese: la quantità è la somma delle spese registrate\n"
+"  - Foglio ore: la quantità è la somma delle ore registrate sulle attività "
+"collegate a questa riga di vendita\n"
+"  - Movimenti di magazzino: la quantità proviene da prelievi confermati\n"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:16
+#: selection:sale.order.line,qty_delivered_method:0
+msgid "After return"
+msgstr "Dopo reso"
+
+#. module: sale_order_type_plus
+#: selection:sale.order.line,qty_delivered_method:0
+msgid "Analytic From Expenses"
+msgstr "Calcolo analitico delle spese"
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:38
 #: code:addons/sale_order_type_plus/models/stock_picking.py:10
 #: selection:sale.order.type,owner_mode:0
 #: selection:stock.picking.type,owner_mode:0
@@ -33,7 +55,7 @@ msgid "Anonymize"
 msgstr "Anonimizzare"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:15
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:37
 #: code:addons/sale_order_type_plus/models/stock_picking.py:9
 #: selection:sale.order.type,owner_mode:0
 #: selection:stock.picking.type,owner_mode:0
@@ -47,14 +69,17 @@ msgid "Auto Validate Picking"
 msgstr "Auto conferma prelievo"
 
 #. module: sale_order_type_plus
-#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__validate_picking
-msgid "Confirm and Transfer Picking"
-msgstr "Confermare e Transfer Picking"
-
-#. module: sale_order_type_plus
 #: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__location_dest_id
 msgid "Destination Location"
 msgstr "Ubicazione di destinazione"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__qty_delivered_method_service
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__qty_delivered_method_stock
+msgid "Force quantity delivered method.\n"
+"Leave empty for ordinary Odoo process"
+msgstr "Forzare metodo quantità consegnata.\n"
+"Lasciare vuoto per normale gestione Odoo"
 
 #. module: sale_order_type_plus
 #: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__location_dest_id
@@ -62,27 +87,51 @@ msgid "Force the destination location rather than using customer location"
 msgstr "Forza la locazione di destinazione invece di usare quella del cliente"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:40
-#: selection:sale.order.type,auto_validate_picking:0
-#, python-format
-msgid "None"
+#: selection:sale.order.line,qty_delivered_method:0
+msgid "Manual"
+msgstr "Manuale"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__qty_delivered_method_service
+msgid "Method to evaluate delivered qty (services)"
 msgstr ""
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:43
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__qty_delivered_method_stock
+msgid "Method to evaluate delivered qty (stock products)"
+msgstr ""
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_line__qty_delivered_method
+msgid "Method to update delivered qty"
+msgstr "Metodo per aggiornare le q.tà consegnate"
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:49
+#: selection:sale.order.type,auto_validate_picking:0
+#, python-format
+msgid "None"
+msgstr "Nessuna"
+
+#. module: sale_order_type_plus
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:52
 #: selection:sale.order.type,auto_validate_picking:0
 #, python-format
 msgid "Only assign lots/serial numbers filled"
 msgstr "Assegnare solo lotti e numeri di serie"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:27
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:42
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:51
 #: selection:sale.order.type,auto_validate_picking:0
-#: selection:sale.order.type,validate_picking:0
 #, python-format
 msgid "Only with lots/serial numbers filled"
 msgstr "Sole se compilati lotti e numeri di serie"
+
+#. module: sale_order_type_plus
+#: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__not_sale
+#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__not_sale
+msgid "Order not for sale"
+msgstr "Ordine senza vendita"
 
 #. module: sale_order_type_plus
 #: model:ir.model,name:sale_order_type_plus.model_stock_picking_type
@@ -91,8 +140,12 @@ msgstr "Tipo di prelievo"
 
 #. module: sale_order_type_plus
 #: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__auto_validate_picking
-msgid "Pickings are generated automatically upon sale confirmatio: always, if you set 'Validate' or else just if all order lines have lot/serial number (this feature requires lot/serial number activation and supplemental module installed."
-msgstr "Pickings are generated automatically upon sale confirmatio: always, if you set 'Validate' o else just if all order lines have lot/serial number (this feature requires lot/serial number activation e  module installati."
+msgid ""
+"Pickings are confirmed automatically upon sale confirmation: always, if you "
+"set 'Validate' or else just if all order lines have lot/serial number (this feature requires lot/serial number activation and supplemental module installed."
+msgstr ""
+"Pickings are confirmed automatically upon sale confirmation: always, if you "
+"set 'Validate' o else just if all order lines have lot/serial number (this feature requires lot/serial number activation e  module installati."
 
 #. module: sale_order_type_plus
 #: model:ir.model,name:sale_order_type_plus.model_sale_order
@@ -103,6 +156,11 @@ msgstr "Ordine di vendita"
 #: model:ir.model,name:sale_order_type_plus.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Riga ordine di vendita"
+
+#. module: sale_order_type_plus
+#: selection:sale.order.line,qty_delivered_method:0
+msgid "Stock Moves"
+msgstr "Movimenti di magazzino"
 
 #. module: sale_order_type_plus
 #: model:ir.model.fields,field_description:sale_order_type_plus.field_sale_order_type__owner_mode
@@ -121,22 +179,21 @@ msgid "Type of sale order"
 msgstr "Tipo di ordine di vendita"
 
 #. module: sale_order_type_plus
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:41
-#: code:addons/sale_order_type_plus/models/sale_order_type.py:48
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:50
+#: code:addons/sale_order_type_plus/models/sale_order_type.py:57
 #: selection:sale.order.type,auto_validate_picking:0
 #, python-format
 msgid "Validate"
-msgstr ""
+msgstr "Validare"
 
 #. module: sale_order_type_plus
 #: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__owner_mode
 #: model:ir.model.fields,help:sale_order_type_plus.field_stock_picking_type__owner_mode
-msgid "When picking is assigned the ownership of stock mey be automatically assigned (if value is 'assign') or anonymized (if value is 'anonymize') or neither assignment neither anonymizing will be done"
-msgstr "quando il prelievo è assegnato, la proprietà della giacenza può essere automaticamente assegnata (se il valore è ‘assegnare') oppure anonimizzata (se il valore è ‘anonimizzare') oppure non fare nulla"
-
-#. module: sale_order_type_plus
-#: model:ir.model.fields,help:sale_order_type_plus.field_sale_order_type__validate_picking
-msgid "When sale order is confirmed, transfer picking may confirmed too. Picking may be always confirmed or just if all order lines have  lot/serial number (this feature requires lot/serial number activation and supplemental module"
-msgstr "È impostato a form solamente sale order is confirmed, transfer picking may confirmed too. Picking may be always confirmed o just if all order lines have  lot/serial number (this feature requires lot/serial number activation e  module"
+msgid ""
+"When picking is assigned the ownership of stock mey be automatically assigned "
+"(if value is 'assign') or anonymized (if value is 'anonymize') or neither assignment neither anonymizing will be done"
+msgstr ""
+"quando il prelievo è assegnato, la proprietà della giacenza può essere "
+"automaticamente assegnata (se il valore è ‘assegnare') oppure anonimizzata (se il valore è ‘anonimizzare') oppure non fare nulla"
 
 

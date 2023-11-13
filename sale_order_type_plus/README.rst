@@ -1,4 +1,3 @@
-
 =================================================================
 |icon| Sale Order Type Improvement/Tipo ordine evoluto 12.0.0.1.0
 =================================================================
@@ -15,56 +14,132 @@
 Overview | Panoramica
 =====================
 
-|en| This module adds some features to order type:
+|en| This module adds some features to order type (see below Features for more info).
 
-* Destination location based on order type
-* Automatic owner assign or deassign on picking confirmation
-* Automatic picking validation upon sale order confirmation
+**Destination location**
+
+You can force destination location based on order type. If destination location field
+is empty, ordinary Odoo process is executed, which is customer location.
+
+**Automatic owner assign or de-assign on picking confirmation**
+
+When picking is confirmed, the owner can be assigned or deassigned or none operation
+is done. This feature is useful specific order types, like:
+
+* For for evaluation order
+* On consignment order
+* Subcontract work (tolling) order
+
+Leave empty for manual management.
+
+**Automatic picking validation upon sale order confirmation**
+
+Force picking validation on sale order confirmation.
+
+**Delivered quantity method**
+
+This field force the delivered method for all sale order lines.
+A new method "After Return" is added to list. Delivered quantity of all sale order lines
+with this method are set ot zero when picking is confirmed.
+Actual delivered quantity will be set on confirmation of "for sale" specific picking.
+
+This feature is useful for specific order type (see above *Automatic owner assign ...*).
+
+**Not for sale**
+
+Usually, sale orders start the sale process which ends with an invoice.
+This flag declare that the sale order is not for sale. Delivered quantity in all
+sale order lines are set with "After Return" (see above *Delivered quantity method*).
 
 
 |
 
 |it| Questo modulo aggiunge alcune caratteristiche al tipo di ordine.
 
-* Ubicazione di destinazione basata su tipo ordine
-* Assegnazione o deassegnazione automatica del proprietario dello stock
-* Validazione automatica del picking alla conferma ordine
+**Ubicazione di destinazione**
+
+SI può forzare l'ubicazione di destinazione in base al tipo di ordine. Se il campo è
+lasciato vuoto viene eseguito il normale processo di Odoo che è ubicazione clienti.
+
+**Assegnazione o deassegnazione automatica del proprietario dello stock**
+
+Quanto un prelievo è confermato, il proprieatrio dello stock può essere assegnato,
+deassegnato o nessuna operazione è eseguita. Questa caratteristica è indispensabile
+per alcuni tipi di ordine, quali:
+
+* Ordine di conto visione
+* Ordine di conto deposito
+* Ordine di conto lavoro
+
+Lasciare vuoto per gestione manuale.
+
+**Validazione automatica del prelievo alla conferma ordine**
+
+Forza la conferma del prelievo alla conferma dell'ordine.
+
+**Metodo consegna quantità**
+
+Questo campo forza il Metodo consegna quantità su tutte le righe dell'ordine.
+Un nuovo metodo "Dopo reso" è disponibile. Le quantità consegnate di tutte le righe con
+questo metodo sono impostate a zero alla conferma del prelievo. Il valore reale sarà
+calcolato da specifica conferma di prelievo per vendita.
+
+Questa caratteristica è indispensabile per alcuni tipi di ordine (vedere sopra
+*Assegnazione o deassegnazione automatica ...*)
 
 
-|
+**No per vendita**
+
+Di norma, gli ordini iniziano il processo di vendita che termina con un una fattura.
+Questa impostazione dichiara che l'ordine non è per la vendita. Il metodo di calcolo
+di consegna quantità è impostata con "Dopo reso" (vedere
+sopra *Metodo consegna quantità*).
+
+
 
 Features | Caratteristiche
 --------------------------
 
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Description | Descrizione                                                | Z0incomben | OCA | Note(s)                                    |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Version | Versione                                                       | 12.0.0.1.0 | N/D | Compared with *sale_order_type* 12.0.1.3.0 |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Order Number sequence | Sequenza numerazione                             | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Journal_id | Registro sezionale                                          | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Warehouse | Magazzino                                                    | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Picking policy | Politica di prelievo                                    | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Company | Azienda                                                        | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Payment term | Termini di pagamento                                      | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Price list | Listino                                                     | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Incoterms|Incoterm                                                       | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Route | Rotta                                                            | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Analytic account | Conto analitico                                       | ✅          | ✅   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine        | ✅          | ❌   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
-| Auto confirm picking upon SO confirmation | Conferma prelievo con ordine | ✅          | ❌   |                                            |
-+--------------------------------------------------------------------------+------------+-----+--------------------------------------------+
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Description | Descrizione                                                | Z0incomben | OCA | Note(s)                                          |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Version | Versione                                                       | 12.0.0.1.0 | N/D | Compared with *sale_order_type* 12.0.1.3.0       |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Order Number sequence | Sequenza numerazione                             | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Journal_id | Registro sezionale                                          | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Warehouse | Magazzino                                                    | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Picking policy | Politica di prelievo                                    | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Company | Azienda                                                        | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Payment term | Termini di pagamento                                      | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Price list | Listino                                                     | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Incoterms|Incoterm                                                       | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Route | Rotta                                                            | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Analytic account | Conto analitico                                       | ✅          | ✅   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Destination location | Ubicazione di destinazione                        | ✅          | ❌   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine        | ✅          | ❌   | Requires *sale_order_lot_selection* module       |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Auto confirm picking upon SO confirmation | Conferma prelievo all'ordine | ✅          | ❌   |                                                  |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Assign stock owner | Assegna proprietario stock                          | ✅          | ❌   | Used by *sale_consignment_evaluation* module     |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Deassign stock owner | Deassegna proprietario stock                      | ✅          | ❌   | Used by *rma_sale_consignment_evaluation* module |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Compute delivery q.ty on demand | Calcolo q.tà consegnata su richiesta   | ✅          | ❌   | Used by *rma_sale_consignment_evaluation* module |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+| Not for sale | No per vendita                                            | ✅          | ❌   | Used by *sale_consignment_evaluation* module     |
++--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
+
 
 
 |
@@ -77,7 +152,6 @@ Usage | Utilizzo
 Select the new type you have created before and all settings will be propagated.
 
 
-|
 
 Getting started | Primi passi
 =============================
@@ -85,11 +159,16 @@ Getting started | Primi passi
 |Try Me|
 
 
-|
+Prerequisites | Prerequisiti
+----------------------------
+
+* python 3.7
+* postgresql 9.6+ (best 10.0+)
+
+
 
 Installation | Installazione
 ----------------------------
-
 
 +---------------------------------+------------------------------------------+
 | |en|                            | |it|                                     |
@@ -133,7 +212,6 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Install
 
 
-|
 
 Configuration | Configurazione
 ------------------------------
@@ -146,11 +224,9 @@ Create a new sale order type with all the settings you want
 The field 'Picking Auto Confirmation' requires module *sale_order_lot_selection*.
 
 
-|
 
 Upgrade | Aggiornamento
 -----------------------
-
 
 ::
 
@@ -179,17 +255,13 @@ From UI: go to:
 * |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Update
 
 
-|
 
 Support | Supporto
 ------------------
 
-
 |Zeroincombenze| This module is supported by the `SHS-AV s.r.l. <https://www.zeroincombenze.it/>`__
 
 
-|
-|
 
 Get involved | Ci mettiamo in gioco
 ===================================
@@ -200,12 +272,12 @@ and/or submit pull requests on `GitHub Issues
 
 In case of trouble, please check there if your issue has already been reported.
 
-|
+
 
 Known issues | Roadmap
 ----------------------
 
-This module replaces the standard Odoo function `sale.order._action_launch_stock_rule()`
+This module replaces the standard Odoo function ``sale.order._action_launch_stock_rule()``
 of the module *sale_stock*. The function, now can use the destination location different
 from the partner destination location.
 In this way is very simple to manage sale order on consignment or for evaluation or
@@ -217,9 +289,9 @@ features of that module. Please choice this module or else
 *sale_order_automatic_workflow* but not both.
 
 
+
 Proposals for enhancement
 -------------------------
-
 
 |en| If you have a proposal to change this module, you may want to send an email to <cc@shs-av.com> for initial feedback.
 An Enhancement Proposal may be submitted if your idea gains ground.
@@ -227,18 +299,17 @@ An Enhancement Proposal may be submitted if your idea gains ground.
 |it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 
+
 ChangeLog History | Cronologia modifiche
 ----------------------------------------
 
-12.0.0.1.0 (2023-10-21)
+12.0.0.1.0 (2023-10-22)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] First version
 * [QUA] Test coverage 38% (84: 52+32) [0 TestPoints] - quality rating 20 (target 100)
 
 
-|
-|
 
 Credits | Didascalie
 ====================
@@ -249,24 +320,26 @@ Copyright
 Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 
 
-|
-
 Authors | Autori
 ----------------
 
-* SHS-AV s.r.l. <https://www.zeroincombenze.it>
+* `SHS-AV s.r.l. <https://www.zeroincombenze.it>`__
+
+
 
 Contributors | Contributi da
 ----------------------------
 
-* Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>
+* `Antonio Maria Vigliotti <antoniomaria.vigliotti@gmail.com>`__
+
+
 
 Maintainer | Manutenzione
 -------------------------
 
-Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>
+* `Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>`__
 
-|
+
 
 ----------------
 
@@ -282,10 +355,11 @@ La distribuzione `Zeroincombenze® <https://www.zeroincombenze.it/>`__ è proget
 
 
 |
+|
 
 This module is part of sale-workflow project.
 
-Last Update / Ultimo aggiornamento: 2023-10-22
+Last Update / Ultimo aggiornamento: 2023-11-13
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-black.png
     :target: https://odoo-community.org/page/development-status
@@ -345,5 +419,3 @@ Last Update / Ultimo aggiornamento: 2023-10-22
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
    :target: https://t.me/Assitenza_clienti_powERP
-
-
