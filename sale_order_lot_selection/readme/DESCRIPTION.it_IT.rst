@@ -1,4 +1,4 @@
-Questo modulo aggiunge il campo "lotto/numero di serie" nella riga della vista
+Questo modulo aggiunge il campo **lotto/numero di serie** nella riga della vista
 ordine cliente. Derivato da modulo OCA con alcune migliorie.
 L'utente può scegliere il lotto o il numero seriale dalla lista tra i disponibili in
 magazzino.
