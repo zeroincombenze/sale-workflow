@@ -52,8 +52,6 @@ This flag declare that the sale order is not for sale. Delivered quantity in all
 sale order lines are set with "After Return" (see above *Delivered quantity method*).
 
 
-|
-
 |it| Questo modulo aggiunge alcune caratteristiche al tipo di ordine.
 
 **Ubicazione di destinazione**
@@ -142,7 +140,17 @@ Features | Caratteristiche
 
 
 
-|
+Configuration | Configurazione
+------------------------------
+
+To configure Sale Order Types you need to:
+
+☰ Sales > Configuration > Sales Orders Types >
+Create a new sale order type with all the settings you want
+
+The field **Picking Auto Confirmation** requires module *sale_order_lot_selection*.
+
+
 
 Usage | Utilizzo
 ----------------
@@ -164,6 +172,16 @@ Prerequisites | Prerequisiti
 
 * python 3.7
 * postgresql 9.6+ (best 10.0+)
+
+::
+
+    cd $HOME
+    # Follow statements activate deployment, installation and upgrade tools
+    cd $HOME
+    [[ ! -d ./tools ]] && git clone https://github.com/zeroincombenze/tools.git
+    cd ./tools
+    ./install_tools.sh -pUT
+    source $HOME/devel/activate_tools
 
 
 
@@ -188,40 +206,11 @@ Installation | Installazione
 
 ::
 
-    cd $HOME
-    # *** Tools installation & activation ***
-    # Case 1: you have not installed zeroincombenze tools
-    git clone https://github.com/zeroincombenze/tools.git
-    cd $HOME/tools
-    ./install_tools.sh -pT
-    source $HOME/devel/activate_tools
-    # Case 2: you have already installed zeroincombenze tools
-    cd $HOME/tools
-    ./install_tools.sh -UT
-    source $HOME/devel/activate_tools
-    # *** End of tools installation or upgrade ***
+    # Installation based on zeroincombenze(R) tools
     # Odoo repository installation; OCB repository must be installed
     deploy_odoo clone -r sale-workflow -b 12.0 -G zero -p $HOME/12.0
     # Upgrade virtual environment
     vem amend $HOME/12.0/venv_odoo
-
-From UI: go to:
-
-* |menu| Setting > Activate Developer mode
-* |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Install
-
-
-
-Configuration | Configurazione
-------------------------------
-
-To configure Sale Order Types you need to:
-
-☰ Sales > Configuration > Sales Orders Types >
-Create a new sale order type with all the settings you want
-
-The field 'Picking Auto Confirmation' requires module *sale_order_lot_selection*.
 
 
 
@@ -230,29 +219,11 @@ Upgrade | Aggiornamento
 
 ::
 
-    cd $HOME
-    # *** Tools installation & activation ***
-    # Case 1: you have not installed zeroincombenze tools
-    git clone https://github.com/zeroincombenze/tools.git
-    cd $HOME/tools
-    ./install_tools.sh -pT
-    source $HOME/devel/activate_tools
-    # Case 2: you have already installed zeroincombenze tools
-    cd $HOME/tools
-    ./install_tools.sh -UT
-    source $HOME/devel/activate_tools
-    # *** End of tools installation or upgrade ***
-    # Odoo repository upgrade
+    # Upgrade based on zeroincombenze(R) tools
     deploy_odoo update -r sale-workflow -b 12.0 -G zero -p $HOME/12.0
     vem amend $HOME/12.0/venv_odoo
     # Adjust following statements as per your system
     sudo systemctl restart odoo
-
-From UI: go to:
-
-* |menu| Setting > Activate Developer mode
-* |menu| Apps > Update Apps List
-* |menu| Setting > Apps |right_do| Select **sale_order_type_plus** > Update
 
 
 
@@ -311,6 +282,17 @@ ChangeLog History | Cronologia modifiche
 
 
 
+FAQ | Domande & Risposte
+------------------------
+
+*I read about issue! Does this module conflict with Odoo modules?*
+
+No. This module is fully integrated with Odoo and OCA modules.
+This module checks for Odoo module version. If Odoo module will be updated,
+we will ASAP ugrade this module.
+
+
+
 Credits | Didascalie
 ====================
 
@@ -342,7 +324,6 @@ Maintainer | Manutenzione
 
 
 ----------------
-
 
 |en| **zeroincombenze®** is a trademark of `SHS-AV s.r.l. <https://www.shs-av.com/>`__
 which distributes and promotes ready-to-use **Odoo** on own cloud infrastructure.
