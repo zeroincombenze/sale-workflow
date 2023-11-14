@@ -105,39 +105,39 @@ Features | Caratteristiche
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
 | Version | Versione                                                       | 12.0.0.1.0 | N/D | Compared with *sale_order_type* 12.0.1.3.0       |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Order Number sequence | Sequenza numerazione                             | ✅          | ✅   |                                                  |
+| Order Number sequence | Sequenza numerazione                             | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Journal_id | Registro sezionale                                          | ✅          | ✅   |                                                  |
+| Journal_id | Registro sezionale                                          | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Warehouse | Magazzino                                                    | ✅          | ✅   |                                                  |
+| Warehouse | Magazzino                                                    | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Picking policy | Politica di prelievo                                    | ✅          | ✅   |                                                  |
+| Picking policy | Politica di prelievo                                    | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Company | Azienda                                                        | ✅          | ✅   |                                                  |
+| Company | Azienda                                                        | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Payment term | Termini di pagamento                                      | ✅          | ✅   |                                                  |
+| Payment term | Termini di pagamento                                      | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Price list | Listino                                                     | ✅          | ✅   |                                                  |
+| Price list | Listino                                                     | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Incoterms|Incoterm                                                       | ✅          | ✅   |                                                  |
+| Incoterms|Incoterm                                                       | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Route | Rotta                                                            | ✅          | ✅   |                                                  |
+| Route | Rotta                                                            | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Analytic account | Conto analitico                                       | ✅          | ✅   |                                                  |
+| Analytic account | Conto analitico                                       | ✅         | ✅  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Destination location | Ubicazione di destinazione                        | ✅          | ❌   |                                                  |
+| Destination location | Ubicazione di destinazione                        | ✅         | ❌  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine        | ✅          | ❌   | Requires *sale_order_lot_selection* module       |
+| S.N./Lot from SO to Picking | Lotti/n.serie in prelievo da ordine        | ✅         | ❌  | Requires *sale_order_lot_selection* module       |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Auto confirm picking upon SO confirmation | Conferma prelievo all'ordine | ✅          | ❌   |                                                  |
+| Auto confirm picking upon SO confirmation | Conferma prelievo all'ordine | ✅         | ❌  |                                                  |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Assign stock owner | Assegna proprietario stock                          | ✅          | ❌   | Used by *sale_consignment_evaluation* module     |
+| Assign stock owner | Assegna proprietario stock                          | ✅         | ❌  | Used by *sale_consignment_evaluation* module     |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Deassign stock owner | Deassegna proprietario stock                      | ✅          | ❌   | Used by *rma_sale_consignment_evaluation* module |
+| Deassign stock owner | Deassegna proprietario stock                      | ✅         | ❌  | Used by *rma_sale_consignment_evaluation* module |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Compute delivery q.ty on demand | Calcolo q.tà consegnata su richiesta   | ✅          | ❌   | Used by *rma_sale_consignment_evaluation* module |
+| Compute delivery q.ty on demand | Calcolo q.tà consegnata su richiesta   | ✅         | ❌  | Used by *rma_sale_consignment_evaluation* module |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
-| Not for sale | No per vendita                                            | ✅          | ❌   | Used by *sale_consignment_evaluation* module     |
+| Not for sale | No per vendita                                            | ✅         | ❌  | Used by *sale_consignment_evaluation* module     |
 +--------------------------------------------------------------------------+------------+-----+--------------------------------------------------+
 
 
