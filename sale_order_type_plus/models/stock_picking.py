@@ -11,7 +11,7 @@ class StockPickingType(models.Model):
         ],
         string="Stock Owner Mode",
         help=(
-            "When picking is assigned the ownership of stock mey be automatically"
+            "When picking is assigned the ownership of stock may be automatically"
             " assigned (if value is 'assign') or anonymized (if value is 'anonymize')"
             " or neither assignment neither anonymizing will be done"
         )
