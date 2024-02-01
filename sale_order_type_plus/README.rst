@@ -206,7 +206,7 @@ Installation | Installazione
 
 ::
 
-    # Installation based on zeroincombenze(R) tools
+    # Installation based on `zeroincombenze® tools <https://zeroincombenze-tools.readthedocs.io/en/latest/>`__
     # Odoo repository installation; OCB repository must be installed
     deploy_odoo clone -r sale-workflow -b 12.0 -G zero -p $HOME/12.0
     # Upgrade virtual environment
@@ -219,7 +219,7 @@ Upgrade | Aggiornamento
 
 ::
 
-    # Upgrade based on zeroincombenze(R) tools
+    # Upgrade based on zeroincombenze® tools
     deploy_odoo update -r sale-workflow -b 12.0 -G zero -p $HOME/12.0
     vem amend $HOME/12.0/venv_odoo
     # Adjust following statements as per your system
@@ -285,11 +285,11 @@ ChangeLog History | Cronologia modifiche
 FAQ | Domande & Risposte
 ------------------------
 
-*I read about issue! Does this module conflict with Odoo modules?*
+*I read about issue! May this module conflict with Odoo modules?*
 
 No. This module is fully integrated with Odoo and OCA modules.
 This module checks for Odoo module version. If Odoo module will be updated,
-we will ASAP ugrade this module.
+we will ASAP upgrade this module.
 
 
 

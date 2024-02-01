@@ -12,7 +12,9 @@ class ProductionLot(models.Model):
         res = []
         for lot in self:
             if self.env.context.get("show_qty", False):
-                res.append((lot.id, "%s (%s)" % (lot.name, lot.product_qty)))
+                res.append((lot.id, "%s (%s) - %s" % (lot.name,
+                                                      lot.product_qty,
+                                                      lot.life_date)))
             else:
                 res.append((lot.id, lot.name))
         return res
