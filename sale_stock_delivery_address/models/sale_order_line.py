@@ -1,7 +1,7 @@
-# Copyright 2020 ForgeFlow S.L.
-# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
+# Copyright 2020-22 ForgeFlow S.L.
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class SaleOrderLine(models.Model):
@@ -11,12 +11,11 @@ class SaleOrderLine(models.Model):
         comodel_name="res.partner",
         string="Destination Address",
         help="If set this address will be the delivery address instead of the "
-             "one specified in the Sales Order header.",
+        "one specified in the Sales Order header.",
     )
 
-    @api.multi
     def _get_procurement_group_key(self):
-        """ Return a key with priority to be used to regroup lines in multiple
+        """Return a key with priority to be used to regroup lines in multiple
         procurement groups. The higher the priority number is the more
         preference the criteria has.
         """

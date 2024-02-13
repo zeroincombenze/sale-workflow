@@ -2,3 +2,5 @@
 
   * Sergio Teruel
   * Pedro M. Baeza
+  * Carlos Roca
+  * Ernesto Tejeda

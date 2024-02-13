@@ -20,13 +20,13 @@ msgstr ""
 
 #. module: sale_force_invoiced
 #: model:ir.model.fields,field_description:sale_force_invoiced.field_sale_order__force_invoiced
-msgid "Force invoiced"
-msgstr "Forçar Faturada"
+msgid "Force Invoiced"
+msgstr ""
 
 #. module: sale_force_invoiced
 #: model:ir.model,name:sale_force_invoiced.model_sale_order
 #, fuzzy
-msgid "Sale Order"
+msgid "Sales Order"
 msgstr "Encomenda de Venda"
 
 #. module: sale_force_invoiced
@@ -39,3 +39,6 @@ msgstr ""
 "Quando assinala este campo, a encomenda de venda será considerada como "
 "completamente faturada mesmo que haja quantidades encomendadas ou entregues "
 "pendentes para faturar."
+
+#~ msgid "Force invoiced"
+#~ msgstr "Forçar Faturada"

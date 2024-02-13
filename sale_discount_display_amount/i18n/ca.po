@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-10 10:45+0000\n"
+"PO-Revision-Date: 2021-02-23 17:45+0000\n"
 "Last-Translator: Daniel Martinez Vila <daniel.martinez@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: ca\n"
@@ -17,16 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_discount_display_amount
-#: model_terms:ir.ui.view,arch_db:sale_discount_display_amount.report_saleorder_document_inherit
-msgid "<strong>Discount Subtotal</strong>"
-msgstr ""
-
-#. module: sale_discount_display_amount
-#: model_terms:ir.ui.view,arch_db:sale_discount_display_amount.report_saleorder_document_inherit
-msgid "<strong>Subtotal Without Discount</strong>"
-msgstr ""
-
-#. module: sale_discount_display_amount
 #: model:ir.model.fields,field_description:sale_discount_display_amount.field_sale_order__discount_total
 #: model:ir.model.fields,field_description:sale_discount_display_amount.field_sale_order_line__discount_total
 msgid "Discount Subtotal"
@@ -34,7 +24,7 @@ msgstr "Subtotal de descompte"
 
 #. module: sale_discount_display_amount
 #: model:ir.model,name:sale_discount_display_amount.model_sale_order
-msgid "Sale Order"
+msgid "Sales Order"
 msgstr "Comanda de venda"
 
 #. module: sale_discount_display_amount
@@ -47,3 +37,12 @@ msgstr "Línia de comandes de vendes"
 #: model:ir.model.fields,field_description:sale_discount_display_amount.field_sale_order_line__price_total_no_discount
 msgid "Subtotal Without Discount"
 msgstr "Subtotal sense descompte"
+
+#~ msgid "Display Name"
+#~ msgstr "Nom Visible"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Darrera modificació el"

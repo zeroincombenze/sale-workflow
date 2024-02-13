@@ -4,23 +4,21 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Sale Automatic Workflow',
-    'version': '12.0.1.1.1',
-    'category': 'Sales Management',
-    'license': 'AGPL-3',
-    'author': "Akretion, "
-              "Camptocamp, "
-              "Sodexis, "
-              "Odoo Community Association (OCA)",
-    'website': 'https://github.com/OCA/sale-workflow',
-    'depends': [
-        'sale_stock',
-        'sales_team',
+    "name": "Sale Automatic Workflow",
+    "version": "15.0.1.0.1",
+    "category": "Sales Management",
+    "license": "AGPL-3",
+    "author": "Akretion, "
+    "Camptocamp, "
+    "Sodexis, "
+    "Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/sale-workflow",
+    "depends": ["sale_stock", "sales_team", "sale_delivery_state"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/sale_view.xml",
+        "views/sale_workflow_process_view.xml",
+        "data/automatic_workflow_data.xml",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/sale_view.xml',
-        'views/sale_workflow_process_view.xml',
-        'data/automatic_workflow_data.xml',
-    ],
+    "installable": True,
 }

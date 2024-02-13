@@ -10,37 +10,45 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-23 03:41+0000\n"
-"PO-Revision-Date: 2020-06-26 10:19+0000\n"
-"Last-Translator: Quentin Dupont <perso@quentindupont.fr>\n"
+"PO-Revision-Date: 2023-11-09 11:38+0000\n"
+"Last-Translator: Denis Leemann <denis.leemann@camptocamp.com>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: sale_exception
 #: model_terms:ir.ui.view,arch_db:sale_exception.view_order_form
 msgid ""
 "<strong>There are exceptions blocking the confirmation of this Sale Order:</"
 "strong>"
-msgstr "<strong>Restrictions bloquant la confirmation du devis :</strong>"
+msgstr ""
+"<strong>Des exceptions bloquent la confirmation de cette commande</strong>"
+
+#. module: sale_exception
+#: model_terms:ir.ui.view,arch_db:sale_exception.view_order_form
+msgid ""
+"<strong>There are exceptions on this line blocking the confirmation of this "
+"quotation:</strong>"
+msgstr "<strong>Des exceptions bloquent la confirmation de ce devis:</strong>"
 
 #. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_dumping
 msgid "A product is sold cheaper than his cost."
-msgstr "Un produit est vendu moins cher que son prix de revient."
+msgstr "Le prix de vente d'un produit est plus faible que son coût."
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_exception_rule__model
 msgid "Apply on"
-msgstr "Appliquer sur"
+msgstr "S'applique sur"
 
 #. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_sol
 msgid "At least one order line should be present in the sale"
-msgstr "Au moins une ligne de commande doit être présente dans la vente"
+msgstr "La commande doit contenir au moins une ligne"
 
 #. module: sale_exception
 #: model_terms:ir.ui.view,arch_db:sale_exception.view_sales_order_filter
@@ -63,9 +71,7 @@ msgstr "Annuler"
 msgid ""
 "Click here to be able to confirm this Sale Orders regardless of the "
 "exceptions."
-msgstr ""
-"Cliquez ici pour pouvoir confirmer ces ventes sans tenir compte des "
-"exceptions."
+msgstr "Cliquez ici pour confirmer la Commande en bypassant les exceptions."
 
 #. module: sale_exception
 #: model_terms:ir.ui.view,arch_db:sale_exception.view_sale_exception_confirm
@@ -83,6 +89,11 @@ msgid "Created on"
 msgstr "Créé le"
 
 #. module: sale_exception
+#: model:exception.rule,name:sale_exception.exception_partner_sale_warning
+msgid "Customer sale warning"
+msgstr ""
+
+#. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__display_name
 msgid "Display Name"
 msgstr "Afficher le nom"
@@ -90,13 +101,24 @@ msgstr "Afficher le nom"
 #. module: sale_exception
 #: model:ir.model,name:sale_exception.model_exception_rule
 msgid "Exception Rule"
-msgstr "Règle d'exception"
+msgstr "Règles de restriction"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__exception_ids
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__exception_ids
+msgid "Exceptions"
+msgstr "Restrictions"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__exceptions_summary
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__exceptions_summary
+msgid "Exceptions Summary"
+msgstr ""
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__exception_ids
-#, fuzzy
 msgid "Exceptions to resolve"
-msgstr "Règles de restriction"
+msgstr "Exceptions à résoudre"
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__id
@@ -105,11 +127,11 @@ msgstr "ID"
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__ignore
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__ignore_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__ignore_exception
 #: model_terms:ir.ui.view,arch_db:sale_exception.view_order_form
-#, fuzzy
 msgid "Ignore Exceptions"
-msgstr "Restrictions de vente"
+msgstr "Ignorer les exceptions"
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm____last_update
@@ -125,6 +147,11 @@ msgstr "Modifié par"
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__write_date
 msgid "Last Updated on"
 msgstr "Modifié le"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__main_exception_id
+msgid "Main Exception"
+msgstr ""
 
 #. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_zip
@@ -154,6 +181,11 @@ msgid "Not Enough Virtual Stock"
 msgstr "Not Enough Virtual Stock"
 
 #. module: sale_exception
+#: model:exception.rule,name:sale_exception.exception_product_sale_warning
+msgid "Product warning"
+msgstr ""
+
+#. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__related_model_id
 msgid "Sale"
 msgstr "Ventes"
@@ -165,30 +197,29 @@ msgid "Sale Exception Rules"
 msgstr "Règle de restriction sur les ventes"
 
 #. module: sale_exception
-#: model_terms:ir.ui.view,arch_db:sale_exception.view_sale_exception_confirm
-msgid "Sale Exceptions"
-msgstr "Restrictions de vente"
-
-#. module: sale_exception
-#: model:ir.model,name:sale_exception.model_sale_order
-msgid "Sale Order"
+#: model:ir.model,name:sale_exception.model_sale_exception_confirm
+msgid "Sale exception confirm wizard"
 msgstr ""
 
 #. module: sale_exception
-#: selection:exception.rule,model:0
+#: model:ir.model.fields.selection,name:sale_exception.selection__exception_rule__model__sale_order
 msgid "Sale order"
 msgstr ""
 
 #. module: sale_exception
-#: selection:exception.rule,model:0
+#: model:ir.model.fields.selection,name:sale_exception.selection__exception_rule__model__sale_order_line
 msgid "Sale order line"
 msgstr ""
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_exception_rule__sale_ids
-#, fuzzy
 msgid "Sales"
 msgstr "Ventes"
+
+#. module: sale_exception
+#: model:ir.model,name:sale_exception.model_sale_order
+msgid "Sales Order"
+msgstr ""
 
 #. module: sale_exception
 #: model:ir.model,name:sale_exception.model_sale_order_line
@@ -203,14 +234,25 @@ msgid "Test Draft Orders"
 msgstr "Tester les commandes brouillon"
 
 #. module: sale_exception
+#: model:exception.rule,description:sale_exception.exception_partner_sale_warning
+msgid "The customer has a sale warning in his form"
+msgstr ""
+
+#. module: sale_exception
+#: model:exception.rule,description:sale_exception.exception_product_sale_warning
+msgid "The product has a warning in his form"
+msgstr ""
+
+#. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_free
 msgid "The total can't be 0"
 msgstr ""
 
-#. module: sale_exception
-#: model:ir.model,name:sale_exception.model_sale_exception_confirm
-msgid "sale.exception.confirm"
-msgstr "sale.exception.confirm"
+#~ msgid "Sale Exceptions"
+#~ msgstr "Restrictions de vente"
+
+#~ msgid "sale.exception.confirm"
+#~ msgstr "sale.exception.confirm"
 
 #~ msgid "Error:"
 #~ msgstr "Erreur :"
@@ -226,6 +268,3 @@ msgstr "sale.exception.confirm"
 
 #~ msgid "_Close"
 #~ msgstr "_Close"
-
-#~ msgid "Exceptions"
-#~ msgstr "Restrictions"

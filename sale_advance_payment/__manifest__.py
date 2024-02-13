@@ -1,10 +1,9 @@
 # Copyright 2015 Omar Castiñeira, Comunitea Servicios Tecnológicos S.L.
-# Copyright 2022 Simone Rubino - TAKOBI
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     "name": "Sale Advance Payment",
-    "version": "12.0.1.0.0",
+    "version": "15.0.1.0.3",
     "author": "Comunitea, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/sale-workflow",
     "category": "Sales",

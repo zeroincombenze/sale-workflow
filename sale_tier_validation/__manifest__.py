@@ -3,19 +3,14 @@
 {
     "name": "Sale Tier Validation",
     "summary": "Extends the functionality of Sale Orders to "
-               "support a tier validation process.",
-    "version": "12.0.1.0.0",
+    "support a tier validation process.",
+    "version": "15.0.1.1.2",
     "category": "Sale",
     "website": "https://github.com/OCA/sale-workflow",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "sale",
-        "base_tier_validation",
-    ],
-    "data": [
-        "views/sale_order_view.xml",
-    ],
+    "depends": ["sale", "base_tier_validation"],
+    "data": ["data/mail_data.xml", "views/sale_order_view.xml"],
 }

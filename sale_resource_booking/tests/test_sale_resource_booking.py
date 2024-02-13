@@ -1,28 +1,24 @@
 # Copyright 2021 Tecnativa - Jairo Llopis
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from datetime import datetime
 from contextlib import suppress
+from datetime import datetime
+
+from odoo.tests.common import Form, TransactionCase
 
 from odoo.addons.resource_booking.tests.common import create_test_data
-from odoo.tests.common import SavepointCase, Form
 
 
-class SaleResourceBookingsCase(SavepointCase):
+class SaleResourceBookingsCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         create_test_data(cls)
         cls.product = cls.env["product.product"].create(
-            {
-                "name": "test booking product",
-                "resource_booking_type_id": cls.rbt.id,
-            }
+            {"name": "test booking product", "resource_booking_type_id": cls.rbt.id}
         )
         cls.product_normal = cls.env["product.product"].create(
-            {
-                "name": "test non-booking product",
-            }
+            {"name": "test non-booking product"}
         )
 
     def _run_action(self, action):
@@ -65,11 +61,9 @@ class SaleResourceBookingsCase(SavepointCase):
         self.assertTrue(order.resource_booking_ids)
         self.assertTrue(self.rbt.booking_ids)
         self.assertEqual(self.rbt.booking_count, 2)
-        # Use wizard to quickly assign partners
-        wiz = self._run_action(action["actions"][0])
-        with Form(wiz) as wiz_f:
-            with wiz_f.resource_booking_ids.edit(1) as booking_f:
-                booking_f.partner_id = partner2
+        # Add new attendees
+        for booking in order.resource_booking_ids:
+            booking.partner_ids += partner2
         # Click on "Bookings" smart button
         action = order.action_open_resource_bookings()
         bookings = self._run_action(action)
@@ -82,8 +76,16 @@ class SaleResourceBookingsCase(SavepointCase):
             self.assertFalse(booking.start)
             self.assertFalse(booking.stop)
             self.assertFalse(booking.meeting_id)
-        self.assertEqual(bookings[0].partner_id, order.partner_id)
-        self.assertEqual(bookings[1].partner_id, partner2)
+            self.assertEqual(order.partner_id, booking.partner_id)
+            self.assertTrue(partner2 in booking.partner_ids)
+        if self.product.resource_booking_type_combination_rel_id:
+            self.assertEqual(bookings.mapped("combination_auto_assign"), [False] * 2)
+            self.assertEqual(
+                bookings.combination_id,
+                self.product.resource_booking_type_combination_rel_id.combination_id,
+            )
+        else:
+            self.assertEqual(bookings.mapped("combination_auto_assign"), [True] * 2)
         # Cancel SO, bookings canceled
         order.action_cancel()
         self.assertEqual(bookings.mapped("state"), ["canceled"] * 2)

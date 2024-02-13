@@ -1,2 +1,0 @@
-* Add Screenshots
-* Add tests

@@ -3,48 +3,66 @@
 # Copyright 2017 - 2019 Alex Comba - Agile Business Group
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import json
+
 from odoo import api, models
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
-    @api.depends('order_line.price_total')
+    @api.depends(
+        "order_line.tax_id", "order_line.price_unit", "amount_total", "amount_untaxed"
+    )
+    def _compute_tax_totals_json(self):
+        def compute_taxes(order_line):
+            price = 0.0
+            if order_line.discounting_type == "additive":
+                total_discount = (
+                    order_line.discount + order_line.discount2 + order_line.discount3
+                )
+                price = order_line.price_unit * (1 - total_discount / 100.0)
+            elif order_line.discounting_type == "multiplicative":
+                price = order_line.price_unit * (
+                    1 - (order_line.discount or 0.0) / 100.0
+                )
+                price = price * (1 - (order_line.discount2 or 0.0) / 100.0)
+                price = price * (1 - (order_line.discount3 or 0.0) / 100.0)
+                order = order_line.order_id
+            order = order_line.order_id
+            return order_line.tax_id._origin.compute_all(
+                price,
+                order.currency_id,
+                order_line.product_uom_qty,
+                product=order_line.product_id,
+                partner=order.partner_shipping_id,
+            )
+
+        vals = super()._compute_tax_totals_json()
+        for order in self.filtered(
+            lambda a: any(line.discount2 or line.discount3 for line in a.order_line)
+        ):
+            account_move = self.env["account.move"]
+            tax_lines_data = (
+                account_move._prepare_tax_lines_data_for_totals_from_object(
+                    order.order_line, compute_taxes
+                )
+            )
+            tax_totals = account_move._get_tax_totals(
+                order.partner_id,
+                tax_lines_data,
+                order.amount_total,
+                order.amount_untaxed,
+                order.currency_id,
+            )
+            order.tax_totals_json = json.dumps(tax_totals)
+        return vals
+
+    @api.depends("order_line.price_total")
     def _amount_all(self):
         prev_values = dict()
         for order in self:
             prev_values.update(order.order_line.triple_discount_preprocess())
-        super(SaleOrder, self)._amount_all()
-        self.env['sale.order.line'].triple_discount_postprocess(prev_values)
-
-    @api.multi
-    def _get_tax_amount_by_group(self):
-        # Copy/paste from standard method in sale
-        self.ensure_one()
-        res = {}
-        for line in self.order_line:
-            price_reduce = line.price_reduce  # changed
-            taxes = line.tax_id.compute_all(
-                price_reduce, quantity=line.product_uom_qty,
-                product=line.product_id,
-                partner=self.partner_shipping_id)['taxes']
-            for tax in line.tax_id:
-                group = tax.tax_group_id
-                res.setdefault(group, 0.0)
-                for t in taxes:
-                    if (t['id'] == tax.id or
-                            t['id'] in tax.children_tax_ids.ids):
-                        res[group] += t['amount']
-        res = sorted(list(res.items()), key=lambda l: l[0].sequence)
-        res = [(l[0].name, l[1]) for l in res]
+        res = super()._amount_all()
+        self.env["sale.order.line"].triple_discount_postprocess(prev_values)
         return res
-
-    @api.multi
-    def action_invoice_create(self, grouped=False, final=False):
-        invoice_ids = super(SaleOrder, self).action_invoice_create(
-            grouped=grouped, final=final
-        )
-        invoices = self.env['account.invoice'].browse(invoice_ids)
-        for inv in invoices:
-            inv._onchange_invoice_line_ids()
-        return invoice_ids

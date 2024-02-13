@@ -30,7 +30,6 @@ class SaleOrder(models.Model):
             ("paid", "Paid"),
             ("partial", "Partially Paid"),
         ],
-        string="Advance Payment Status",
         store=True,
         readonly=True,
         copy=False,
@@ -44,23 +43,32 @@ class SaleOrder(models.Model):
         "amount_total",
         "account_payment_ids",
         "account_payment_ids.state",
-        "account_payment_ids.move_line_ids",
-        "account_payment_ids.move_line_ids.date",
-        "account_payment_ids.move_line_ids.debit",
-        "account_payment_ids.move_line_ids.credit",
-        "account_payment_ids.move_line_ids.currency_id",
-        "account_payment_ids.move_line_ids.amount_currency",
+        "account_payment_ids.move_id",
+        "account_payment_ids.move_id.line_ids",
+        "account_payment_ids.move_id.line_ids.date",
+        "account_payment_ids.move_id.line_ids.debit",
+        "account_payment_ids.move_id.line_ids.credit",
+        "account_payment_ids.move_id.line_ids.currency_id",
+        "account_payment_ids.move_id.line_ids.amount_currency",
+        "invoice_ids.amount_residual",
     )
     def _compute_advance_payment(self):
         for order in self:
-            mls = order.account_payment_ids.mapped("move_line_ids").filtered(
+            mls = order.account_payment_ids.mapped("move_id.line_ids").filtered(
                 lambda x: x.account_id.internal_type == "receivable"
                 and x.parent_state == "posted"
             )
             advance_amount = 0.0
             for line in mls:
                 line_currency = line.currency_id or line.company_id.currency_id
-                line_amount = line.amount_currency if line.currency_id else line.balance
+                # Exclude reconciled pre-payments amount because once reconciled
+                # the pre-payment will reduce invoice residual amount like any
+                # other payment.
+                line_amount = (
+                    line.amount_residual_currency
+                    if line.currency_id
+                    else line.amount_residual
+                )
                 line_amount *= -1
                 if line_currency != order.currency_id:
                     advance_amount += line.currency_id._convert(
@@ -71,7 +79,11 @@ class SaleOrder(models.Model):
                     )
                 else:
                     advance_amount += line_amount
-            amount_residual = order.amount_total - advance_amount
+            # Consider payments in related invoices.
+            invoice_paid_amount = 0.0
+            for inv in order.invoice_ids:
+                invoice_paid_amount += inv.amount_total - inv.amount_residual
+            amount_residual = order.amount_total - advance_amount - invoice_paid_amount
             payment_state = "not_paid"
             if mls:
                 has_due_amount = float_compare(

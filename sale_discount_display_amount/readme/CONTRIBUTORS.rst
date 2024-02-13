@@ -1,3 +1,5 @@
 * Cédric Pigeon <cedric.pigeon@acsone.eu>
 * Abraham Anes <abrahamanes@gmail.com>
-* Giovanni Serra <giovanni@gslab.it>
+* Chafique Delli <chafique.delli@akretion.com>
+* Ruchir Shukla <ruchir@bizzappdev.com>
+* Manuel Regidor <manuel.regidor@sygel.es>

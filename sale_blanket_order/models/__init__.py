@@ -1,6 +1,3 @@
-from . import (
-    blanket_orders,
-    sale_order,
-    sale_order_line,
-    sale_config_settings,
-)
+from . import blanket_orders
+from . import sale_orders
+from . import sale_config_settings

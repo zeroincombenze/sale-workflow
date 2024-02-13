@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* sale_advance_payment
+# 	* sale_advance_payment
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,8 +30,8 @@ msgid "Advance Payment Status"
 msgstr ""
 
 #. module: sale_advance_payment
-#: model_terms:ir.ui.view,arch_db:sale_advance_payment.view_order_form
-msgid "Amount"
+#: model:ir.model.fields,field_description:sale_advance_payment.field_account_voucher_wizard__amount_total
+msgid "Amount Total"
 msgstr ""
 
 #. module: sale_advance_payment
@@ -45,8 +45,9 @@ msgid "Amount in Order Currency"
 msgstr ""
 
 #. module: sale_advance_payment
-#: model:ir.model.fields,field_description:sale_advance_payment.field_account_voucher_wizard__amount_total
-msgid "Amount total"
+#: code:addons/sale_advance_payment/wizard/sale_advance_payment_wzd.py:0
+#, python-format
+msgid "Amount of advance must be positive."
 msgstr ""
 
 #. module: sale_advance_payment
@@ -76,11 +77,6 @@ msgid "Currency"
 msgstr ""
 
 #. module: sale_advance_payment
-#: model_terms:ir.ui.view,arch_db:sale_advance_payment.view_order_form
-msgid "Customer"
-msgstr ""
-
-#. module: sale_advance_payment
 #: model:ir.model.fields,field_description:sale_advance_payment.field_account_voucher_wizard__date
 msgid "Date"
 msgstr ""
@@ -96,8 +92,14 @@ msgid "ID"
 msgstr ""
 
 #. module: sale_advance_payment
-#: selection:account.voucher.wizard,payment_type:0
+#: model:ir.model.fields.selection,name:sale_advance_payment.selection__account_voucher_wizard__payment_type__inbound
 msgid "Inbound"
+msgstr ""
+
+#. module: sale_advance_payment
+#: code:addons/sale_advance_payment/wizard/sale_advance_payment_wzd.py:0
+#, python-format
+msgid "Inbound amount of advance is greater than residual amount on sale"
 msgstr ""
 
 #. module: sale_advance_payment
@@ -108,6 +110,11 @@ msgstr ""
 #. module: sale_advance_payment
 #: model:ir.model.fields,field_description:sale_advance_payment.field_account_voucher_wizard__journal_currency_id
 msgid "Journal Currency"
+msgstr ""
+
+#. module: sale_advance_payment
+#: model:ir.model,name:sale_advance_payment.model_account_move
+msgid "Journal Entry"
 msgstr ""
 
 #. module: sale_advance_payment
@@ -131,7 +138,7 @@ msgid "Make advance payment"
 msgstr ""
 
 #. module: sale_advance_payment
-#: selection:sale.order,advance_payment_status:0
+#: model:ir.model.fields.selection,name:sale_advance_payment.selection__sale_order__advance_payment_status__not_paid
 msgid "Not Paid"
 msgstr ""
 
@@ -156,17 +163,23 @@ msgid "Order Due Amount"
 msgstr ""
 
 #. module: sale_advance_payment
-#: selection:account.voucher.wizard,payment_type:0
+#: model:ir.model.fields.selection,name:sale_advance_payment.selection__account_voucher_wizard__payment_type__outbound
 msgid "Outbound"
 msgstr ""
 
 #. module: sale_advance_payment
-#: selection:sale.order,advance_payment_status:0
+#: code:addons/sale_advance_payment/wizard/sale_advance_payment_wzd.py:0
+#, python-format
+msgid "Outbound amount of advance is greater than the advanced paid amount"
+msgstr ""
+
+#. module: sale_advance_payment
+#: model:ir.model.fields.selection,name:sale_advance_payment.selection__sale_order__advance_payment_status__paid
 msgid "Paid"
 msgstr ""
 
 #. module: sale_advance_payment
-#: selection:sale.order,advance_payment_status:0
+#: model:ir.model.fields.selection,name:sale_advance_payment.selection__sale_order__advance_payment_status__partial
 msgid "Partially Paid"
 msgstr ""
 
@@ -218,12 +231,13 @@ msgstr ""
 
 #. module: sale_advance_payment
 #: model:ir.model,name:sale_advance_payment.model_sale_order
-msgid "Sale Order"
+msgid "Sales Order"
 msgstr ""
 
 #. module: sale_advance_payment
-#: code:addons/sale_advance_payment/wizard/sale_advance_payment_wzd.py:87
+#: code:addons/sale_advance_payment/wizard/sale_advance_payment_wzd.py:0
 #, python-format
-msgid "The amount to advance must always be positive. Please use the payment type to indicate if this is an inbound or an outbound payment."
+msgid ""
+"The amount to advance must always be positive. Please use the payment type "
+"to indicate if this is an inbound or an outbound payment."
 msgstr ""
-

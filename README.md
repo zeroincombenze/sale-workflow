@@ -1,15 +1,15 @@
 
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/sale-workflow&target_branch=12.0)
-[![Pre-commit Status](https://github.com/OCA/sale-workflow/actions/workflows/pre-commit.yml/badge.svg?branch=12.0)](https://github.com/OCA/sale-workflow/actions/workflows/pre-commit.yml?query=branch%3A12.0)
-[![Build Status](https://github.com/OCA/sale-workflow/actions/workflows/test.yml/badge.svg?branch=12.0)](https://github.com/OCA/sale-workflow/actions/workflows/test.yml?query=branch%3A12.0)
-[![codecov](https://codecov.io/gh/OCA/sale-workflow/branch/12.0/graph/badge.svg)](https://codecov.io/gh/OCA/sale-workflow)
-[![Translation Status](https://translation.odoo-community.org/widgets/sale-workflow-12-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/sale-workflow-12-0/?utm_source=widget)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/sale-workflow&target_branch=15.0)
+[![Pre-commit Status](https://github.com/OCA/sale-workflow/actions/workflows/pre-commit.yml/badge.svg?branch=15.0)](https://github.com/OCA/sale-workflow/actions/workflows/pre-commit.yml?query=branch%3A15.0)
+[![Build Status](https://github.com/OCA/sale-workflow/actions/workflows/test.yml/badge.svg?branch=15.0)](https://github.com/OCA/sale-workflow/actions/workflows/test.yml?query=branch%3A15.0)
+[![codecov](https://codecov.io/gh/OCA/sale-workflow/branch/15.0/graph/badge.svg)](https://codecov.io/gh/OCA/sale-workflow)
+[![Translation Status](https://translation.odoo-community.org/widgets/sale-workflow-15-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/sale-workflow-15-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
-# Sale addons
+# Sale Workflow
 
-This project aim to deal with modules related to manage sale and their related workflow.
+TODO: add repo description.
 
 <!-- /!\ do not modify below this line -->
 
@@ -21,103 +21,96 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[account_invoice_pricelist_technical](account_invoice_pricelist_technical/) | 12.0.1.0.1 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Prevent technical pricelists from being selected on invoice forms
-[partner_contact_sale_info_propagation](partner_contact_sale_info_propagation/) | 12.0.1.0.0 |  | Propagate Salesperson and Sales Channel from Company to Contacts
-[partner_prospect](partner_prospect/) | 12.0.1.0.0 |  | Partner Prospect
-[partner_sale_pivot](partner_sale_pivot/) | 12.0.1.0.0 | [![ernestotejeda](https://github.com/ernestotejeda.png?size=30px)](https://github.com/ernestotejeda) | Sales analysis from customer form view
-[portal_sale_personal_data_only](portal_sale_personal_data_only/) | 12.0.1.1.1 |  | Allow portal users to see their own documents
-[pricelist_by_category_qty](pricelist_by_category_qty/) | 12.0.1.0.0 |  | Discount by quantities of product category
-[product_form_sale_link](product_form_sale_link/) | 12.0.1.1.0 |  | Adds a button on product forms to access Sale Lines
-[product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale/) | 12.0.1.1.0 |  | Loads in every sale order line the customer code defined in the product
-[sale_advance_payment](sale_advance_payment/) | 12.0.1.0.0 |  | Allow to add advance payments on sales and then use them on invoices
-[sale_automatic_workflow](sale_automatic_workflow/) | 12.0.1.1.1 |  | Sale Automatic Workflow
-[sale_automatic_workflow_job](sale_automatic_workflow_job/) | 12.0.1.0.1 |  | Execute sale automatic workflows in queue jobs
-[sale_automatic_workflow_payment_mode](sale_automatic_workflow_payment_mode/) | 12.0.1.0.0 |  | Sale Automatic Workflow - Payment Mode
-[sale_blanket_order](sale_blanket_order/) | 12.0.1.0.2 |  | Blanket Orders
-[sale_cancel_reason](sale_cancel_reason/) | 12.0.1.2.0 |  | Sale Cancel Reason
-[sale_commercial_partner](sale_commercial_partner/) | 12.0.1.0.1 |  | Add stored related field 'Commercial Entity' on sale orders
-[sale_commitment_lead_time](sale_commitment_lead_time/) | 12.0.1.0.0 |  | Check preparation time of sale order
-[sale_contact_type](sale_contact_type/) | 12.0.1.0.0 |  | Define ordering contact type
-[sale_delivery_split_date](sale_delivery_split_date/) | 12.0.1.0.1 |  | Sale Deliveries split by date
-[sale_delivery_state](sale_delivery_state/) | 12.0.1.0.0 |  | Show the delivery state on the sale order
-[sale_disable_inventory_check](sale_disable_inventory_check/) | 12.0.1.0.0 |  | Disable warning 'Not enough inventory' when there isn't enough product stock
-[sale_discount_display_amount](sale_discount_display_amount/) | 12.0.1.1.0 | [![GSLabIt](https://github.com/GSLabIt.png?size=30px)](https://github.com/GSLabIt) | This addon intends to display the amount of the discount computed on sale_order_line and sale_order level
-[sale_double_validation](sale_double_validation/) | 12.0.1.0.1 |  | Double validation for Sales
-[sale_elaboration](sale_elaboration/) | 12.0.1.0.1 |  | Set an elaboration for any sale line
-[sale_exception](sale_exception/) | 12.0.1.1.1 |  | Custom exceptions on sale order
-[sale_fixed_discount](sale_fixed_discount/) | 12.0.1.0.0 |  | Allows to apply fixed amount discounts in sales orders.
-[sale_force_invoiced](sale_force_invoiced/) | 12.0.1.0.1 |  | Allows to force the invoice status of the sales order to Invoiced
-[sale_force_whole_invoiceability](sale_force_whole_invoiceability/) | 12.0.1.1.1 |  | Sale Force Whole Invoiceability
-[sale_generator](sale_generator/) | 12.0.1.0.2 | [![sebastienbeau](https://github.com/sebastienbeau.png?size=30px)](https://github.com/sebastienbeau) [![kevinkhao](https://github.com/kevinkhao.png?size=30px)](https://github.com/kevinkhao) | Sale Generator
-[sale_global_discount](sale_global_discount/) | 12.0.1.2.1 |  | Sale Global Discount
-[sale_invoice_group_method](sale_invoice_group_method/) | 12.0.1.0.0 |  | This module allows you to combine severalSales Orders into a single invoice,if they meet the group criteria defined by the 'Invoice Group Method'
-[sale_invoice_plan](sale_invoice_plan/) | 12.0.2.1.3 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Add to sales order, ability to manage future invoice plan
-[sale_invoice_policy](sale_invoice_policy/) | 12.0.1.0.0 |  | Sales Management: let the user choose the invoice policy on the order
-[sale_isolated_quotation](sale_isolated_quotation/) | 12.0.1.1.0 |  | Sale Isolated Quotation
-[sale_last_price_info](sale_last_price_info/) | 12.0.2.0.0 |  | Product Last Price Info - Sale
-[sale_manual_delivery](sale_manual_delivery/) | 12.0.2.0.2 |  | Create manually your deliveries
-[sale_merge_draft_invoice](sale_merge_draft_invoice/) | 12.0.1.0.1 |  | Sale Merge Draft Invoice
-[sale_milestone_profile_invoicing](sale_milestone_profile_invoicing/) | 12.0.1.0.1 |  | Inform on delivered and invoiced work by sale order line.
-[sale_mrp_bom](sale_mrp_bom/) | 12.0.1.0.1 |  | Allows define a BOM in the sales lines.
-[sale_mrp_link](sale_mrp_link/) | 12.0.1.0.1 |  | Show manufacturing orders generated from sales order
-[sale_order_action_invoice_create_hook](sale_order_action_invoice_create_hook/) | 12.0.1.0.3 |  | Add more flexibility in the grouping parameters for the creation of invoices
-[sale_order_archive](sale_order_archive/) | 12.0.1.0.0 |  | Archive Sale Orders
-[sale_order_digitized_signature](sale_order_digitized_signature/) | 12.0.1.0.0 | [![mgosai](https://github.com/mgosai.png?size=30px)](https://github.com/mgosai) | Capture customer signature on the sales order
-[sale_order_general_discount](sale_order_general_discount/) | 12.0.1.1.0 |  | General discount per sale order
-[sale_order_incoterm_place](sale_order_incoterm_place/) | 12.0.1.0.1 |  | Sale Order Incoterm Place
-[sale_order_invoicing_finished_task](sale_order_invoicing_finished_task/) | 12.0.1.1.1 |  | Control invoice order lines if their related task has been set to invoiceable
-[sale_order_line_date](sale_order_line_date/) | 12.0.1.1.2 |  | Adds a commitment date to each sale order line.
-[sale_order_line_description](sale_order_line_description/) | 12.0.1.0.1 |  | Sale order line description
-[sale_order_line_input](sale_order_line_input/) | 12.0.1.0.0 |  | Search, create or modify directly sale order lines
-[sale_order_line_price_history](sale_order_line_price_history/) | 12.0.1.1.2 |  | Sale order line price history
-[sale_order_line_sequence](sale_order_line_sequence/) | 12.0.1.0.0 |  | Propagates SO line sequence to invoices and stock picking.
-[sale_order_line_serial_unique](sale_order_line_serial_unique/) | 12.0.1.0.0 | [![rousseldenis](https://github.com/rousseldenis.png?size=30px)](https://github.com/rousseldenis) | Restrict the usage of unique quantity of product per line if product tracking is serial
-[sale_order_lot_generator](sale_order_lot_generator/) | 12.0.1.0.2 | [![florian-dacosta](https://github.com/florian-dacosta.png?size=30px)](https://github.com/florian-dacosta) [![mourad-ehm](https://github.com/mourad-ehm.png?size=30px)](https://github.com/mourad-ehm) [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Sale Order Lot Generator
-[sale_order_lot_selection](sale_order_lot_selection/) | 12.0.2.0.1 |  | Sale Order Lot Selection
-[sale_order_price_recalculation](sale_order_price_recalculation/) | 12.0.1.1.1 |  | Recalculate prices / Reset descriptions on sale order lines
-[sale_order_priority](sale_order_priority/) | 12.0.1.0.2 |  | Define priority on sale orders
-[sale_order_product_assortment](sale_order_product_assortment/) | 12.0.1.0.0 | [![CarlosRoca13](https://github.com/CarlosRoca13.png?size=30px)](https://github.com/CarlosRoca13) | Sale Order Product Assortment
-[sale_order_product_recommendation](sale_order_product_recommendation/) | 12.0.3.0.1 |  | Recommend products to sell to customer based on history
-[sale_order_product_recommendation_secondary_unit](sale_order_product_recommendation_secondary_unit/) | 12.0.2.1.0 |  | Add secondary unit to recommend products wizard
-[sale_order_rename](sale_order_rename/) | 12.0.1.0.2 |  | Allows renaming of Quotation / Sale Order
-[sale_order_revision](sale_order_revision/) | 12.0.1.0.1 |  | Keep track of revised quotations
-[sale_order_secondary_unit](sale_order_secondary_unit/) | 12.0.1.1.0 |  | Sale product in a secondary unit
-[sale_order_tag](sale_order_tag/) | 12.0.1.0.0 | [![patrickrwilson](https://github.com/patrickrwilson.png?size=30px)](https://github.com/patrickrwilson) | Adds Tags to Sales Orders.
-[sale_order_transmit_method](sale_order_transmit_method/) | 12.0.1.0.0 |  | Set transmit method (email, post, portal, ...) in sale order and propagate it to invoices
-[sale_order_type](sale_order_type/) | 12.0.1.3.0 |  | Sale Order Type
-[sale_order_weight](sale_order_weight/) | 12.0.1.0.2 |  | Sale Order Weight
-[sale_partner_incoterm](sale_partner_incoterm/) | 12.0.1.0.1 |  | Set the customer preferred incoterm on each sales order
-[sale_pricelist_technical](sale_pricelist_technical/) | 12.0.1.0.1 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Prevent some pricelists from being selected on order and customer forms
-[sale_procurement_group_by_commitment_date](sale_procurement_group_by_commitment_date/) | 12.0.1.0.0 |  | Groups pickings based on commitment date of order line
-[sale_procurement_group_by_line](sale_procurement_group_by_line/) | 12.0.1.0.0 |  | Base module for multiple procurement group by Sale order
-[sale_product_category_menu](sale_product_category_menu/) | 12.0.1.0.3 |  | Shows 'Product Categories' menu item in Sales
-[sale_product_classification](sale_product_classification/) | 12.0.1.0.0 |  | Classify products regarding their sales performance
-[sale_product_multi_add](sale_product_multi_add/) | 12.0.1.1.0 |  | Sale Product Multi Add
-[sale_product_returnable](sale_product_returnable/) | 12.0.1.0.2 | [![max3903](https://github.com/max3903.png?size=30px)](https://github.com/max3903) | Get returnable products from your customers
-[sale_product_set](sale_product_set/) | 12.0.1.3.2 |  | Sale product set
-[sale_product_set_variant](sale_product_set_variant/) | 12.0.1.1.0 |  | Add variant management to sale product set.
-[sale_promotion_rule](sale_promotion_rule/) | 12.0.1.0.1 |  | Module to manage promotion rule on sale order
-[sale_quotation_number](sale_quotation_number/) | 12.0.1.0.1 |  | Different sequence for sale quotations
-[sale_rental](sale_rental/) | 12.0.1.1.1 |  | Manage Rental of Products
-[sale_require_po_doc](sale_require_po_doc/) | 12.0.1.0.1 |  | Sale Orders Require PO or Sales Documentation
-[sale_resource_booking](sale_resource_booking/) | 12.0.1.0.1 | [![Yajo](https://github.com/Yajo.png?size=30px)](https://github.com/Yajo) | Link resource bookings with sales
-[sale_restricted_qty](sale_restricted_qty/) | 12.0.2.0.1 |  | Sale order min quantity
-[sale_secondary_salesperson](sale_secondary_salesperson/) | 12.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Sale Secondary Salesperson
-[sale_shipping_info_helper](sale_shipping_info_helper/) | 12.0.1.0.0 |  | Add shipping amounts on sale order
-[sale_start_end_dates](sale_start_end_dates/) | 12.0.1.0.2 |  | Adds start date and end date on sale order lines
-[sale_stock_delivery_address](sale_stock_delivery_address/) | 12.0.1.0.2 |  | Sale Stock Delivery Address
-[sale_stock_last_date](sale_stock_last_date/) | 12.0.1.0.0 |  | Displays last delivery date in sale order lines
-[sale_stock_picking_blocking](sale_stock_picking_blocking/) | 12.0.1.0.1 |  | Allow you to block the creation of deliveries from a sale order.
-[sale_stock_picking_note](sale_stock_picking_note/) | 12.0.1.0.0 |  | Add picking note in sale and purchase order
-[sale_stock_return_request](sale_stock_return_request/) | 12.0.1.0.1 | [![chienandalu](https://github.com/chienandalu.png?size=30px)](https://github.com/chienandalu) | Sale Stock Return Request
-[sale_stock_secondary_unit](sale_stock_secondary_unit/) | 12.0.1.0.0 |  | Get product quantities in a secondary unit
-[sale_stock_sourcing_address](sale_stock_sourcing_address/) | 12.0.1.0.1 |  | Sale Stock Sourcing Address
-[sale_substate](sale_substate/) | 12.0.1.0.1 |  | Sale Sub State
-[sale_tier_validation](sale_tier_validation/) | 12.0.1.0.0 |  | Extends the functionality of Sale Orders to support a tier validation process.
-[sale_triple_discount](sale_triple_discount/) | 12.0.1.2.0 |  | Manage triple discount on sale order lines
-[sale_validity](sale_validity/) | 12.0.1.0.0 |  | Set a default validity delay on quotations
-[sale_wishlist](sale_wishlist/) | 12.0.1.0.0 |  | Handle sale wishlist for partners
-[sales_team_security](sales_team_security/) | 12.0.4.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | New group for seeing only sales channel's documents
+[partner_contact_sale_info_propagation](partner_contact_sale_info_propagation/) | 15.0.1.0.0 |  | Propagate Salesperson and Sales Channel from Company to Contacts
+[partner_sale_pivot](partner_sale_pivot/) | 15.0.1.0.0 | [![ernestotejeda](https://github.com/ernestotejeda.png?size=30px)](https://github.com/ernestotejeda) | Sales analysis from customer form view
+[portal_sale_personal_data_only](portal_sale_personal_data_only/) | 15.0.1.0.0 |  | Portal Sale Personal Data Only
+[product_form_sale_link](product_form_sale_link/) | 15.0.1.0.1 |  | Adds a button on product forms to access Sale Lines
+[product_supplierinfo_for_customer_elaboration](product_supplierinfo_for_customer_elaboration/) | 15.0.2.0.2 |  | Allows to define default elaborations and elaboration notes on product customerinfos
+[product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale/) | 15.0.1.2.0 |  | Loads in every sale order line the customer code defined in the product
+[sale_advance_payment](sale_advance_payment/) | 15.0.1.0.3 |  | Allow to add advance payments on sales and then use them on invoices
+[sale_attached_product](sale_attached_product/) | 15.0.1.0.0 | [![chienandalu](https://github.com/chienandalu.png?size=30px)](https://github.com/chienandalu) | Define products that will be added automatically when adding another in a sales order
+[sale_automatic_workflow](sale_automatic_workflow/) | 15.0.1.0.1 |  | Sale Automatic Workflow
+[sale_automatic_workflow_job](sale_automatic_workflow_job/) | 15.0.1.0.0 |  | Execute sale automatic workflows in queue jobs
+[sale_automatic_workflow_payment_mode](sale_automatic_workflow_payment_mode/) | 15.0.1.0.0 |  | Sale Automatic Workflow - Payment Mode
+[sale_blanket_order](sale_blanket_order/) | 15.0.1.2.1 |  | Blanket Orders
+[sale_cancel_reason](sale_cancel_reason/) | 15.0.1.0.0 |  | Sale Cancel Reason
+[sale_commercial_partner](sale_commercial_partner/) | 15.0.1.0.2 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Add stored related field 'Commercial Entity' on sale orders
+[sale_credit_point](sale_credit_point/) | 15.0.1.0.2 |  | Sale Credit Points
+[sale_delivery_split_date](sale_delivery_split_date/) | 15.0.1.0.0 |  | Sale Deliveries split by date
+[sale_delivery_state](sale_delivery_state/) | 15.0.2.0.0 |  | Show the delivery state on the sale order
+[sale_discount_display_amount](sale_discount_display_amount/) | 15.0.1.0.1 |  | This addon intends to display the amount of the discount computed on sale_order_line and sale_order level
+[sale_elaboration](sale_elaboration/) | 15.0.3.3.0 | [![CarlosRoca13](https://github.com/CarlosRoca13.png?size=30px)](https://github.com/CarlosRoca13) [![sergio-teruel](https://github.com/sergio-teruel.png?size=30px)](https://github.com/sergio-teruel) | Set an elaboration for any sale line
+[sale_exception](sale_exception/) | 15.0.1.0.1 |  | Custom exceptions on sale order
+[sale_fixed_discount](sale_fixed_discount/) | 15.0.1.0.0 |  | Allows to apply fixed amount discounts in sales orders.
+[sale_force_invoiced](sale_force_invoiced/) | 15.0.1.0.0 |  | Allows to force the invoice status of the sales order to Invoiced
+[sale_force_whole_invoiceability](sale_force_whole_invoiceability/) | 15.0.1.0.0 |  | Sale Force Whole Invoiceability
+[sale_global_discount](sale_global_discount/) | 15.0.1.0.0 |  | Sale Global Discount
+[sale_invoice_blocking](sale_invoice_blocking/) | 15.0.1.0.0 |  | Allow you to block the creation of invoices from a sale order.
+[sale_invoice_frequency](sale_invoice_frequency/) | 15.0.1.1.1 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) [![yajo](https://github.com/yajo.png?size=30px)](https://github.com/yajo) [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Define the invoice frequency for customers
+[sale_invoice_no_mail](sale_invoice_no_mail/) | 15.0.1.0.1 |  | Sale Invoice No Mail
+[sale_invoice_plan](sale_invoice_plan/) | 15.0.1.4.1 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Add to sales order, ability to manage future invoice plan
+[sale_invoice_policy](sale_invoice_policy/) | 15.0.1.0.1 |  | Sales Management: let the user choose the invoice policy on the order
+[sale_last_price_info](sale_last_price_info/) | 15.0.1.0.1 |  | Product Last Price Info - Sale
+[sale_missing_tracking](sale_missing_tracking/) | 15.0.1.0.2 | [![carlosdauden](https://github.com/carlosdauden.png?size=30px)](https://github.com/carlosdauden) | Tracking sale missing products
+[sale_order_archive](sale_order_archive/) | 15.0.1.0.1 |  | Archive Sale Orders
+[sale_order_carrier_auto_assign](sale_order_carrier_auto_assign/) | 15.0.1.0.1 |  | Auto assign delivery carrier on sale order confirmation
+[sale_order_discount_invoicing](sale_order_discount_invoicing/) | 15.0.1.0.0 |  | Sale Discount Invoicing
+[sale_order_general_discount](sale_order_general_discount/) | 15.0.1.0.1 |  | General discount per sale order
+[sale_order_invoice_amount](sale_order_invoice_amount/) | 15.0.1.0.0 |  | Display the invoiced and uninvoiced total in the sale order
+[sale_order_invoicing_finished_task](sale_order_invoicing_finished_task/) | 15.0.1.0.1 |  | Control invoice order lines if their related task has been set to invoiceable
+[sale_order_line_date](sale_order_line_date/) | 15.0.1.1.0 |  | Adds a commitment date to each sale order line.
+[sale_order_line_delivery_state](sale_order_line_delivery_state/) | 15.0.1.0.1 |  | Show the delivery state on the sale order line
+[sale_order_line_description](sale_order_line_description/) | 15.0.1.0.0 |  | Sale order line description
+[sale_order_line_input](sale_order_line_input/) | 15.0.1.0.2 |  | Search, create or modify directly sale order lines
+[sale_order_line_menu](sale_order_line_menu/) | 15.0.1.2.0 |  | Adds a Sale Order Lines Menu
+[sale_order_line_price_history](sale_order_line_price_history/) | 15.0.2.0.1 |  | Sale order line price history
+[sale_order_line_remove](sale_order_line_remove/) | 15.0.1.0.0 |  | Allows removal of sale order lines from confirmed orders if not invoiced or received
+[sale_order_line_sequence](sale_order_line_sequence/) | 15.0.2.0.0 |  | Propagates SO line sequence to invoices and stock picking.
+[sale_order_partner_restrict](sale_order_partner_restrict/) | 15.0.1.0.0 | [![OriolVForgeFlow](https://github.com/OriolVForgeFlow.png?size=30px)](https://github.com/OriolVForgeFlow) | Apply restrictions when selecting from the list of customers on SO.
+[sale_order_price_recalculation](sale_order_price_recalculation/) | 15.0.1.0.0 |  | Recalculate prices / Reset descriptions on sale order lines
+[sale_order_priority](sale_order_priority/) | 15.0.1.0.1 |  | Define priority on sale orders
+[sale_order_product_assortment](sale_order_product_assortment/) | 15.0.2.0.0 | [![CarlosRoca13](https://github.com/CarlosRoca13.png?size=30px)](https://github.com/CarlosRoca13) | Module that allows to use the assortments on sale orders
+[sale_order_product_availability_inline](sale_order_product_availability_inline/) | 15.0.1.0.2 | [![ernestotejeda](https://github.com/ernestotejeda.png?size=30px)](https://github.com/ernestotejeda) | Show product availability in sales order line product drop-down.
+[sale_order_product_recommendation](sale_order_product_recommendation/) | 15.0.1.2.2 |  | Recommend products to sell to customer based on history
+[sale_order_product_recommendation_secondary_unit](sale_order_product_recommendation_secondary_unit/) | 15.0.1.0.0 |  | Add secondary unit to recommend products wizard
+[sale_order_qty_change_no_recompute](sale_order_qty_change_no_recompute/) | 15.0.2.0.1 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Prevent recompute if only quantity has changed in sale order line
+[sale_order_report_without_price](sale_order_report_without_price/) | 15.0.1.0.0 |  | Allow you to generate quotation and order reports without price.
+[sale_order_revision](sale_order_revision/) | 15.0.1.0.1 |  | Keep track of revised quotations
+[sale_order_secondary_unit](sale_order_secondary_unit/) | 15.0.2.0.1 |  | Sale product in a secondary unit
+[sale_order_type](sale_order_type/) | 15.0.2.1.2 |  | Sale Order Type
+[sale_order_type_quotation_number](sale_order_type_quotation_number/) | 15.0.1.1.0 |  | Use quotation sequence depending on sale type
+[sale_order_warn_message](sale_order_warn_message/) | 15.0.1.0.0 |  | Add a popup warning on sale to ensure warning is populated
+[sale_partner_incoterm](sale_partner_incoterm/) | 15.0.1.1.0 |  | Set the customer preferred incoterm on each sales order
+[sale_partner_selectable_option](sale_partner_selectable_option/) | 15.0.1.0.2 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Sale Partner Selectable Option
+[sale_payment_sheet](sale_payment_sheet/) | 15.0.1.2.3 | [![sergio-teruel](https://github.com/sergio-teruel.png?size=30px)](https://github.com/sergio-teruel) | Allow to create invoice payments to commercial users without accounting permissions
+[sale_planner_calendar](sale_planner_calendar/) | 15.0.1.4.0 |  | Sale planner calendar
+[sale_procurement_group_by_line](sale_procurement_group_by_line/) | 15.0.1.2.0 |  | Base module for multiple procurement group by Sale order
+[sale_product_category_menu](sale_product_category_menu/) | 15.0.1.0.0 |  | Shows 'Product Categories' menu item in Sales
+[sale_product_multi_add](sale_product_multi_add/) | 15.0.1.0.0 |  | Sale Product Multi Add
+[sale_product_set](sale_product_set/) | 15.0.1.0.1 |  | Sale product set
+[sale_product_set_layout](sale_product_set_layout/) | 15.0.1.0.1 |  | This module allows to add sections with product sets
+[sale_quotation_number](sale_quotation_number/) | 15.0.2.0.1 |  | Different sequence for sale quotations
+[sale_rental](sale_rental/) | 15.0.1.0.2 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Manage Rental of Products
+[sale_resource_booking](sale_resource_booking/) | 15.0.1.0.1 | [![Yajo](https://github.com/Yajo.png?size=30px)](https://github.com/Yajo) | Link resource bookings with sales
+[sale_shipping_info_helper](sale_shipping_info_helper/) | 15.0.1.0.0 |  | Add shipping amounts on sale order
+[sale_sourced_by_line](sale_sourced_by_line/) | 15.0.1.1.0 |  | Multiple warehouse source locations for Sale order
+[sale_start_end_dates](sale_start_end_dates/) | 15.0.1.0.1 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Adds start date and end date on sale order lines
+[sale_stock_cancel_restriction](sale_stock_cancel_restriction/) | 15.0.1.0.2 |  | Sale Stock Cancel Restriction
+[sale_stock_delivery_address](sale_stock_delivery_address/) | 15.0.1.0.0 |  | Sale Stock Delivery Address
+[sale_stock_invoice_plan](sale_stock_invoice_plan/) | 15.0.1.0.1 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Add to sales order, ability to manage future invoice plan
+[sale_stock_last_date](sale_stock_last_date/) | 15.0.1.0.0 |  | Displays last delivery date in sale order lines
+[sale_stock_line_sequence](sale_stock_line_sequence/) | 15.0.1.0.0 |  | Glue Module for Sale Order Line Sequence and Stock Picking Line Sequence
+[sale_stock_picking_blocking](sale_stock_picking_blocking/) | 15.0.1.0.1 |  | Allow you to block the creation of deliveries from a sale order.
+[sale_stock_picking_note](sale_stock_picking_note/) | 15.0.1.0.1 |  | Add picking note in sale and purchase order
+[sale_stock_return_request](sale_stock_return_request/) | 15.0.1.1.1 | [![chienandalu](https://github.com/chienandalu.png?size=30px)](https://github.com/chienandalu) | Sale Stock Return Request
+[sale_stock_secondary_unit](sale_stock_secondary_unit/) | 15.0.1.0.3 |  | Get product quantities in a secondary unit
+[sale_substate](sale_substate/) | 15.0.1.0.0 |  | Sale Sub State
+[sale_tier_validation](sale_tier_validation/) | 15.0.1.1.2 |  | Extends the functionality of Sale Orders to support a tier validation process.
+[sale_triple_discount](sale_triple_discount/) | 15.0.1.0.1 |  | Manage triple discount on sale order lines
+[sale_wishlist](sale_wishlist/) | 15.0.1.0.0 |  | Handle sale wishlist for partners
+[sales_team_security](sales_team_security/) | 15.0.1.0.3 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | New group for seeing only sales channel's documents
+[sales_team_security_crm](sales_team_security_crm/) | 15.0.1.0.1 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Integrates sales_team_security with crm
+[sales_team_security_sale](sales_team_security_sale/) | 15.0.1.0.1 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Integrates sales_team_security with sale
 
 [//]: # (end addons)
 

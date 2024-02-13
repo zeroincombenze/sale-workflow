@@ -1,16 +1,18 @@
 # Copyright 2018 Tecnativa - Sergio Teruel
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
-from odoo.addons import decimal_precision as dp
+from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     sale_discount = fields.Float(
-        digits=dp.get_precision('Discount'),
-        string='Discount (%)',
+        string="Discount",
+        digits="Discount",
         company_dependent=True,
-        track_visibility="onchange",
     )
+
+    @api.model
+    def _commercial_fields(self):
+        return super()._commercial_fields() + ["sale_discount"]

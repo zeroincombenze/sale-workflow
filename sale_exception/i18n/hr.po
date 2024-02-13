@@ -27,6 +27,13 @@ msgid ""
 msgstr ""
 
 #. module: sale_exception
+#: model_terms:ir.ui.view,arch_db:sale_exception.view_order_form
+msgid ""
+"<strong>There are exceptions on this line blocking the confirmation of this "
+"quotation:</strong>"
+msgstr ""
+
+#. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_dumping
 msgid "A product is sold cheaper than his cost."
 msgstr ""
@@ -80,6 +87,11 @@ msgid "Created on"
 msgstr "Datum kreiranja"
 
 #. module: sale_exception
+#: model:exception.rule,name:sale_exception.exception_partner_sale_warning
+msgid "Customer sale warning"
+msgstr ""
+
+#. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__display_name
 msgid "Display Name"
 msgstr "Naziv za prikaz"
@@ -89,6 +101,18 @@ msgstr "Naziv za prikaz"
 #, fuzzy
 msgid "Exception Rule"
 msgstr "Pravila izuzetaka"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__exception_ids
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__exception_ids
+msgid "Exceptions"
+msgstr "Izuzeci"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__exceptions_summary
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__exceptions_summary
+msgid "Exceptions Summary"
+msgstr ""
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__exception_ids
@@ -103,6 +127,7 @@ msgstr "ID"
 
 #. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__ignore
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__ignore_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_order_line__ignore_exception
 #: model_terms:ir.ui.view,arch_db:sale_exception.view_order_form
 #, fuzzy
@@ -123,6 +148,11 @@ msgstr "Promijenio"
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__write_date
 msgid "Last Updated on"
 msgstr "Vrijeme promjene"
+
+#. module: sale_exception
+#: model:ir.model.fields,field_description:sale_exception.field_sale_order__main_exception_id
+msgid "Main Exception"
+msgstr ""
 
 #. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_zip
@@ -152,6 +182,11 @@ msgid "Not Enough Virtual Stock"
 msgstr "Nije dovoljna virtualna zaliha"
 
 #. module: sale_exception
+#: model:exception.rule,name:sale_exception.exception_product_sale_warning
+msgid "Product warning"
+msgstr ""
+
+#. module: sale_exception
 #: model:ir.model.fields,field_description:sale_exception.field_sale_exception_confirm__related_model_id
 msgid "Sale"
 msgstr "Prodaja"
@@ -163,22 +198,17 @@ msgid "Sale Exception Rules"
 msgstr "Pravila izuzetaka u prodaji"
 
 #. module: sale_exception
-#: model_terms:ir.ui.view,arch_db:sale_exception.view_sale_exception_confirm
-msgid "Sale Exceptions"
-msgstr "Izuzeci u prodaji"
-
-#. module: sale_exception
-#: model:ir.model,name:sale_exception.model_sale_order
-msgid "Sale Order"
+#: model:ir.model,name:sale_exception.model_sale_exception_confirm
+msgid "Sale exception confirm wizard"
 msgstr ""
 
 #. module: sale_exception
-#: selection:exception.rule,model:0
+#: model:ir.model.fields.selection,name:sale_exception.selection__exception_rule__model__sale_order
 msgid "Sale order"
 msgstr ""
 
 #. module: sale_exception
-#: selection:exception.rule,model:0
+#: model:ir.model.fields.selection,name:sale_exception.selection__exception_rule__model__sale_order_line
 msgid "Sale order line"
 msgstr ""
 
@@ -187,6 +217,11 @@ msgstr ""
 #, fuzzy
 msgid "Sales"
 msgstr "Prodaja"
+
+#. module: sale_exception
+#: model:ir.model,name:sale_exception.model_sale_order
+msgid "Sales Order"
+msgstr ""
 
 #. module: sale_exception
 #: model:ir.model,name:sale_exception.model_sale_order_line
@@ -201,14 +236,25 @@ msgid "Test Draft Orders"
 msgstr ""
 
 #. module: sale_exception
+#: model:exception.rule,description:sale_exception.exception_partner_sale_warning
+msgid "The customer has a sale warning in his form"
+msgstr ""
+
+#. module: sale_exception
+#: model:exception.rule,description:sale_exception.exception_product_sale_warning
+msgid "The product has a warning in his form"
+msgstr ""
+
+#. module: sale_exception
 #: model:exception.rule,description:sale_exception.excep_no_free
 msgid "The total can't be 0"
 msgstr ""
 
-#. module: sale_exception
-#: model:ir.model,name:sale_exception.model_sale_exception_confirm
-msgid "sale.exception.confirm"
-msgstr "sale.exception.confirm"
+#~ msgid "Sale Exceptions"
+#~ msgstr "Izuzeci u prodaji"
+
+#~ msgid "sale.exception.confirm"
+#~ msgstr "sale.exception.confirm"
 
 #~ msgid "Error:"
 #~ msgstr "Greška:"
@@ -221,6 +267,3 @@ msgstr "sale.exception.confirm"
 
 #~ msgid "_Close"
 #~ msgstr "_Zatvori"
-
-#~ msgid "Exceptions"
-#~ msgstr "Izuzeci"

@@ -4,5 +4,6 @@
 * David Vidal <david.vidal@tecnativa.com>
 * Simone Rubino <simone.rubino@agilebg.com>
 * Jacques-Etienne Baudoux (BCIM sprl) <je@bcim.be>
-* Lorenzo Battistini (`TAKOBI <https://takobi.online>`_)
-* `Nextev Srl <https://www.nextev.it>`_
+* Pimolnat Suntian <pimolnats@ecosoft.co.th>
+* Denis Leemann <denis.leemann@camptocamp.com>
+* Manuel Regidor <manuel.regidor@sygel.es>

@@ -1,12 +1,13 @@
 # Copyright 2017 Omar Castiñeira, Comunitea Servicios Tecnológicos S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+
+from odoo import _, api, exceptions, fields, models
 from odoo.exceptions import UserError
+from odoo.tools import float_compare
 
 
 class AccountVoucherWizard(models.TransientModel):
-
     _name = "account.voucher.wizard"
     _description = "Account Voucher Wizard"
 
@@ -25,11 +26,11 @@ class AccountVoucherWizard(models.TransientModel):
         compute="_compute_get_journal_currency",
     )
     currency_id = fields.Many2one("res.currency", "Currency", readonly=True)
-    amount_total = fields.Monetary("Amount total", readonly=True)
+    amount_total = fields.Monetary(readonly=True)
     amount_advance = fields.Monetary(
         "Amount advanced", required=True, currency_field="journal_currency_id"
     )
-    date = fields.Date("Date", required=True, default=fields.Date.context_today)
+    date = fields.Date(required=True, default=fields.Date.context_today)
     currency_amount = fields.Monetary(
         "Curr. amount", readonly=True, currency_field="currency_id"
     )
@@ -47,6 +48,43 @@ class AccountVoucherWizard(models.TransientModel):
                 wzd.journal_id.currency_id.id
                 or wzd.journal_id.company_id.currency_id.id
             )
+
+    @api.constrains("amount_advance")
+    def check_amount(self):
+        if self.amount_advance <= 0:
+            raise exceptions.ValidationError(_("Amount of advance must be positive."))
+        if self.env.context.get("active_id", False):
+            self.onchange_date()
+            if self.payment_type == "inbound":
+                if (
+                    float_compare(
+                        self.currency_amount,
+                        self.order_id.amount_residual,
+                        precision_digits=2,
+                    )
+                    > 0
+                ):
+                    raise exceptions.ValidationError(
+                        _(
+                            "Inbound amount of advance is greater than residual amount on sale"
+                        )
+                    )
+            else:
+                paid_in_advanced = self.order_id.amount_total - self.amount_total
+                if (
+                    float_compare(
+                        self.currency_amount,
+                        paid_in_advanced,
+                        precision_digits=2,
+                    )
+                    > 0
+                ):
+                    raise exceptions.ValidationError(
+                        _(
+                            "Outbound amount of advance is greater than the "
+                            "advanced paid amount"
+                        )
+                    )
 
     @api.model
     def default_get(self, fields_list):
@@ -90,12 +128,13 @@ class AccountVoucherWizard(models.TransientModel):
                     "is an inbound or an outbound payment."
                 )
             )
+
         return {
-            "payment_date": self.date,
+            "date": self.date,
             "amount": self.amount_advance,
             "payment_type": self.payment_type,
             "partner_type": "customer",
-            "communication": self.payment_ref or sale.name,
+            "ref": self.payment_ref or sale.name,
             "journal_id": self.journal_id.id,
             "currency_id": self.journal_currency_id.id,
             "partner_id": partner_id,
@@ -116,7 +155,7 @@ class AccountVoucherWizard(models.TransientModel):
             payment_vals = self._prepare_payment_vals(sale)
             payment = payment_obj.create(payment_vals)
             sale.account_payment_ids |= payment
-            payment.post()
+            payment.action_post()
 
         return {
             "type": "ir.actions.act_window_close",

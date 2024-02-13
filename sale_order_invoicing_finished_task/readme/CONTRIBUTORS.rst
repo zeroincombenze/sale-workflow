@@ -4,3 +4,9 @@
   * Sergio Teruel
   * Carlos Dauden
   * Alexandre Díaz
+  * João Marques
+  * Ernesto Tejeda
+  * César A. Sánchez
+  * Luis D. Lafaurie
+
+* nikulchaudhary2112@gmail.com
