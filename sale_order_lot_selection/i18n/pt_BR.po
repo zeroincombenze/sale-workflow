@@ -35,6 +35,5 @@ msgid "Stock Move"
 msgstr "Movimentação de estoque"
 
 #, fuzzy
-#~| msgid "Sales Order"
-#~ msgid "Sale Order"
+#~ msgid "Sales Order"
 #~ msgstr "Pedido de Venda"

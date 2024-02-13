@@ -26,7 +26,7 @@ msgstr ""
 #. module: sale_procurement_group_by_line
 #: model:ir.model,name:sale_procurement_group_by_line.model_sale_order
 #, fuzzy
-msgid "Sale Order"
+msgid "Sales Order"
 msgstr "Myyntitilaus"
 
 #. module: sale_procurement_group_by_line

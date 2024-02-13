@@ -29,9 +29,22 @@
   * Angel Moya Pardo <angel.moya@pesol.es>
   * Antonio J Rubio Lorente <antonio.rubio@pesol.es>
 
+* Rattapong Chokmasermkul <rattapongc@ecosoft.co.th>
+
+* `Druidoo <https://www.druidoo.io>`_
+
+  * Iván Todorovich <ivan.todorovich@druidoo.io>
+
 * `GSLab.it <https://www.gslab.it>`_
 
   * Giovanni Serra <giovanni@gslab.it>
 
+* `Therp BV <https://therp.nl>`_
+
+  * Nikos Tsirintanis <ntsirintanis@therp.nl>
+
+* `Sunflower IT <https://sunflowerweb.nl>`_
+
+  * Tom Blauwendraat <info@sunflowerweb.nl>
 
 Do not contact contributors directly about support or help with technical issues.

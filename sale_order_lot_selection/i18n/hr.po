@@ -42,6 +42,5 @@ msgstr "Skladišni prenos"
 #~ msgstr "Nije moguće dohvatiti lot na skladištu"
 
 #, fuzzy
-#~| msgid "Sales Order"
-#~ msgid "Sale Order"
+#~ msgid "Sales Order"
 #~ msgstr "Prodajni nalog"

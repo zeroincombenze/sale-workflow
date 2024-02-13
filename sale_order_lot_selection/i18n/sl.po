@@ -41,6 +41,5 @@ msgstr "Premik zaloge"
 #~ msgstr "Lota ni mogoče pridobiti na zalogi"
 
 #, fuzzy
-#~| msgid "Sales Order"
-#~ msgid "Sale Order"
+#~ msgid "Sales Order"
 #~ msgstr "Prodajni nalog"

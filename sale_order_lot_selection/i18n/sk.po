@@ -34,6 +34,5 @@ msgid "Stock Move"
 msgstr ""
 
 #, fuzzy
-#~| msgid "Sales Order"
-#~ msgid "Sale Order"
+#~ msgid "Sales Order"
 #~ msgstr "Objednávka predaja"

@@ -9,25 +9,24 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-23 01:51+0000\n"
-"PO-Revision-Date: 2021-09-30 15:34+0000\n"
-"Last-Translator: Yavuz Avci <yavuzavci@gmail.com>\n"
+"PO-Revision-Date: 2017-11-23 01:51+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_cancel_reason
 #: model:ir.model,name:sale_cancel_reason.model_sale_order_cancel
 msgid " Ask a reason for the sale order cancellation."
-msgstr " Sipariş emri iptali için neden sorun."
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel
 msgid "Cancel"
-msgstr "İptal"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_order_form
@@ -37,7 +36,7 @@ msgstr ""
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_order_form
 msgid "Cancellation reason:"
-msgstr "İptal sebebi:"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel
@@ -45,14 +44,11 @@ msgid ""
 "Choose the reason for the cancellation of the\n"
 "                sale order."
 msgstr ""
-"Sipariş emrinin iptal nedenini\n"
-"                seçin."
 
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel
-#, fuzzy
 msgid "Confirm"
-msgstr "Onayla"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__create_uid
@@ -64,7 +60,7 @@ msgstr "Oluşturan"
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__create_date
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel_reason__create_date
 msgid "Created on"
-msgstr "Oluşturulma Tarihi"
+msgstr "Oluşturuldu"
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__display_name
@@ -80,78 +76,78 @@ msgstr "ID"
 
 #. module: sale_cancel_reason
 #: model:sale.order.cancel.reason,name:sale_cancel_reason.cancel_reason_only_quotation
-#, fuzzy
 msgid "Just for Quotation"
-msgstr "Yalnızca Teklif için"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel____last_update
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel_reason____last_update
 msgid "Last Modified on"
-msgstr "Son Değişiklik"
+msgstr "Son değişiklik"
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__write_uid
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel_reason__write_uid
 msgid "Last Updated by"
-msgstr "Son Güncelleyen"
+msgstr "Son güncelleyen"
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__write_date
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel_reason__write_date
 msgid "Last Updated on"
-msgstr "Son Güncellenme"
+msgstr "Son güncellenme"
 
 #. module: sale_cancel_reason
 #: model:sale.order.cancel.reason,name:sale_cancel_reason.cancel_reason_other_provider
-#, fuzzy
 msgid "Other Service Provider selected"
-msgstr "Başka Servis Sağlayıcısı seçildi"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel__reason_id
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order_cancel_reason__name
 msgid "Reason"
-msgstr "Neden"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.model.fields,field_description:sale_cancel_reason.field_sale_order__cancel_reason_id
 msgid "Reason for cancellation"
-msgstr "İptal nedeni"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.actions.act_window,name:sale_cancel_reason.action_sale_order_cancel
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel
 msgid "Reason for the cancellation"
-msgstr "İptal nedeni"
-
-#. module: sale_cancel_reason
-#: model:ir.model,name:sale_cancel_reason.model_sale_order
-#, fuzzy
-msgid "Sale Order"
-msgstr "Sipariş Emri"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.actions.act_window,name:sale_cancel_reason.action_sale_order_cancel_reason
 #: model:ir.model,name:sale_cancel_reason.model_sale_order_cancel_reason
-#, fuzzy
 msgid "Sale Order Cancel Reason"
-msgstr "Sipariş Emri İptal Nedeni"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:ir.ui.menu,name:sale_cancel_reason.menu_sale_order_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel_reason_form
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel_reason_tree
-#, fuzzy
 msgid "Sale Order Cancel Reasons"
-msgstr "Sipariş Emri İptal Nedenleri"
+msgstr ""
+
+#. module: sale_cancel_reason
+#: model:ir.model,name:sale_cancel_reason.model_sale_order
+msgid "Sales Order"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model:sale.order.cancel.reason,name:sale_cancel_reason.cancel_reason_no_service_needed
 msgid "Service no longer needed"
-msgstr "Hizmet artık gerekli değil"
+msgstr ""
 
 #. module: sale_cancel_reason
 #: model_terms:ir.ui.view,arch_db:sale_cancel_reason.view_sale_order_cancel
 msgid "or"
-msgstr "veya"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Sales Order"
+#~ msgid "Sale Order"
+#~ msgstr "Sipariş Emri"

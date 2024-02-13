@@ -34,8 +34,7 @@ msgid "Stock Move"
 msgstr "Lagerbuchung"
 
 #, fuzzy
-#~| msgid "Sales Order"
-#~ msgid "Sale Order"
+#~ msgid "Sales Order"
 #~ msgstr "Verkaufsauftrag"
 
 #~ msgid "Procurement Group"

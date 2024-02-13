@@ -29,6 +29,11 @@ msgid "Analytic account"
 msgstr ""
 
 #. module: sale_order_type
+#: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__journal_id
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
 msgid "Billing Journal"
@@ -92,9 +97,9 @@ msgid "Incoterm"
 msgstr ""
 
 #. module: sale_order_type
-#: model:ir.model,name:sale_order_type.model_account_invoice
-msgid "Invoice"
-msgstr "Фактура"
+#: model:ir.model,name:sale_order_type.model_account_move
+msgid "Journal Entries"
+msgstr ""
 
 #. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type____last_update
@@ -138,25 +143,29 @@ msgid "Pricelist"
 msgstr ""
 
 #. module: sale_order_type
+#: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__quotation_validity_days
+msgid "Quotation Validity (Days)"
+msgstr ""
+
+#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__route_id
 msgid "Route"
 msgstr ""
 
 #. module: sale_order_type
-#: model:ir.model,name:sale_order_type.model_sale_order
-msgid "Sale Order"
-msgstr ""
-
-#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_res_partner__sale_type
 #: model:ir.model.fields,field_description:sale_order_type.field_res_users__sale_type
-#: model_terms:ir.ui.view,arch_db:sale_order_type.view_sales_order_filter
 msgid "Sale Order Type"
 msgstr ""
 
 #. module: sale_order_type
-#: model:ir.model.fields,field_description:sale_order_type.field_account_invoice__sale_type_id
+#: model:ir.model.fields,field_description:sale_order_type.field_account_move__sale_type_id
 msgid "Sale Type"
+msgstr ""
+
+#. module: sale_order_type
+#: model:ir.model,name:sale_order_type.model_sale_order
+msgid "Sales Order"
 msgstr ""
 
 #. module: sale_order_type
@@ -177,11 +186,6 @@ msgid "Shipping Policy"
 msgstr ""
 
 #. module: sale_order_type
-#: model:ir.model.fields,help:sale_order_type.field_sale_order_type__company_id
-msgid "The company is automatically set from your user preferences."
-msgstr ""
-
-#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order__type_id
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_form_view
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
@@ -198,6 +202,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
 msgid "Warehouse"
 msgstr ""
+
+#~ msgid "Invoice"
+#~ msgstr "Фактура"
 
 #~ msgid "Partner"
 #~ msgstr "Партньор"

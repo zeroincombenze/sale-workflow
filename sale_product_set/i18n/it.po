@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-23 01:51+0000\n"
-"PO-Revision-Date: 2017-11-23 01:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2023-04-15 12:34+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set__active
@@ -31,7 +32,7 @@ msgid "Add set"
 msgstr ""
 
 #. module: sale_product_set
-#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add
+#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add_from_order
 msgid "Add set in sale order"
 msgstr ""
 
@@ -41,9 +42,20 @@ msgid "Add set in sale order line"
 msgstr ""
 
 #. module: sale_product_set
+#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add_from_set
+msgid "Add set to sale order"
+msgstr ""
+
+#. module: sale_product_set
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_search
+msgid "Archived"
+msgstr ""
+
+#. module: sale_product_set
 #: model_terms:ir.ui.view,arch_db:sale_product_set.product_set_add_form_view
 msgid "Cancel"
-msgstr "Cancella"
+msgstr "Annulla"
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set__company_id
@@ -79,7 +91,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__display_name
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_line__display_name
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Nome visualizzato"
 
 #. module: sale_product_set
 #: model:ir.model.fields,help:sale_product_set.field_product_set_add__skip_existing_products
@@ -133,8 +145,14 @@ msgstr ""
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_line__product_id
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
 msgid "Product"
 msgstr "Prodotto"
+
+#. module: sale_product_set
+#: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__product_set_line_ids
+msgid "Product Set Line"
+msgstr ""
 
 #. module: sale_product_set
 #: model:ir.actions.act_window,name:sale_product_set.act_open_product_set_view
@@ -142,6 +160,7 @@ msgstr "Prodotto"
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__product_set_id
 #: model:ir.ui.menu,name:sale_product_set.menu_product_set_config
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_search
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_tree
 msgid "Product set"
@@ -153,11 +172,16 @@ msgid "Product set internal reference"
 msgstr ""
 
 #. module: sale_product_set
+#: model:ir.actions.act_window,name:sale_product_set.act_open_product_set_line_view
 #: model:ir.model,name:sale_product_set.model_product_set_line
+#: model:ir.ui.menu,name:sale_product_set.menu_product_set_line_config
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_tree
 msgid "Product set line"
 msgstr ""
 
 #. module: sale_product_set
+#: model_terms:ir.ui.view,arch_db:sale_product_set.product_set_add_form_view
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
 msgid "Product set lines"
 msgstr ""
@@ -181,12 +205,6 @@ msgstr ""
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__order_id
 msgid "Sale Order"
-msgstr ""
-
-#. module: sale_product_set
-#: code:addons/sale_product_set/wizard/product_set_add.py:39
-#, python-format
-msgid "Select a product set assigned to the same partner of the order."
 msgstr ""
 
 #. module: sale_product_set
@@ -217,6 +235,7 @@ msgid ""
 msgstr ""
 
 #. module: sale_product_set
-#: model:ir.model.fields,help:sale_product_set.field_product_set_add__partner_id
-msgid "You can find a customer by its Name, TIN, Email or Internal Reference."
+#: code:addons/sale_product_set/wizard/product_set_add.py:0
+#, python-format
+msgid "You can use a sale order assigned only to following partner(s): {}"
 msgstr ""

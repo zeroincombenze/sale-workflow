@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-08 00:49+0000\n"
-"PO-Revision-Date: 2023-02-01 16:48+0000\n"
+"PO-Revision-Date: 2023-04-07 14:25+0000\n"
 "Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -22,29 +22,27 @@ msgstr ""
 #. module: sale_order_line_sequence
 #: model_terms:ir.ui.view,arch_db:sale_order_line_sequence.report_saleorder_document_sequence
 msgid "<strong>Sequence</strong>"
-msgstr "<strong>Sequenza</strong>"
+msgstr ""
 
 #. module: sale_order_line_sequence
 #: model:ir.model.fields,help:sale_order_line_sequence.field_sale_order_line__sequence
 msgid "Gives the sequence of this line when displaying the sale order."
 msgstr ""
-"Mostra la sequenza di questa riga quando viene visualizzato l'ordine di "
-"vendita."
 
 #. module: sale_order_line_sequence
 #: model:ir.model.fields,field_description:sale_order_line_sequence.field_sale_order_line__sequence2
 msgid "Line Number"
-msgstr "Numero di riga"
+msgstr ""
 
 #. module: sale_order_line_sequence
 #: model:ir.model.fields,field_description:sale_order_line_sequence.field_sale_order__max_line_sequence
 msgid "Max sequence in lines"
-msgstr "Massima sequenza nelle righe"
+msgstr ""
 
 #. module: sale_order_line_sequence
 #: model:ir.model,name:sale_order_line_sequence.model_sale_order
-msgid "Sale Order"
-msgstr "Ordine di vendita"
+msgid "Sales Order"
+msgstr ""
 
 #. module: sale_order_line_sequence
 #: model:ir.model,name:sale_order_line_sequence.model_sale_order_line
@@ -59,4 +57,8 @@ msgstr "Sequenza"
 #. module: sale_order_line_sequence
 #: model:ir.model.fields,help:sale_order_line_sequence.field_sale_order_line__sequence2
 msgid "Shows the sequence of this line in the sale order."
-msgstr "Mostra la sequenza di questa riga nell'ordine di vendita."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Sale Order"
+#~ msgstr "Ordini vendita"

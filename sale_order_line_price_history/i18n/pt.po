@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* sale_order_line_price_history
+# 	* sale_order_line_price_history
 #
 msgid ""
 msgstr ""
@@ -32,6 +32,13 @@ msgstr "Criado por"
 #: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history_line__create_date
 msgid "Created on"
 msgstr "Criado em"
+
+#. module: sale_order_line_price_history
+#: model:ir.model.fields,help:sale_order_line_price_history.field_sale_order_line_price_history_line__sale_order_date_order
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
 
 #. module: sale_order_line_price_history
 #: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history__partner_id
@@ -115,16 +122,6 @@ msgid "Order Reference"
 msgstr "Refª da Encomenda"
 
 #. module: sale_order_line_price_history
-#: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history_line__product_uom_qty
-msgid "Ordered Quantity"
-msgstr "Quantidade da Encomenda"
-
-#. module: sale_order_line_price_history
-#: model_terms:ir.ui.view,arch_db:sale_order_line_price_history.view_order_form
-msgid "Price history"
-msgstr "Histórico de Preço"
-
-#. module: sale_order_line_price_history
 #: model:ir.actions.act_window,name:sale_order_line_price_history.sale_order_line_price_history_action
 msgid "Price history per customer"
 msgstr "Histórico de preço por cliente"
@@ -133,6 +130,11 @@ msgstr "Histórico de preço por cliente"
 #: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history__product_id
 msgid "Product"
 msgstr "Produto"
+
+#. module: sale_order_line_price_history
+#: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history_line__product_uom_qty
+msgid "Quantity"
+msgstr ""
 
 #. module: sale_order_line_price_history
 #: model_terms:ir.ui.view,arch_db:sale_order_line_price_history.sale_order_line_price_history_view_form
@@ -166,11 +168,17 @@ msgid "Unit Price"
 msgstr "Preço Unitário"
 
 #. module: sale_order_line_price_history
-#: model:ir.model.fields,help:sale_order_line_price_history.field_sale_order_line_price_history_line__partner_id
-msgid "You can find a customer by its Name, TIN, Email or Internal Reference."
-msgstr "Pode encontrar um cliente pelo seu Nome, NIF, E-mail ou Refª Interna."
-
-#. module: sale_order_line_price_history
 #: model:ir.model.fields,field_description:sale_order_line_price_history.field_sale_order_line_price_history_line__history_sale_order_line_id
 msgid "history sale order line"
 msgstr "linha de encomenda de venda do histórico"
+
+#~ msgid "Ordered Quantity"
+#~ msgstr "Quantidade da Encomenda"
+
+#~ msgid "Price history"
+#~ msgstr "Histórico de Preço"
+
+#~ msgid ""
+#~ "You can find a customer by its Name, TIN, Email or Internal Reference."
+#~ msgstr ""
+#~ "Pode encontrar um cliente pelo seu Nome, NIF, E-mail ou Refª Interna."

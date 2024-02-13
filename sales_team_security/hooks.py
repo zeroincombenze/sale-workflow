@@ -1,7 +1,7 @@
 # Copyright 2018-2016 Tecnativa - Pedro M. Baeza
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from odoo import api, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api
 
 
 def post_init_hook(cr, registry):
@@ -20,11 +20,13 @@ def post_init_hook(cr, registry):
     # At installation time, we need to sync followers
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
-        partners = env['res.partner'].search([
-            ('parent_id', '=', False),
-            ('is_company', '=', True),
-            '|',
-            ('user_id', '!=', False),
-            ('child_ids.user_id', '!=', False)
-        ])
+        partners = env["res.partner"].search(
+            [
+                ("parent_id", "=", False),
+                ("is_company", "=", True),
+                "|",
+                ("user_id", "!=", False),
+                ("child_ids.user_id", "!=", False),
+            ]
+        )
         partners._add_followers_from_salesmans()

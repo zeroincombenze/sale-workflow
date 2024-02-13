@@ -9,22 +9,22 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-16 03:41+0000\n"
-"PO-Revision-Date: 2020-08-11 15:59+0000\n"
-"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
+"PO-Revision-Date: 2023-03-31 21:27+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 3.10\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set__active
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_line__active
 msgid "Active"
-msgstr "Aktivno"
+msgstr ""
 
 #. module: sale_product_set
 #: model_terms:ir.ui.view,arch_db:sale_product_set.product_set_add_form_view
@@ -33,7 +33,7 @@ msgid "Add set"
 msgstr "Dodaj sklop"
 
 #. module: sale_product_set
-#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add
+#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add_from_order
 msgid "Add set in sale order"
 msgstr "Dodaj sklop v prodajni nalog"
 
@@ -43,6 +43,17 @@ msgid "Add set in sale order line"
 msgstr "Dodaj sklop v postavko prodajnega naloga"
 
 #. module: sale_product_set
+#: model:ir.actions.act_window,name:sale_product_set.act_open_wizard_product_set_add_from_set
+msgid "Add set to sale order"
+msgstr ""
+
+#. module: sale_product_set
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_search
+msgid "Archived"
+msgstr ""
+
+#. module: sale_product_set
 #: model_terms:ir.ui.view,arch_db:sale_product_set.product_set_add_form_view
 msgid "Cancel"
 msgstr "Preklic"
@@ -50,7 +61,7 @@ msgstr "Preklic"
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set__company_id
 msgid "Company"
-msgstr "Družba"
+msgstr ""
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set__create_uid
@@ -81,7 +92,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__display_name
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_line__display_name
 msgid "Display Name"
-msgstr "Prikazni naziv"
+msgstr "Prikazani naziv"
 
 #. module: sale_product_set
 #: model:ir.model.fields,help:sale_product_set.field_product_set_add__skip_existing_products
@@ -135,8 +146,14 @@ msgstr ""
 
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_line__product_id
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
 msgid "Product"
 msgstr "Proizvod"
+
+#. module: sale_product_set
+#: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__product_set_line_ids
+msgid "Product Set Line"
+msgstr ""
 
 #. module: sale_product_set
 #: model:ir.actions.act_window,name:sale_product_set.act_open_product_set_view
@@ -144,6 +161,7 @@ msgstr "Proizvod"
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__product_set_id
 #: model:ir.ui.menu,name:sale_product_set.menu_product_set_config
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_search
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_tree
 msgid "Product set"
@@ -151,15 +169,21 @@ msgstr "Sklop proizvodov"
 
 #. module: sale_product_set
 #: model:ir.model.fields,help:sale_product_set.field_product_set__ref
+#, fuzzy
 msgid "Product set internal reference"
-msgstr "Interni sklic sklopa proizvodov"
+msgstr "Postavka sklopa proizvodov"
 
 #. module: sale_product_set
+#: model:ir.actions.act_window,name:sale_product_set.act_open_product_set_line_view
 #: model:ir.model,name:sale_product_set.model_product_set_line
+#: model:ir.ui.menu,name:sale_product_set.menu_product_set_line_config
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_search
+#: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_line_tree
 msgid "Product set line"
 msgstr "Postavka sklopa proizvodov"
 
 #. module: sale_product_set
+#: model_terms:ir.ui.view,arch_db:sale_product_set.product_set_add_form_view
 #: model_terms:ir.ui.view,arch_db:sale_product_set.view_product_set_form
 msgid "Product set lines"
 msgstr "Postavke sklopov proizvodov"
@@ -183,12 +207,6 @@ msgstr "Količina"
 #. module: sale_product_set
 #: model:ir.model.fields,field_description:sale_product_set.field_product_set_add__order_id
 msgid "Sale Order"
-msgstr "Prodajni nalog"
-
-#. module: sale_product_set
-#: code:addons/sale_product_set/wizard/product_set_add.py:39
-#, python-format
-msgid "Select a product set assigned to the same partner of the order."
 msgstr ""
 
 #. module: sale_product_set
@@ -219,6 +237,7 @@ msgid ""
 msgstr ""
 
 #. module: sale_product_set
-#: model:ir.model.fields,help:sale_product_set.field_product_set_add__partner_id
-msgid "You can find a customer by its Name, TIN, Email or Internal Reference."
+#: code:addons/sale_product_set/wizard/product_set_add.py:0
+#, python-format
+msgid "You can use a sale order assigned only to following partner(s): {}"
 msgstr ""
